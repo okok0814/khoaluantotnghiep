@@ -1,1 +1,8 @@
 embeddings/
+logs/
+.venv/
+.cache/
+checkpoints/
+third_party/
+__pycache__/
+*.py[cod]

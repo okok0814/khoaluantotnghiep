@@ -1,0 +1,21 @@
+{
+  "seed": 42,
+  "epochs": 1,
+  "batch_size": 2,
+  "learning_rate": 0.00002,
+  "weight_decay": 0.05,
+  "betas": [0.9, 0.98],
+  "eps": 1e-7,
+  "max_grad_norm": 1.0,
+  "image_size": 224,
+  "target_ratio": 1.25,
+  "max_txt_len": 64,
+  "num_workers": 0,
+  "precision": "fp16",
+  "grad_scaler_init_scale": 256.0,
+  "max_amp_retries": 10,
+  "freeze_vit": true,
+  "train_per_category": 8,
+  "val_per_category": 4,
+  "description": "One complete epoch; UniFashion pretrained retrieval adaptation; original ITC+ITM+TTC losses; no benchmark claim"
+}

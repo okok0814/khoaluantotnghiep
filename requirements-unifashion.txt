@@ -1,0 +1,16 @@
+# Python 3.11. Install the CUDA build of torch/torchvision separately on Colab.
+torch==2.6.0
+torchvision==0.21.0
+transformers==4.36.2
+tokenizers==0.15.2
+timm==0.9.12
+omegaconf==2.3.0
+iopath==0.1.10
+fairscale==0.4.13
+einops==0.7.0
+accelerate==0.27.2
+pandas==2.2.3
+numpy==1.26.4
+Pillow==11.1.0
+matplotlib==3.9.4
+pytest==8.3.5
