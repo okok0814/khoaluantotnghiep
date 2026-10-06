@@ -39,12 +39,12 @@ def preprocess(config):
 
 
 class UniFashionSanityDataset(FashionIQTripletDataset):
-    def __init__(self, csv_path, images_root, config):
+    def __init__(self, csv_path, images_root, config, require_unique_targets=True):
         super().__init__(csv_path, images_root, preprocess=preprocess(config), strict=True)
         for column in ("reference_caption", "target_caption", "modifier", "candidate", "target"):
             if column not in self.data or self.data[column].isna().any() or self.data[column].str.strip().eq("").any():
                 raise ValueError(f"Missing required {column}; run prepare_unifashion_sanity.py")
-        if self.data["target"].duplicated().any():
+        if require_unique_targets and self.data["target"].duplicated().any():
             raise ValueError("Sanity subset requires unique targets to avoid false in-batch negatives")
 
     def __getitem__(self, index):
