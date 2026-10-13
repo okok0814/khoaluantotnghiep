@@ -27,7 +27,15 @@ def test_gate_shape_and_gradients():
 
 
 def test_upstream_ast_injection():
-    upstream_source = ROOT / "third_party/UniFashion/src/lavis/models/blip2_models/blip2_qformer_cir_rerank.py"
+    upstream_source = (
+    ROOT.parent
+    / "UniFashion"
+    / "src"
+    / "lavis"
+    / "models"
+    / "blip2_models"
+    / "blip2_qformer_cir_rerank.py"
+)
     if not upstream_source.is_file():
         raise FileNotFoundError(
             f"Pinned upstream source not found: {upstream_source}. "
