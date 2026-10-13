@@ -1,9 +1,11 @@
-"""Small import/initialization adapter for the pinned official UniFashion code.
+"""Import/initialization adapter for pinned UniFashion retrieval code.
 
-The official CIR forward method and all three losses are executed unchanged.
-Unrelated eager imports are omitted; legacy Q-former utility imports are
-redirected to their defining transformers.pytorch_utils module.
-This is the retrieval branch, not the LLM/diffusion generation pipeline.
+The original ITC/ITM/TTC loss structure is retained. An Attention-Gated Fusion
+module refines the projected multimodal query in both training and retrieval
+inference, without editing the pinned third-party source tree on disk.
+Unrelated eager imports are omitted and legacy Q-former helper imports are
+redirected to transformers.pytorch_utils. This is the retrieval branch, not the
+LLM/diffusion generation pipeline.
 """
 import ast
 import importlib
@@ -48,6 +50,64 @@ def _import_qformer(root):
     return module
 
 
+def _inject_attention_fusion(tree):
+    """Insert the trainable gate into UniFashion's training and retrieval paths.
+
+    The gate combines the pooled projected Q-former query-token stream with the
+    projected modification-token representation. Keeping this transformation in
+    the AST adapter avoids editing the pinned third-party source tree in place.
+    """
+    model_class = next((node for node in tree.body
+                        if isinstance(node, ast.ClassDef)
+                        and node.name == "Blip2QformerCirRerank"), None)
+    if model_class is None:
+        raise RuntimeError("Pinned UniFashion model class was not found")
+
+    def insert_after(method_name, assignment_name, source):
+        method = next((node for node in model_class.body
+                       if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))
+                       and node.name == method_name), None)
+        if method is None:
+            raise RuntimeError(f"Pinned UniFashion method {method_name!r} was not found")
+        injected = ast.parse(source).body
+        output = []
+        matches = 0
+        for statement in method.body:
+            output.append(statement)
+            if isinstance(statement, ast.Assign) and any(
+                isinstance(target, ast.Name) and target.id == assignment_name
+                for target in statement.targets
+            ):
+                output.extend(injected)
+                matches += 1
+        if matches != 1:
+            raise RuntimeError(
+                f"Expected exactly one {assignment_name!r} assignment in "
+                f"{method_name}(), found {matches}; refusing an unsafe patch"
+            )
+        method.body = output
+
+    insert_after(
+        "forward",
+        "image_feats",
+        """attention_image = F.normalize(image_feats.mean(dim=1), dim=-1)
+fusion_feats = self.attention_fusion(attention_image, fusion_feats)""",
+    )
+    insert_after(
+        "inference",
+        "fusion_feats",
+        """attention_image = F.normalize(
+     F.normalize(
+         self.vision_proj(
+             fusion_output.last_hidden_state[:, : query_tokens.size(1), :]
+         ), dim=-1
+     ).mean(dim=1), dim=-1
+)
+fusion_feats = self.attention_fusion(attention_image, fusion_feats)""",
+    )
+    return tree
+
+
 def import_retrieval_class(upstream):
     root = Path(upstream).resolve() / "src/lavis"
     module_name = "lavis.models.blip2_models.blip2_qformer_cir_rerank"
@@ -74,6 +134,8 @@ def import_retrieval_class(upstream):
     tree.body = [node for node in tree.body if not (
         isinstance(node, ast.ImportFrom) and
         (node.module or "").startswith("rq_vae_transformer."))]
+    tree = _inject_attention_fusion(tree)
+    tree = ast.fix_missing_locations(tree)
     module = types.ModuleType(module_name)
     module.__file__ = str(path)
     module.__package__ = "lavis.models.blip2_models"
@@ -134,6 +196,7 @@ def build_model(upstream, assets, config, device, inspect_only=False):
     from accelerate import init_empty_weights
     from functools import partial
     from transformers import BertTokenizer
+    from src.attention_fusion import AttentionGatedFusion
 
     assets = Path(assets)
     official_class = import_retrieval_class(upstream)
@@ -142,6 +205,15 @@ def build_model(upstream, assets, config, device, inspect_only=False):
     from lavis.models.eva_vit import VisionTransformer
 
     class LocalUniFashion(official_class):
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            embedding_dim = int(self.vision_proj.out_features)
+            self.attention_fusion = AttentionGatedFusion(
+                embedding_dim=embedding_dim,
+                hidden_dim=embedding_dim,
+                dropout=float(config.get("attention_dropout", 0.1)),
+            )
+
         @classmethod
         def init_tokenizer(cls, truncation_side="right"):
             tokenizer = BertTokenizer.from_pretrained(
@@ -192,6 +264,16 @@ def build_model(upstream, assets, config, device, inspect_only=False):
     state = checkpoint_state(assets / "pretrain/none_lora_0.pt")
     report = load_domain_weights(model, state)
     report["vision_checkpoint"] = model.vision_checkpoint_report
+    report["attention_fusion"] = {
+        "enabled": True,
+        "embedding_dim": int(model.vision_proj.out_features),
+        "inputs": [
+            "mean-pooled projected Q-former query tokens",
+            "projected modification-token representation",
+        ],
+        "connected_to": ["training ITC similarity", "retrieval inference query"],
+        "initialization": "random; standalone 512-d FashionCLIP checkpoint is not loaded",
+    }
     if not inspect_only:
         model.to(device)
     report["inspection_only"] = inspect_only
@@ -215,6 +297,7 @@ def load_domain_weights(model, state):
     # Pretrain does not save the unused BERT language-model head or the
     # deterministic position_ids buffer. CIR forward only calls Qformer.bert.
     allowed_missing.update(key for key in missing if key.startswith("Qformer.cls."))
+    allowed_missing.update(key for key in missing if key.startswith("attention_fusion."))
     allowed_missing.add("Qformer.bert.embeddings.position_ids")
     unexplained = set(missing) - allowed_missing
     if unexplained:

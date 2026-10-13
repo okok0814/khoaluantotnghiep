@@ -80,7 +80,8 @@ def execute(args):
     total_steps = sum(len(batches) for batches, _ in plans)
     source_files = [Path(__file__), ROOT / "src/unifashion_training.py",
                     ROOT / "src/unifashion_runtime.py", ROOT / "src/unifashion_sanity_data.py",
-                    ROOT / "src/fashioniq_unifashion_dataset.py", ROOT / "scripts/train_unifashion_sanity.py"]
+                    ROOT / "src/fashioniq_unifashion_dataset.py", ROOT / "src/attention_fusion.py",
+                    ROOT / "scripts/train_unifashion_sanity.py"]
     fingerprint = {"data_audit": file_hash(args.data_dir / "data_audit.json"),
                    "code": {p.name: file_hash(p) for p in source_files},
                    "assets_manifest": file_hash(args.assets / "download_manifest.json")}

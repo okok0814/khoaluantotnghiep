@@ -92,7 +92,8 @@ def evaluate(args):
         "caption_rerank": "No ITM reranking, no labeled target captions used as query input",
         "gallery_captions_sha256": digest(args.eval_data / "gallery_captions.json"),
         "code_sha256": {p.name: digest(p) for p in [Path(__file__), ROOT / "src/fashioniq_evaluation.py",
-                                                  ROOT / "src/unifashion_runtime.py"]}}
+                                                  ROOT / "src/unifashion_runtime.py",
+                                                  ROOT / "src/attention_fusion.py"]}}
     device = torch.device("cuda")
     torch.manual_seed(config["seed"])
     torch.set_num_threads(2)
