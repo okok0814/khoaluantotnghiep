@@ -1,0 +1,6 @@
+{
+  "status": "training",
+  "checkpoint_step": 29500,
+  "completed_epochs": 3,
+  "planned_epochs": 10
+}

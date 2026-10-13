@@ -1,5 +1,6 @@
 embeddings/
-logs/
+/logs/*
+!/logs/week9_fashioniq_evaluation/
 .venv/
 .cache/
 checkpoints/

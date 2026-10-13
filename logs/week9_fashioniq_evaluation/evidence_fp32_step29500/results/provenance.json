@@ -1,0 +1,61 @@
+{
+  "checkpoint_sha256": "f4e9ee1f8c2dda190e7d4854e963426ef466b60455154a01e3b12cd0647872fb",
+  "snapshot": "fp32_snapshot.pt",
+  "optimizer_steps": 29500,
+  "completed_epochs": 3,
+  "next_epoch_one_based": 4,
+  "completed_batches_in_current_epoch": 2500,
+  "planned_epochs": 10,
+  "training_config": {
+    "seed": 42,
+    "epochs": 10,
+    "batch_size": 2,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.05,
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "eps": 1e-07,
+    "scheduler": "one_cycle",
+    "warmup_epochs": 1.5,
+    "div_factor": 100.0,
+    "final_div_factor": 10000.0,
+    "max_grad_norm": 1.0,
+    "image_size": 224,
+    "target_ratio": 1.25,
+    "max_txt_len": 64,
+    "num_workers": 0,
+    "precision": "fp32",
+    "grad_scaler_init_scale": 256.0,
+    "max_amp_retries": 10,
+    "freeze_vit": true,
+    "checkpoint_every_steps": 500,
+    "monitor_per_category": 32,
+    "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+  },
+  "training_fingerprint": {
+    "data_audit": "4715235209dc1b8573217a9bc97c1cc41f76d8cc29e66f2a6b56bb9f4ae21bbe",
+    "code": {
+      "train_unifashion_finetune.py": "0c8b1887b00865b00bdfc0b54db745551e19a18f003fab9c59a65fbd0096c09c",
+      "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+      "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+      "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+      "fashioniq_unifashion_dataset.py": "2c252f4297aac573d0e3676e6476a825e611bbe692997b8e2bc9cdffa0b3aa88",
+      "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+    },
+    "assets_manifest": "6728ad447f435cca7253d7c9c9cd933b6abc25a21930bdf77a74d90bcde4bcec"
+  },
+  "eval_batch_size": 4,
+  "precision": "fp32",
+  "gpu": "Tesla T4",
+  "torch": "2.6.0+cu124",
+  "scoring": "Official query_tokens target encoder; max query-to-target-token similarity; optional released gallery-caption similarity",
+  "caption_rerank": "No ITM reranking, no labeled target captions used as query input",
+  "gallery_captions_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+  "code_sha256": {
+    "evaluate_unifashion_fashioniq.py": "59a8c050e0a49a5d12b77676439fb52b449e678fdf034e8c5a275ba4f7a7b1c8",
+    "fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+    "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66"
+  }
+}

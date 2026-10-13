@@ -1,0 +1,69 @@
+{
+  "method": "fashionclip_image_only",
+  "protocol": {
+    "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+    "gallery_sha256": {
+      "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+      "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+      "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+    },
+    "split": "val",
+    "exclude_reference": true,
+    "ks": [
+      10,
+      50
+    ],
+    "tie_break": "descending score, then official gallery order",
+    "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+    "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+  },
+  "provenance": {
+    "source": "Existing Week6/Week37 FashionCLIP embedding artifacts",
+    "source_sha256": {
+      "fashionclip_image_ids.csv": "b9d62bc9bf1f6aa6f830d7ff71ca65320bd80f69809d33260da0542d4661d90d",
+      "fashionclip_image_embeddings.npy": "8000b26407e1440c10ad313ebba08fa0c9e47add3524aa1704de11fcec41da50",
+      "fashionclip_text_metadata.csv": "839a06637abcc514725fd19ead82aee058bf58ac52c5d4f551e684fabb8a1641",
+      "fashionclip_text_embeddings.npy": "d79c3e2bffba6353c4a817e196be88f9b2366c868e2faad2040b35eb68da1793"
+    },
+    "reference_notebook": "notebooks/38_18_FashionIQ_RecallK.ipynb",
+    "image_preprocessing": "Cached Week6 model-specific preprocessing; original image pixels not reverified",
+    "note": "Full official galleries, reference excluded. Baseline rerun, not a new model training run."
+  },
+  "summary": [
+    {
+      "category": "dress",
+      "queries": 2017,
+      "gallery_size": 3817,
+      "Recall@10": 6.395637084779375,
+      "Recall@50": 15.220624690133864
+    },
+    {
+      "category": "shirt",
+      "queries": 2038,
+      "gallery_size": 6346,
+      "Recall@10": 8.979391560353287,
+      "Recall@50": 18.105986261040236
+    },
+    {
+      "category": "toptee",
+      "queries": 1961,
+      "gallery_size": 5373,
+      "Recall@10": 7.445181030086691,
+      "Recall@50": 17.440081591024985
+    },
+    {
+      "category": "MACRO",
+      "queries": 6016,
+      "gallery_size": null,
+      "Recall@10": 7.606736558406451,
+      "Recall@50": 16.922230847399696
+    },
+    {
+      "category": "MICRO",
+      "queries": 6016,
+      "gallery_size": null,
+      "Recall@10": 7.613031914893617,
+      "Recall@50": 16.92154255319149
+    }
+  ]
+}

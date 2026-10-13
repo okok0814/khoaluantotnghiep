@@ -1,0 +1,65 @@
+{
+  "verified_on": "2026-10-13",
+  "archive_sha256": "3a1cdc2200e461cdc4a4a3a95000601cd21a709829a7a5c2f93d984c2387e2e7",
+  "archive_bytes": 6331864,
+  "checkpoint_sha256_recorded": "f4e9ee1f8c2dda190e7d4854e963426ef466b60455154a01e3b12cd0647872fb",
+  "checkpoint_file_received": false,
+  "methods_verified": [
+    {
+      "method": "fashionclip_additive",
+      "queries": 6016,
+      "summary_recomputed": true
+    },
+    {
+      "method": "fashionclip_image_only",
+      "queries": 6016,
+      "summary_recomputed": true
+    },
+    {
+      "method": "fashionclip_text_only",
+      "queries": 6016,
+      "summary_recomputed": true
+    },
+    {
+      "method": "unifashion_image_caption_score",
+      "queries": 6016,
+      "summary_recomputed": true
+    },
+    {
+      "method": "unifashion_image_score",
+      "queries": 6016,
+      "summary_recomputed": true
+    }
+  ],
+  "checks": [
+    "ZIP CRC",
+    "query IDs and exact text match local protocol",
+    "unique complete query coverage",
+    "gallery membership and reference exclusion in saved top50",
+    "target rank and hit consistency",
+    "per-category/macro/micro recomputed from saved query ranks",
+    "local evaluation source hashes match provenance",
+    "caption hash and copied training config match provenance",
+    "both scoring variants use identical checkpoint metadata"
+  ],
+  "limits": "No model checkpoint or full score matrices received; validation checks exported evidence, not an independent GPU rerun.",
+  "files_sha256": {
+    "evaluation_evidence.zip": "3a1cdc2200e461cdc4a4a3a95000601cd21a709829a7a5c2f93d984c2387e2e7",
+    "report/comparison.csv": "d483bc83ef24ca757b329811ce69be38fb0ed78b020ee206b9465e12c3167634",
+    "report/evaluation_report.md": "ced95cd5c22eba02ad57848a454a8079b2dd82d81c88fac00ee947827a74a3b2",
+    "report/recall_comparison.png": "6f4096e3f0627c49d6988e719b9fe6553d29247ad01b18c07b27a957e6655e85",
+    "results/checkpoint_load.json": "5fc10d88fc251f5cb6db47e7a59989cac1e57642225a0ea9b9e374ee7c32bd8e",
+    "results/provenance.json": "db0089f0c712343a707225bb156318fe1e95323973bd16f12a5316cef56f786c",
+    "results/status.json": "e4ffe798a490123d5eee97a2275c43dbdb3fc787162c916a10188dd789a30d3e",
+    "results/unifashion_image_caption_score.json": "60965704d1b90c49009da4d23cd20fa6dbbfdc52aa3b5ab71259a05af6b6b1a4",
+    "results/unifashion_image_caption_score_partial.csv": "b7d36215b3e1bb88582ffa8faf244a3b856663046648aefd029486004108f39b",
+    "results/unifashion_image_caption_score_per_query.csv": "b7d36215b3e1bb88582ffa8faf244a3b856663046648aefd029486004108f39b",
+    "results/unifashion_image_score.json": "ed0325ab750d42c0a35c5e1e4cdd36f27c906461bfe09e7a0f365b764716d8a8",
+    "results/unifashion_image_score_partial.csv": "66d4249799fbc2d3a724d3a6e591eaa99b65046b07d25c4430546013c42fe283",
+    "results/unifashion_image_score_per_query.csv": "66d4249799fbc2d3a724d3a6e591eaa99b65046b07d25c4430546013c42fe283",
+    "training_checkpoint_load.json": "5fc10d88fc251f5cb6db47e7a59989cac1e57642225a0ea9b9e374ee7c32bd8e",
+    "training_config.json": "dd8b196657a7d40cd05dc3b7187b594a7f3de336ef688f1c3c24ffbb1988d269",
+    "training_epoch_metrics.csv": "3951ebc1c66e8f1207222f0b06eb1a94ab20c4e643bce7dd5b6b36c5ae20995c",
+    "training_status.json": "d5986946d2475bb5baec84f853d9664068084de7b7b5afb99c315a1ade55b182"
+  }
+}
