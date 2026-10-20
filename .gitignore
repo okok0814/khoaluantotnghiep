@@ -1,6 +1,12 @@
 embeddings/
 /logs/*
-!/logs/week9_fashioniq_evaluation/
+!/logs/week41_fashioniq_evaluation/
+!/logs/week42_unifashion_tuning/
+/logs/week41_fashioniq_evaluation/**/*.zip
+/logs/week42_unifashion_tuning/**/*.pt
+/logs/week42_unifashion_tuning/**/*.pth
+/logs/week42_unifashion_tuning/**/*.zip
+/logs/week42_unifashion_tuning/**/*.tmp
 .venv/
 .cache/
 checkpoints/

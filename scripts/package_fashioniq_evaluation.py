@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
-    evidence = ROOT / "reports/week9_fashioniq_evaluation"
+    evidence = ROOT / "logs/week41_fashioniq_evaluation"
     output = ROOT / "checkpoints/unifashion_recall_eval.zip"
     output.parent.mkdir(parents=True, exist_ok=True)
-    files = ["src/fashioniq_evaluation.py", "scripts/evaluate_unifashion_fashioniq.py",
+    files = ["src/fashioniq_evaluation.py", "src/unifashion_tuning.py", "scripts/evaluate_unifashion_fashioniq.py",
              "scripts/report_fashioniq_evaluation.py", "tests/test_fashioniq_evaluation.py"]
     with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED) as z:
         for name in files:

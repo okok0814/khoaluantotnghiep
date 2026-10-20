@@ -1,0 +1,31 @@
+Reading and hashing the checkpoint snapshot...
+Verifying 1534 validation images...
+Verifying the frozen EVA-G checkpoint...
+Snapshot progress: {"optimizer_steps": 60000, "completed_epochs": 6, "next_epoch_one_based": 7, "completed_batches_in_current_epoch": 6000}
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+dress: gallery 100/512
+dress: gallery 200/512
+dress: gallery 300/512
+dress: gallery 400/512
+dress: gallery 500/512
+dress: gallery 512/512
+dress: queries 64/64
+shirt: gallery 100/512
+shirt: gallery 200/512
+shirt: gallery 300/512
+shirt: gallery 400/512
+shirt: gallery 500/512
+shirt: gallery 512/512
+shirt: queries 64/64
+toptee: gallery 100/512
+toptee: gallery 200/512
+toptee: gallery 300/512
+toptee: gallery 400/512
+toptee: gallery 500/512
+toptee: gallery 512/512
+toptee: queries 64/64
+unifashion_image_score [{'category': 'dress', 'queries': 64, 'gallery_size': 512, 'Recall@10': 67.1875, 'Recall@50': 85.9375}, {'category': 'shirt', 'queries': 64, 'gallery_size': 512, 'Recall@10': 82.8125, 'Recall@50': 96.875}, {'category': 'toptee', 'queries': 64, 'gallery_size': 512, 'Recall@10': 76.5625, 'Recall@50': 93.75}, {'category': 'MACRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 75.52083333333333, 'Recall@50': 92.1875}, {'category': 'MICRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 75.52083333333334, 'Recall@50': 92.1875}]
+unifashion_image_caption_score [{'category': 'dress', 'queries': 64, 'gallery_size': 512, 'Recall@10': 78.125, 'Recall@50': 93.75}, {'category': 'shirt', 'queries': 64, 'gallery_size': 512, 'Recall@10': 95.3125, 'Recall@50': 98.4375}, {'category': 'toptee', 'queries': 64, 'gallery_size': 512, 'Recall@10': 90.625, 'Recall@50': 96.875}, {'category': 'MACRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 88.02083333333333, 'Recall@50': 96.35416666666667}, {'category': 'MICRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 88.02083333333334, 'Recall@50': 96.35416666666666}]

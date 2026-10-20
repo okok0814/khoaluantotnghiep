@@ -15,6 +15,7 @@ from src.fashioniq_evaluation import CATEGORIES, digest, protocol, rank_batch, s
 from src.unifashion_runtime import build_model
 from src.unifashion_sanity_data import clean_caption, preprocess
 from src.unifashion_training import load_trainable_state
+from src.unifashion_tuning import progress
 from scripts.train_unifashion_sanity import autocast_context
 
 
@@ -54,9 +55,14 @@ def evaluate(args):
     config = saved["config"]
     if not saved.get("history") or "cursor" not in saved:
         raise ValueError("Expected a full-training checkpoint with history/cursor; not a benchmark or best-monitor weights file")
+    if saved.get("tuning") and not saved["tuning"]["trial_completed"]:
+        raise ValueError("Complete the equal-example tuning trial before evaluating")
     checkpoint_sha = digest(args.checkpoint)
     queries, galleries, fingerprint = protocol(args.eval_data)
     preparation = json.loads((args.eval_data.parent / "preparation.json").read_text())
+    scope = preparation.get("scope", "full_validation")
+    if scope != "full_validation" and not getattr(args, "allow_screening", False):
+        raise ValueError("Reduced screening gallery requires --allow-screening; not full validation")
     for name, expected in preparation["files"].items():
         if digest(args.eval_data / name) != expected:
             raise ValueError(f"Evaluation input changed: {name}")
@@ -83,15 +89,14 @@ def evaluate(args):
     if digest(args.assets / "pretrain/none_lora_0.pt") != "f272d3a3cc91ae809f844d3e258f6a872be405cb203a550c15c4510c7280b541":
         raise ValueError("Domain-pretraining checksum mismatch")
     provenance = {"checkpoint_sha256": checkpoint_sha, "snapshot": args.checkpoint.name,
-        "optimizer_steps": len(saved["history"]), "completed_epochs": len(saved["epochs"]),
-        "next_epoch_one_based": saved["cursor"][0] + 1, "completed_batches_in_current_epoch": saved["cursor"][1],
-        "planned_epochs": config["epochs"], "training_config": config,
+        **progress(saved), "evaluation_scope": scope, "training_config": config,
         "training_fingerprint": saved["fingerprint"], "eval_batch_size": args.batch_size,
         "precision": config["precision"], "gpu": torch.cuda.get_device_name(), "torch": str(torch.__version__),
         "scoring": "Official query_tokens target encoder; max query-to-target-token similarity; optional released gallery-caption similarity",
         "caption_rerank": "No ITM reranking, no labeled target captions used as query input",
         "gallery_captions_sha256": digest(args.eval_data / "gallery_captions.json"),
         "code_sha256": {p.name: digest(p) for p in [Path(__file__), ROOT / "src/fashioniq_evaluation.py",
+                                                  ROOT / "src/unifashion_tuning.py",
                                                   ROOT / "src/unifashion_runtime.py",
                                                   ROOT / "src/attention_fusion.py"]}}
     device = torch.device("cuda")
@@ -157,6 +162,7 @@ def evaluate(args):
         result = save_result(args.output, method, records, galleries, fingerprint, provenance)
         print(method, result["summary"], flush=True)
     (args.output / "status.json").write_text(json.dumps({"status": "evaluation_completed",
+        "evaluation_scope": scope,
         "queries": len(queries), "checkpoint_sha256": checkpoint_sha, "retrieval_evaluated": True}, indent=2))
 
 
@@ -168,6 +174,8 @@ def main():
     p.add_argument("--images-dir", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
     p.add_argument("--batch-size", type=int, default=4)
+    p.add_argument("--allow-screening", action="store_true",
+                   help="Explicitly allow reduced-gallery screening; never treat it as full-val Recall")
     p.add_argument("--upstream", type=Path, default=ROOT / "third_party/UniFashion")
     p.add_argument("--assets", type=Path, default=ROOT / "checkpoints/unifashion")
     args = p.parse_args()

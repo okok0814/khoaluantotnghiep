@@ -1,0 +1,111 @@
+{
+  "source_notebook": "notebooks/42_14_UniFashion_Hyperparameter_Tuning.ipynb",
+  "source_sha256": "5db66693b5c73ab51628ba08174735c4d57d3ac7ae7d228da47b16f5a4de5101",
+  "evidence_type": "saved_notebook_outputs_not_original_run_artifacts",
+  "parent_metadata_reported": {
+    "checkpoint_sha256": "df8226a0e61e41ebb5bf88f1870b0176118f75d14612ceb8c0e04cf91309a683",
+    "progress": {
+      "checkpoint_kind": "full_training",
+      "optimizer_steps": 60000,
+      "completed_epochs": 6,
+      "next_epoch_one_based": 7,
+      "completed_batches_in_current_epoch": 6000,
+      "planned_epochs": 10
+    },
+    "config": {
+      "seed": 42,
+      "epochs": 10,
+      "batch_size": 2,
+      "learning_rate": 2e-05,
+      "weight_decay": 0.05,
+      "betas": [
+        0.9,
+        0.98
+      ],
+      "eps": 1e-07,
+      "scheduler": "one_cycle",
+      "warmup_epochs": 1.5,
+      "div_factor": 100.0,
+      "final_div_factor": 10000.0,
+      "max_grad_norm": 1.0,
+      "image_size": 224,
+      "target_ratio": 1.25,
+      "max_txt_len": 64,
+      "num_workers": 0,
+      "precision": "fp32",
+      "grad_scaler_init_scale": 256.0,
+      "max_amp_retries": 10,
+      "freeze_vit": true,
+      "checkpoint_every_steps": 500,
+      "monitor_per_category": 32,
+      "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+    },
+    "source": "/content/drive/MyDrive/Thesis/UniFashion/week8/runs/full_train_fp32_b2_seed42/last.pt",
+    "next_lr_in_original_run": 6.676078010759317e-06
+  },
+  "selection_reported": {
+    "ready": true,
+    "selected": "lr1e5_b4",
+    "failed_trials": [],
+    "selection_method": "unifashion_image_caption_score",
+    "selection_metric": "mean_macro_recall_10_50",
+    "parent_sha256": "df8226a0e61e41ebb5bf88f1870b0176118f75d14612ceb8c0e04cf91309a683",
+    "warning": "Screening selection only; full validation against base is required."
+  },
+  "trial_completion": [
+    {
+      "name": "lr1e5_b2",
+      "learning_rate": 1e-05,
+      "batch_size": 2,
+      "updates": 600,
+      "train_examples": 1200,
+      "status_in_notebook": "trial_completed",
+      "logged_updates": 25
+    },
+    {
+      "name": "lr5e6_b2",
+      "learning_rate": 5e-06,
+      "batch_size": 2,
+      "updates": 600,
+      "train_examples": 1200,
+      "status_in_notebook": "trial_completed",
+      "logged_updates": 25
+    },
+    {
+      "name": "lr1e5_b4",
+      "learning_rate": 1e-05,
+      "batch_size": 4,
+      "updates": 300,
+      "train_examples": 1200,
+      "status_in_notebook": "trial_completed",
+      "logged_updates": 13
+    }
+  ],
+  "full_validation_last_saved_line": "dress: queries 900/2017",
+  "full_validation_summary_present": false,
+  "interruption_reason": "Colab usage exhausted (user report); saved output itself contains no quota error",
+  "checks": [
+    "Both screening methods and all three categories present for base/three trials",
+    "Aggregate Recall matches reported per-category percentages",
+    "Trial end updates, LR and batch match console output/config",
+    "Selection recomputed from unrounded reported metrics"
+  ],
+  "limits": [
+    "No trial checkpoint or original result JSON/per-query CSV received",
+    "Cannot independently recompute target ranks or identify per-query regressions",
+    "Training log contains selected updates only, not full loss history",
+    "Last saved notebook output may precede the actual runtime stop"
+  ],
+  "extracted_files_sha256": {
+    "base_screen.txt": "633c4d62358461a868a46bdd87852fbb9e817361df1e42643cc64577f470a8af",
+    "full_validation_interrupted.txt": "30d368aa53d10e1a0a852849e64b8f6cae1620085840e3f0436ea1ff2774acc0",
+    "logged_training_updates.csv": "7ca09edcf5858000fe06bd2f04bf6f8b456edbe1f7762b83fc0b5e896e8d21c8",
+    "report_displayed_before_full_validation.md": "341e1fb41192fe44dae6d3cdee9470eb524dec3935bebe19428db184f80e6fbe",
+    "screening_all_categories.csv": "defb6e96786b2df37c13ca61709cebadaf7f6452445623920f99a36fbacae14a",
+    "screening_comparison.csv": "0539241c3a7486d451f4ed82f389495ba718cb1b954c431e58f266cde4f51526",
+    "setup.txt": "9ee53e5ec2d0e136d6aee7b89b573e73961870663467f507679c06afa938be60",
+    "snapshot.txt": "087a9e1fbf9ddc796f7e18e45a64fe23aeb211843a00d2933743cdf04dca0e2f",
+    "trials_and_screen.txt": "ddb8df82afa9ae3eecc5b45566bb987707b970e7387c592e45e1ee5fa45f0ccf",
+    "trial_completion.csv": "c30d362d2a396af743ba517ef8e3e0121c2cd2029795baf6269a72d50424b7c9"
+  }
+}

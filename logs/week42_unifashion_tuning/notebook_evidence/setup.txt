@@ -1,0 +1,376 @@
+Collecting torch==2.6.0 (from -r requirements-unifashion.txt (line 2))
+  Downloading torch-2.6.0-cp312-cp312-manylinux1_x86_64.whl.metadata (28 kB)
+Collecting torchvision==0.21.0 (from -r requirements-unifashion.txt (line 3))
+  Downloading torchvision-0.21.0-cp312-cp312-manylinux1_x86_64.whl.metadata (6.1 kB)
+Collecting transformers==4.36.2 (from -r requirements-unifashion.txt (line 4))
+  Downloading transformers-4.36.2-py3-none-any.whl.metadata (126 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.8/126.8 kB 18.3 MB/s eta 0:00:00
+Collecting tokenizers==0.15.2 (from -r requirements-unifashion.txt (line 5))
+  Downloading tokenizers-0.15.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+Collecting timm==0.9.12 (from -r requirements-unifashion.txt (line 6))
+  Downloading timm-0.9.12-py3-none-any.whl.metadata (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 10.8 MB/s eta 0:00:00
+Collecting omegaconf==2.3.0 (from -r requirements-unifashion.txt (line 7))
+  Downloading omegaconf-2.3.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting iopath==0.1.10 (from -r requirements-unifashion.txt (line 8))
+  Downloading iopath-0.1.10.tar.gz (42 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.2/42.2 kB 5.5 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting fairscale==0.4.13 (from -r requirements-unifashion.txt (line 9))
+  Downloading fairscale-0.4.13.tar.gz (266 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 266.3/266.3 kB 32.2 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting einops==0.7.0 (from -r requirements-unifashion.txt (line 10))
+  Downloading einops-0.7.0-py3-none-any.whl.metadata (13 kB)
+Collecting accelerate==0.27.2 (from -r requirements-unifashion.txt (line 11))
+  Downloading accelerate-0.27.2-py3-none-any.whl.metadata (18 kB)
+Collecting pandas==2.2.3 (from -r requirements-unifashion.txt (line 12))
+  Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.9/89.9 kB 12.2 MB/s eta 0:00:00
+Collecting numpy==1.26.4 (from -r requirements-unifashion.txt (line 13))
+  Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 8.5 MB/s eta 0:00:00
+Collecting Pillow==11.1.0 (from -r requirements-unifashion.txt (line 14))
+  Downloading pillow-11.1.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting matplotlib==3.9.4 (from -r requirements-unifashion.txt (line 15))
+  Downloading matplotlib-3.9.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting pytest==8.3.5 (from -r requirements-unifashion.txt (line 16))
+  Downloading pytest-8.3.5-py3-none-any.whl.metadata (7.6 kB)
+Requirement already satisfied: filelock in /usr/local/lib/python3.12/dist-packages (from torch==2.6.0->-r requirements-unifashion.txt (line 2)) (3.29.7)
+Requirement already satisfied: typing-extensions>=4.10.0 in /usr/local/lib/python3.12/dist-packages (from torch==2.6.0->-r requirements-unifashion.txt (line 2)) (4.16.0)
+Requirement already satisfied: networkx in /usr/local/lib/python3.12/dist-packages (from torch==2.6.0->-r requirements-unifashion.txt (line 2)) (3.6.1)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.12/dist-packages (from torch==2.6.0->-r requirements-unifashion.txt (line 2)) (3.1.6)
+Requirement already satisfied: fsspec in /usr/local/lib/python3.12/dist-packages (from torch==2.6.0->-r requirements-unifashion.txt (line 2)) (2025.3.0)
+Collecting nvidia-cuda-nvrtc-cu12==12.4.127 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-runtime-cu12==12.4.127 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-cupti-cu12==12.4.127 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cudnn-cu12==9.1.0.70 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cublas-cu12==12.4.5.8 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cufft-cu12==11.2.1.3 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-curand-cu12==10.3.5.147 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cusolver-cu12==11.6.1.9 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cusparse-cu12==12.3.1.170 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cusparselt-cu12==0.6.2 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading nvidia_cusparselt_cu12-0.6.2-py3-none-manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting nvidia-nccl-cu12==2.21.5 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvtx-cu12==12.4.127 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-nvjitlink-cu12==12.4.127 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting triton==3.2.0 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading triton-3.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.4 kB)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.12/dist-packages (from torch==2.6.0->-r requirements-unifashion.txt (line 2)) (75.2.0)
+Collecting sympy==1.13.1 (from torch==2.6.0->-r requirements-unifashion.txt (line 2))
+  Downloading sympy-1.13.1-py3-none-any.whl.metadata (12 kB)
+Collecting huggingface-hub<1.0,>=0.19.3 (from transformers==4.36.2->-r requirements-unifashion.txt (line 4))
+  Downloading huggingface_hub-0.36.2-py3-none-any.whl.metadata (15 kB)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from transformers==4.36.2->-r requirements-unifashion.txt (line 4)) (26.2)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers==4.36.2->-r requirements-unifashion.txt (line 4)) (6.0.3)
+Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.12/dist-packages (from transformers==4.36.2->-r requirements-unifashion.txt (line 4)) (2025.11.3)
+Requirement already satisfied: requests in /usr/local/lib/python3.12/dist-packages (from transformers==4.36.2->-r requirements-unifashion.txt (line 4)) (2.32.4)
+Requirement already satisfied: safetensors>=0.3.1 in /usr/local/lib/python3.12/dist-packages (from transformers==4.36.2->-r requirements-unifashion.txt (line 4)) (0.8.0)
+Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.12/dist-packages (from transformers==4.36.2->-r requirements-unifashion.txt (line 4)) (4.67.3)
+Requirement already satisfied: antlr4-python3-runtime==4.9.* in /usr/local/lib/python3.12/dist-packages (from omegaconf==2.3.0->-r requirements-unifashion.txt (line 7)) (4.9.3)
+Collecting portalocker (from iopath==0.1.10->-r requirements-unifashion.txt (line 8))
+  Downloading portalocker-4.4.1-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: psutil in /usr/local/lib/python3.12/dist-packages (from accelerate==0.27.2->-r requirements-unifashion.txt (line 11)) (5.9.5)
+Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.12/dist-packages (from pandas==2.2.3->-r requirements-unifashion.txt (line 12)) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.12/dist-packages (from pandas==2.2.3->-r requirements-unifashion.txt (line 12)) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.12/dist-packages (from pandas==2.2.3->-r requirements-unifashion.txt (line 12)) (2026.3)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib==3.9.4->-r requirements-unifashion.txt (line 15)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib==3.9.4->-r requirements-unifashion.txt (line 15)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib==3.9.4->-r requirements-unifashion.txt (line 15)) (4.63.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib==3.9.4->-r requirements-unifashion.txt (line 15)) (1.5.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib==3.9.4->-r requirements-unifashion.txt (line 15)) (3.3.2)
+Requirement already satisfied: iniconfig in /usr/local/lib/python3.12/dist-packages (from pytest==8.3.5->-r requirements-unifashion.txt (line 16)) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.12/dist-packages (from pytest==8.3.5->-r requirements-unifashion.txt (line 16)) (1.6.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.12/dist-packages (from sympy==1.13.1->torch==2.6.0->-r requirements-unifashion.txt (line 2)) (1.3.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<1.0,>=0.19.3->transformers==4.36.2->-r requirements-unifashion.txt (line 4)) (1.5.1)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.8.2->pandas==2.2.3->-r requirements-unifashion.txt (line 12)) (1.17.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.12/dist-packages (from jinja2->torch==2.6.0->-r requirements-unifashion.txt (line 2)) (3.0.3)
+Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.12/dist-packages (from requests->transformers==4.36.2->-r requirements-unifashion.txt (line 4)) (3.4.9)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.12/dist-packages (from requests->transformers==4.36.2->-r requirements-unifashion.txt (line 4)) (3.18)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.12/dist-packages (from requests->transformers==4.36.2->-r requirements-unifashion.txt (line 4)) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.12/dist-packages (from requests->transformers==4.36.2->-r requirements-unifashion.txt (line 4)) (2026.6.17)
+Downloading torch-2.6.0-cp312-cp312-manylinux1_x86_64.whl (766.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 766.6/766.6 MB 2.9 MB/s eta 0:00:00
+Downloading torchvision-0.21.0-cp312-cp312-manylinux1_x86_64.whl (7.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 97.0 MB/s eta 0:00:00
+Downloading transformers-4.36.2-py3-none-any.whl (8.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.2/8.2 MB 94.5 MB/s eta 0:00:00
+Downloading tokenizers-0.15.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 142.7 MB/s eta 0:00:00
+Downloading timm-0.9.12-py3-none-any.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 123.3 MB/s eta 0:00:00
+Downloading omegaconf-2.3.0-py3-none-any.whl (79 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 12.4 MB/s eta 0:00:00
+Downloading einops-0.7.0-py3-none-any.whl (44 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 6.7 MB/s eta 0:00:00
+Downloading accelerate-0.27.2-py3-none-any.whl (279 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 280.0/280.0 kB 42.9 MB/s eta 0:00:00
+Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 136.2 MB/s eta 0:00:00
+Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.0/18.0 MB 79.8 MB/s eta 0:00:00
+Downloading pillow-11.1.0-cp312-cp312-manylinux_2_28_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 87.5 MB/s eta 0:00:00
+Downloading matplotlib-3.9.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 105.3 MB/s eta 0:00:00
+Downloading pytest-8.3.5-py3-none-any.whl (343 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.6/343.6 kB 43.3 MB/s eta 0:00:00
+Downloading nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl (363.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 363.4/363.4 MB 5.4 MB/s eta 0:00:00
+Downloading nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (13.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.8/13.8 MB 85.6 MB/s eta 0:00:00
+Downloading nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (24.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.6/24.6 MB 82.6 MB/s eta 0:00:00
+Downloading nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (883 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 883.7/883.7 kB 63.6 MB/s eta 0:00:00
+Downloading nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl (664.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 3.2 MB/s eta 0:00:00
+Downloading nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl (211.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.5/211.5 MB 7.4 MB/s eta 0:00:00
+Downloading nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl (56.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 19.3 MB/s eta 0:00:00
+Downloading nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl (127.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 127.9/127.9 MB 10.8 MB/s eta 0:00:00
+Downloading nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl (207.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 207.5/207.5 MB 9.2 MB/s eta 0:00:00
+Downloading nvidia_cusparselt_cu12-0.6.2-py3-none-manylinux2014_x86_64.whl (150.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.1/150.1 MB 9.0 MB/s eta 0:00:00
+Downloading nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl (188.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.7/188.7 MB 8.3 MB/s eta 0:00:00
+Downloading nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (21.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.1/21.1 MB 46.3 MB/s eta 0:00:00
+Downloading nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (99 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.1/99.1 kB 12.8 MB/s eta 0:00:00
+Downloading sympy-1.13.1-py3-none-any.whl (6.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 59.6 MB/s eta 0:00:00
+Downloading triton-3.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (253.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 253.2/253.2 MB 6.7 MB/s eta 0:00:00
+Downloading huggingface_hub-0.36.2-py3-none-any.whl (566 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 49.3 MB/s eta 0:00:00
+Downloading portalocker-4.4.1-py3-none-any.whl (129 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.7/129.7 kB 11.7 MB/s eta 0:00:00
+Building wheels for collected packages: iopath, fairscale
+  Building wheel for iopath (setup.py): started
+  Building wheel for iopath (setup.py): finished with status 'done'
+  Created wheel for iopath: filename=iopath-0.1.10-py3-none-any.whl size=31527 sha256=47e8131cee3b1efa68faea34d9ee0a1755746329129f49118c1a88991459ce21
+  Stored in directory: /root/.cache/pip/wheels/7c/96/04/4f5f31ff812f684f69f40cb1634357812220aac58d4698048c
+  Building wheel for fairscale (pyproject.toml): started
+  Building wheel for fairscale (pyproject.toml): finished with status 'done'
+  Created wheel for fairscale: filename=fairscale-0.4.13-py3-none-any.whl size=332207 sha256=c7772996432ae7b5e38d8f86e3f564bc3ca5ca027965db5408e9a27fbbf63481
+  Stored in directory: /root/.cache/pip/wheels/5a/88/aa/d84b2cf1bad6b273cbf661640141a82c7b9f496e024f80aac0
+Successfully built iopath fairscale
+Installing collected packages: triton, nvidia-cusparselt-cu12, sympy, pytest, portalocker, Pillow, omegaconf, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, einops, pandas, nvidia-cusparse-cu12, nvidia-cudnn-cu12, iopath, huggingface-hub, tokenizers, nvidia-cusolver-cu12, matplotlib, transformers, torch, torchvision, fairscale, accelerate, timm
+  Attempting uninstall: triton
+    Found existing installation: triton 3.6.0
+    Uninstalling triton-3.6.0:
+      Successfully uninstalled triton-3.6.0
+  Attempting uninstall: nvidia-cusparselt-cu12
+    Found existing installation: nvidia-cusparselt-cu12 0.7.1
+    Uninstalling nvidia-cusparselt-cu12-0.7.1:
+      Successfully uninstalled nvidia-cusparselt-cu12-0.7.1
+  Attempting uninstall: sympy
+    Found existing installation: sympy 1.14.0
+    Uninstalling sympy-1.14.0:
+      Successfully uninstalled sympy-1.14.0
+  Attempting uninstall: pytest
+    Found existing installation: pytest 8.4.2
+    Uninstalling pytest-8.4.2:
+      Successfully uninstalled pytest-8.4.2
+  Attempting uninstall: Pillow
+    Found existing installation: pillow 11.3.0
+    Uninstalling pillow-11.3.0:
+      Successfully uninstalled pillow-11.3.0
+  Attempting uninstall: omegaconf
+    Found existing installation: omegaconf 2.3.1
+    Uninstalling omegaconf-2.3.1:
+      Successfully uninstalled omegaconf-2.3.1
+  Attempting uninstall: nvidia-nvtx-cu12
+    Found existing installation: nvidia-nvtx-cu12 12.8.90
+    Uninstalling nvidia-nvtx-cu12-12.8.90:
+      Successfully uninstalled nvidia-nvtx-cu12-12.8.90
+  Attempting uninstall: nvidia-nvjitlink-cu12
+    Found existing installation: nvidia-nvjitlink-cu12 12.8.93
+    Uninstalling nvidia-nvjitlink-cu12-12.8.93:
+      Successfully uninstalled nvidia-nvjitlink-cu12-12.8.93
+  Attempting uninstall: nvidia-nccl-cu12
+    Found existing installation: nvidia-nccl-cu12 2.28.9
+    Uninstalling nvidia-nccl-cu12-2.28.9:
+      Successfully uninstalled nvidia-nccl-cu12-2.28.9
+  Attempting uninstall: nvidia-curand-cu12
+    Found existing installation: nvidia-curand-cu12 10.3.9.90
+    Uninstalling nvidia-curand-cu12-10.3.9.90:
+      Successfully uninstalled nvidia-curand-cu12-10.3.9.90
+  Attempting uninstall: nvidia-cufft-cu12
+    Found existing installation: nvidia-cufft-cu12 11.3.3.83
+    Uninstalling nvidia-cufft-cu12-11.3.3.83:
+      Successfully uninstalled nvidia-cufft-cu12-11.3.3.83
+  Attempting uninstall: nvidia-cuda-runtime-cu12
+    Found existing installation: nvidia-cuda-runtime-cu12 12.8.90
+    Uninstalling nvidia-cuda-runtime-cu12-12.8.90:
+      Successfully uninstalled nvidia-cuda-runtime-cu12-12.8.90
+  Attempting uninstall: nvidia-cuda-nvrtc-cu12
+    Found existing installation: nvidia-cuda-nvrtc-cu12 12.8.93
+    Uninstalling nvidia-cuda-nvrtc-cu12-12.8.93:
+      Successfully uninstalled nvidia-cuda-nvrtc-cu12-12.8.93
+  Attempting uninstall: nvidia-cuda-cupti-cu12
+    Found existing installation: nvidia-cuda-cupti-cu12 12.8.90
+    Uninstalling nvidia-cuda-cupti-cu12-12.8.90:
+      Successfully uninstalled nvidia-cuda-cupti-cu12-12.8.90
+  Attempting uninstall: nvidia-cublas-cu12
+    Found existing installation: nvidia-cublas-cu12 12.8.4.1
+    Uninstalling nvidia-cublas-cu12-12.8.4.1:
+      Successfully uninstalled nvidia-cublas-cu12-12.8.4.1
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.0.2
+    Uninstalling numpy-2.0.2:
+      Successfully uninstalled numpy-2.0.2
+  Attempting uninstall: einops
+    Found existing installation: einops 0.8.2
+    Uninstalling einops-0.8.2:
+      Successfully uninstalled einops-0.8.2
+  Attempting uninstall: pandas
+    Found existing installation: pandas 2.2.2
+    Uninstalling pandas-2.2.2:
+      Successfully uninstalled pandas-2.2.2
+  Attempting uninstall: nvidia-cusparse-cu12
+    Found existing installation: nvidia-cusparse-cu12 12.5.8.93
+    Uninstalling nvidia-cusparse-cu12-12.5.8.93:
+      Successfully uninstalled nvidia-cusparse-cu12-12.5.8.93
+  Attempting uninstall: nvidia-cudnn-cu12
+    Found existing installation: nvidia-cudnn-cu12 9.19.0.56
+    Uninstalling nvidia-cudnn-cu12-9.19.0.56:
+      Successfully uninstalled nvidia-cudnn-cu12-9.19.0.56
+  Attempting uninstall: huggingface-hub
+    Found existing installation: huggingface_hub 1.23.0
+    Uninstalling huggingface_hub-1.23.0:
+      Successfully uninstalled huggingface_hub-1.23.0
+  Attempting uninstall: tokenizers
+    Found existing installation: tokenizers 0.22.2
+    Uninstalling tokenizers-0.22.2:
+      Successfully uninstalled tokenizers-0.22.2
+  Attempting uninstall: nvidia-cusolver-cu12
+    Found existing installation: nvidia-cusolver-cu12 11.7.3.90
+    Uninstalling nvidia-cusolver-cu12-11.7.3.90:
+      Successfully uninstalled nvidia-cusolver-cu12-11.7.3.90
+  Attempting uninstall: matplotlib
+    Found existing installation: matplotlib 3.10.0
+    Uninstalling matplotlib-3.10.0:
+      Successfully uninstalled matplotlib-3.10.0
+  Attempting uninstall: transformers
+    Found existing installation: transformers 5.13.1
+    Uninstalling transformers-5.13.1:
+      Successfully uninstalled transformers-5.13.1
+  Attempting uninstall: torch
+    Found existing installation: torch 2.11.0+cu128
+    Uninstalling torch-2.11.0+cu128:
+      Successfully uninstalled torch-2.11.0+cu128
+  Attempting uninstall: torchvision
+    Found existing installation: torchvision 0.26.0+cu128
+    Uninstalling torchvision-0.26.0+cu128:
+      Successfully uninstalled torchvision-0.26.0+cu128
+  Attempting uninstall: accelerate
+    Found existing installation: accelerate 1.14.0
+    Uninstalling accelerate-1.14.0:
+      Successfully uninstalled accelerate-1.14.0
+  Attempting uninstall: timm
+    Found existing installation: timm 1.0.28
+    Uninstalling timm-1.0.28:
+      Successfully uninstalled timm-1.0.28
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+google-colab 1.0.0 requires pandas==2.2.2, but you have pandas 2.2.3 which is incompatible.
+cupy-cuda12x 14.0.1 requires numpy<2.6,>=2.0, but you have numpy 1.26.4 which is incompatible.
+gradio 6.20.0 requires huggingface-hub<2.0,>=1.2.0, but you have huggingface-hub 0.36.2 which is incompatible.
+jax 0.7.2 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+jaxlib 0.7.2 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+opencv-contrib-python 4.13.0.92 requires numpy>=2; python_version >= "3.9", but you have numpy 1.26.4 which is incompatible.
+opencv-python 5.0.0.93 requires numpy>=2; python_version >= "3.9", but you have numpy 1.26.4 which is incompatible.
+opencv-python-headless 5.0.0.93 requires numpy>=2; python_version >= "3.9", but you have numpy 1.26.4 which is incompatible.
+pytensor 2.38.3 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+rasterio 1.5.0 requires numpy>=2, but you have numpy 1.26.4 which is incompatible.
+sentence-transformers 5.6.0 requires transformers<6.0.0,>=4.41.0, but you have transformers 4.36.2 which is incompatible.
+shap 0.52.0 requires numpy>=2, but you have numpy 1.26.4 which is incompatible.
+tifffile 2026.4.11 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+tobler 0.14.0 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+xarray-einstats 0.10.0 requires numpy>=2.0, but you have numpy 1.26.4 which is incompatible.
+Successfully installed Pillow-11.1.0 accelerate-0.27.2 einops-0.7.0 fairscale-0.4.13 huggingface-hub-0.36.2 iopath-0.1.10 matplotlib-3.9.4 numpy-1.26.4 nvidia-cublas-cu12-12.4.5.8 nvidia-cuda-cupti-cu12-12.4.127 nvidia-cuda-nvrtc-cu12-12.4.127 nvidia-cuda-runtime-cu12-12.4.127 nvidia-cudnn-cu12-9.1.0.70 nvidia-cufft-cu12-11.2.1.3 nvidia-curand-cu12-10.3.5.147 nvidia-cusolver-cu12-11.6.1.9 nvidia-cusparse-cu12-12.3.1.170 nvidia-cusparselt-cu12-0.6.2 nvidia-nccl-cu12-2.21.5 nvidia-nvjitlink-cu12-12.4.127 nvidia-nvtx-cu12-12.4.127 omegaconf-2.3.0 pandas-2.2.3 portalocker-4.4.1 pytest-8.3.5 sympy-1.13.1 timm-0.9.12 tokenizers-0.15.2 torch-2.6.0 torchvision-0.21.0 transformers-4.36.2 triton-3.2.0
+torch: 2.6.0 (expected 2.6.0)
+torchvision: 0.21.0 (expected 0.21.0)
+transformers: 4.36.2 (expected 4.36.2)
+tokenizers: 0.15.2 (expected 0.15.2)
+timm: 0.9.12 (expected 0.9.12)
+omegaconf: 2.3.0 (expected 2.3.0)
+iopath: 0.1.10 (expected 0.1.10)
+fairscale: 0.4.13 (expected 0.4.13)
+einops: 0.7.0 (expected 0.7.0)
+accelerate: 0.27.2 (expected 0.27.2)
+pandas: 2.2.3 (expected 2.2.3)
+numpy: 1.26.4 (expected 1.26.4)
+Pillow: 11.1.0 (expected 11.1.0)
+matplotlib: 3.9.4 (expected 3.9.4)
+pytest: 8.3.5 (expected 8.3.5)
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+Verified in /usr/bin/python3: /usr/local/lib/python3.12/dist-packages/transformers/__init__.py
+Tesla T4
+Already present: /content/unifashion_week8/checkpoints/unifashion/pretrain/none_lora_0.pt
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/README.md
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/cir_ft.sh
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/blip_fine_tune_2.py
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/data_utils.py
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/lavis/common/registry.py
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/lavis/common/dist_utils.py
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/lavis/common/utils.py
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/lavis/common/logger.py
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/lavis/models/base_model.py
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/lavis/models/eva_vit.py
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/lavis/models/clip_vit.py
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/lavis/models/blip2_models/blip2.py
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/lavis/models/blip2_models/Qformer.py
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/lavis/models/blip2_models/blip2_qformer_cir_rerank.py
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/lavis/models/blip_models/blip_outputs.py
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/src/lavis/configs/models/blip2/blip2_pretrain.yaml
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/dataset/next_llava.train.dress.caption.json
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/dataset/next_llava.train.shirt.caption.json
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/dataset/next_llava.train.toptee.caption.json
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/dataset/next_llava.val.dress.caption.json
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/dataset/next_llava.val.shirt.caption.json
+Downloading https://raw.githubusercontent.com/xiangyu-mm/UniFashion/f01a46fb7ed08255fcb52a943d9bcefde03c8eaf/dataset/next_llava.val.toptee.caption.json
+Already present: /content/unifashion_week8/checkpoints/unifashion/bert-base-uncased/config.json
+Already present: /content/unifashion_week8/checkpoints/unifashion/bert-base-uncased/vocab.txt
+Already present: /content/unifashion_week8/checkpoints/unifashion/bert-base-uncased/tokenizer_config.json
+Already present: /content/unifashion_week8/checkpoints/unifashion/eva_vit_g.pth
+Manifest: /content/unifashion_week8/checkpoints/unifashion/download_manifest.json
+............                                                             [100%]
+=============================== warnings summary ===============================
+tests/test_fashioniq_evaluation.py::test_official_inference_single_query_matches_batch_and_caption_score
+  /usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+    _torch_pytree._register_pytree_node(
+
+tests/test_fashioniq_evaluation.py::test_official_inference_single_query_matches_batch_and_caption_score
+tests/test_fashioniq_evaluation.py::test_official_inference_single_query_matches_batch_and_caption_score
+  /usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+    _torch_pytree._register_pytree_node(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+12 passed, 3 warnings in 13.49s

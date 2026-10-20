@@ -1,0 +1,211 @@
+Verified 10000/40151 images
+Verified 20000/40151 images
+Verified 30000/40151 images
+Verified 40000/40151 images
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+Saved trial checkpoint: 0/600 updates
+{"update": 1, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 6.596205366804497e-06, "loss_ttc": 0.0, "loss": 6.596205366804497e-06, "grad_norm_before_clip": 0.00016740287537686527, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.1967733860001317}
+{"update": 25, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 4.9008802307071164e-05, "loss_ttc": 0.0, "loss": 4.9008802307071164e-05, "grad_norm_before_clip": 0.0031603374518454075, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.362397602999863}
+{"update": 50, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 2.241022048110608e-05, "loss_ttc": 0.0, "loss": 2.241022048110608e-05, "grad_norm_before_clip": 0.0014214258408173919, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3554864100001396}
+{"update": 75, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 1.5437270121765323e-05, "loss_ttc": 0.0, "loss": 1.5437270121765323e-05, "grad_norm_before_clip": 0.0010101167717948556, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.2987609940000766}
+{"update": 100, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 1.7185428077937104e-05, "loss_ttc": 0.0, "loss": 1.7185428077937104e-05, "grad_norm_before_clip": 0.0007793073891662061, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.367310797999835}
+Saved trial checkpoint: 100/600 updates
+{"update": 125, "samples": 2, "lr": 1e-05, "loss_itc": 0.00018378694949205965, "loss_itm": 0.0004296055994927883, "loss_ttc": 0.002822820097208023, "loss": 0.0034362126607447863, "grad_norm_before_clip": 2.1585943698883057, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.403731106000123}
+{"update": 150, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 9.13929852686124e-06, "loss_ttc": 5.9604641222676946e-08, "loss": 9.19890317163663e-06, "grad_norm_before_clip": 0.00024195587320718914, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4530704939998031}
+{"update": 175, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 1.2039920875395183e-05, "loss_ttc": 0.0, "loss": 1.2039920875395183e-05, "grad_norm_before_clip": 0.00043601388460956514, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.300880736000181}
+{"update": 200, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 4.4504672587208916e-06, "loss_ttc": 0.0, "loss": 4.4504672587208916e-06, "grad_norm_before_clip": 0.00010896438470808789, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.366230075999738}
+Saved trial checkpoint: 200/600 updates
+{"update": 225, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 6.059779479983263e-06, "loss_ttc": 0.0, "loss": 6.059779479983263e-06, "grad_norm_before_clip": 0.00014835296315141022, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.412336028000027}
+{"update": 250, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 5.344527380657382e-06, "loss_ttc": 0.0, "loss": 5.344527380657382e-06, "grad_norm_before_clip": 0.00013589307491201907, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.6705026380000163}
+{"update": 275, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 2.048357237072196e-05, "loss_ttc": 0.0, "loss": 2.048357237072196e-05, "grad_norm_before_clip": 0.000970910070464015, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3413968710001427}
+{"update": 300, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 3.2462146918987855e-05, "loss_ttc": 0.0, "loss": 3.2462146918987855e-05, "grad_norm_before_clip": 0.0018324002157896757, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4001979459999347}
+Saved trial checkpoint: 300/600 updates
+{"update": 325, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 5.2849231906293426e-06, "loss_ttc": 0.0, "loss": 5.2849231906293426e-06, "grad_norm_before_clip": 0.00013020365440752357, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.7684146470000996}
+{"update": 350, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 9.516754289506935e-06, "loss_ttc": 0.0, "loss": 9.516754289506935e-06, "grad_norm_before_clip": 0.00026732133119367063, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4992478419999316}
+{"update": 375, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 3.294039925094694e-05, "loss_ttc": 4.1723239974089665e-07, "loss": 3.335763176437467e-05, "grad_norm_before_clip": 0.0015401546843349934, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.565615396999874}
+{"update": 400, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 2.048328133241739e-05, "loss_ttc": 0.0, "loss": 2.048328133241739e-05, "grad_norm_before_clip": 0.0014765621162950993, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4041167419995872}
+Saved trial checkpoint: 400/600 updates
+{"update": 425, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 2.2192032702150755e-05, "loss_ttc": 0.0, "loss": 2.2192032702150755e-05, "grad_norm_before_clip": 0.0011192690581083298, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4263336569997591}
+{"update": 450, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 2.8747841497533955e-05, "loss_ttc": 0.0, "loss": 2.8747841497533955e-05, "grad_norm_before_clip": 0.0013976884074509144, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4722131769999578}
+{"update": 475, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 4.967034328728914e-06, "loss_ttc": 0.0, "loss": 4.967034328728914e-06, "grad_norm_before_clip": 0.00012110130046494305, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.472365673999775}
+{"update": 500, "samples": 2, "lr": 1e-05, "loss_itc": 8.344643447344424e-07, "loss_itm": 9.993636922445148e-06, "loss_ttc": 0.0, "loss": 1.0828101039805915e-05, "grad_norm_before_clip": 0.0013434776337817311, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.378367530000105}
+Saved trial checkpoint: 500/600 updates
+{"update": 525, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 2.608540489745792e-05, "loss_ttc": 0.0, "loss": 2.608540489745792e-05, "grad_norm_before_clip": 0.0012280544033274055, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4065616449997833}
+{"update": 550, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 0.0023503743577748537, "loss_ttc": 0.0, "loss": 0.0023503743577748537, "grad_norm_before_clip": 0.2451351135969162, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.6276704870001595}
+{"update": 575, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 1.8655602616490796e-05, "loss_ttc": 0.0, "loss": 1.8655602616490796e-05, "grad_norm_before_clip": 0.0009159533074125648, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.426968923000004}
+{"update": 600, "samples": 2, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 8.920717846194748e-06, "loss_ttc": 0.0, "loss": 8.920717846194748e-06, "grad_norm_before_clip": 0.00044635721133090556, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3957430239997848}
+Saved trial checkpoint: 600/600 updates
+Saved trial checkpoint: 600/600 updates
+Reading and hashing the checkpoint snapshot...
+Verifying 1534 validation images...
+Verifying the frozen EVA-G checkpoint...
+Snapshot progress: {"optimizer_steps": 600, "completed_epochs": null, "next_epoch_one_based": null, "completed_batches_in_current_epoch": null}
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+dress: gallery 100/512
+dress: gallery 200/512
+dress: gallery 300/512
+dress: gallery 400/512
+dress: gallery 500/512
+dress: gallery 512/512
+dress: queries 64/64
+shirt: gallery 100/512
+shirt: gallery 200/512
+shirt: gallery 300/512
+shirt: gallery 400/512
+shirt: gallery 500/512
+shirt: gallery 512/512
+shirt: queries 64/64
+toptee: gallery 100/512
+toptee: gallery 200/512
+toptee: gallery 300/512
+toptee: gallery 400/512
+toptee: gallery 500/512
+toptee: gallery 512/512
+toptee: queries 64/64
+unifashion_image_score [{'category': 'dress', 'queries': 64, 'gallery_size': 512, 'Recall@10': 70.3125, 'Recall@50': 84.375}, {'category': 'shirt', 'queries': 64, 'gallery_size': 512, 'Recall@10': 85.9375, 'Recall@50': 98.4375}, {'category': 'toptee', 'queries': 64, 'gallery_size': 512, 'Recall@10': 71.875, 'Recall@50': 93.75}, {'category': 'MACRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 76.04166666666667, 'Recall@50': 92.1875}, {'category': 'MICRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 76.04166666666666, 'Recall@50': 92.1875}]
+unifashion_image_caption_score [{'category': 'dress', 'queries': 64, 'gallery_size': 512, 'Recall@10': 79.6875, 'Recall@50': 93.75}, {'category': 'shirt', 'queries': 64, 'gallery_size': 512, 'Recall@10': 95.3125, 'Recall@50': 98.4375}, {'category': 'toptee', 'queries': 64, 'gallery_size': 512, 'Recall@10': 87.5, 'Recall@50': 95.3125}, {'category': 'MACRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 87.5, 'Recall@50': 95.83333333333333}, {'category': 'MICRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 87.5, 'Recall@50': 95.83333333333334}]
+Verified 10000/40151 images
+Verified 20000/40151 images
+Verified 30000/40151 images
+Verified 40000/40151 images
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+Saved trial checkpoint: 0/600 updates
+{"update": 1, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 6.596205366804497e-06, "loss_ttc": 0.0, "loss": 6.596205366804497e-06, "grad_norm_before_clip": 0.00016740287537686527, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.4441480549994594}
+{"update": 25, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 4.28115417889785e-05, "loss_ttc": 0.0, "loss": 4.28115417889785e-05, "grad_norm_before_clip": 0.002648369176313281, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.2978654580001603}
+{"update": 50, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 2.2251304471865296e-05, "loss_ttc": 0.0, "loss": 2.2251304471865296e-05, "grad_norm_before_clip": 0.0014104919973760843, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4378723469999386}
+{"update": 75, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 1.5715415429440327e-05, "loss_ttc": 0.0, "loss": 1.5715415429440327e-05, "grad_norm_before_clip": 0.0009878466371446848, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.2800036449998515}
+{"update": 100, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 1.7642354578129016e-05, "loss_ttc": 0.0, "loss": 1.7642354578129016e-05, "grad_norm_before_clip": 0.0008168120984919369, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3661506809994535}
+Saved trial checkpoint: 100/600 updates
+{"update": 125, "samples": 2, "lr": 5e-06, "loss_itc": 0.000918616889975965, "loss_itm": 0.000659393088426441, "loss_ttc": 0.002472357591614127, "loss": 0.004050367511808872, "grad_norm_before_clip": 2.3184878826141357, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.7159271359996637}
+{"update": 150, "samples": 2, "lr": 5e-06, "loss_itc": 5.9604641222676946e-08, "loss_itm": 1.1026727406715509e-05, "loss_ttc": 0.0, "loss": 1.10863320514909e-05, "grad_norm_before_clip": 0.00030982165480963886, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.474567711000418}
+{"update": 175, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 1.6708698240108788e-05, "loss_ttc": 0.0, "loss": 1.6708698240108788e-05, "grad_norm_before_clip": 0.0007216790691018105, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.304623207000077}
+{"update": 200, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 4.847827767662238e-06, "loss_ttc": 0.0, "loss": 4.847827767662238e-06, "grad_norm_before_clip": 0.00012152907584095374, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3693057849995967}
+Saved trial checkpoint: 200/600 updates
+{"update": 225, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 6.874364316900028e-06, "loss_ttc": 0.0, "loss": 6.874364316900028e-06, "grad_norm_before_clip": 0.00017461659444961697, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.7539807610000935}
+{"update": 250, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 5.841226538905175e-06, "loss_ttc": 0.0, "loss": 5.841226538905175e-06, "grad_norm_before_clip": 0.00015608605463057756, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4620149100001072}
+{"update": 275, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 2.3364298613159917e-05, "loss_ttc": 0.0, "loss": 2.3364298613159917e-05, "grad_norm_before_clip": 0.0010669083567336202, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3403441359996577}
+{"update": 300, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 3.152850331389345e-05, "loss_ttc": 0.0, "loss": 3.152850331389345e-05, "grad_norm_before_clip": 0.0017338425386697054, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4017068320008548}
+Saved trial checkpoint: 300/600 updates
+{"update": 325, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 5.642546966555528e-06, "loss_ttc": 0.0, "loss": 5.642546966555528e-06, "grad_norm_before_clip": 0.00013929582200944424, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4103552870001295}
+{"update": 350, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 1.3092881999909878e-05, "loss_ttc": 0.0, "loss": 1.3092881999909878e-05, "grad_norm_before_clip": 0.0004098568169865757, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3557318780003698}
+{"update": 375, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 4.6250901505118236e-05, "loss_ttc": 2.1457642560562817e-06, "loss": 4.839666507905349e-05, "grad_norm_before_clip": 0.0034175910986959934, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.415438758000164}
+{"update": 400, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 1.6033205611165613e-05, "loss_ttc": 0.0, "loss": 1.6033205611165613e-05, "grad_norm_before_clip": 0.0009495904087089002, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4033451699997386}
+Saved trial checkpoint: 400/600 updates
+{"update": 425, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 2.1258238120935857e-05, "loss_ttc": 0.0, "loss": 2.1258238120935857e-05, "grad_norm_before_clip": 0.0010376990539953113, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4871677629998885}
+{"update": 450, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 3.299906893516891e-05, "loss_ttc": 0.0, "loss": 3.299906893516891e-05, "grad_norm_before_clip": 0.0017853172030299902, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.2965362329996424}
+{"update": 475, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 5.026638518756954e-06, "loss_ttc": 0.0, "loss": 5.026638518756954e-06, "grad_norm_before_clip": 0.0001215550146298483, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4490693309999187}
+{"update": 500, "samples": 2, "lr": 5e-06, "loss_itc": 5.8826324675465e-05, "loss_itm": 1.0649273463059217e-05, "loss_ttc": 0.0, "loss": 6.947560177650303e-05, "grad_norm_before_clip": 0.0640069916844368, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3757735389999652}
+Saved trial checkpoint: 500/600 updates
+{"update": 525, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 2.2191708922036923e-05, "loss_ttc": 0.0, "loss": 2.2191708922036923e-05, "grad_norm_before_clip": 0.001006737700663507, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.5851159200001348}
+{"update": 550, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 0.010733518749475479, "loss_ttc": 0.0, "loss": 0.010733518749475479, "grad_norm_before_clip": 2.4171090126037598, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.2950296459994206}
+{"update": 575, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 3.192585063516162e-05, "loss_ttc": 0.0, "loss": 3.192585063516162e-05, "grad_norm_before_clip": 0.002067123306915164, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.715743384000234}
+{"update": 600, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 1.2059758773830254e-05, "loss_ttc": 0.0, "loss": 1.2059758773830254e-05, "grad_norm_before_clip": 0.0008880224195308983, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3706897460006076}
+Saved trial checkpoint: 600/600 updates
+Saved trial checkpoint: 600/600 updates
+Reading and hashing the checkpoint snapshot...
+Verifying 1534 validation images...
+Verifying the frozen EVA-G checkpoint...
+Snapshot progress: {"optimizer_steps": 600, "completed_epochs": null, "next_epoch_one_based": null, "completed_batches_in_current_epoch": null}
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+dress: gallery 100/512
+dress: gallery 200/512
+dress: gallery 300/512
+dress: gallery 400/512
+dress: gallery 500/512
+dress: gallery 512/512
+dress: queries 64/64
+shirt: gallery 100/512
+shirt: gallery 200/512
+shirt: gallery 300/512
+shirt: gallery 400/512
+shirt: gallery 500/512
+shirt: gallery 512/512
+shirt: queries 64/64
+toptee: gallery 100/512
+toptee: gallery 200/512
+toptee: gallery 300/512
+toptee: gallery 400/512
+toptee: gallery 500/512
+toptee: gallery 512/512
+toptee: queries 64/64
+unifashion_image_score [{'category': 'dress', 'queries': 64, 'gallery_size': 512, 'Recall@10': 70.3125, 'Recall@50': 85.9375}, {'category': 'shirt', 'queries': 64, 'gallery_size': 512, 'Recall@10': 82.8125, 'Recall@50': 98.4375}, {'category': 'toptee', 'queries': 64, 'gallery_size': 512, 'Recall@10': 73.4375, 'Recall@50': 93.75}, {'category': 'MACRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 75.52083333333333, 'Recall@50': 92.70833333333333}, {'category': 'MICRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 75.52083333333334, 'Recall@50': 92.70833333333334}]
+unifashion_image_caption_score [{'category': 'dress', 'queries': 64, 'gallery_size': 512, 'Recall@10': 78.125, 'Recall@50': 93.75}, {'category': 'shirt', 'queries': 64, 'gallery_size': 512, 'Recall@10': 95.3125, 'Recall@50': 98.4375}, {'category': 'toptee', 'queries': 64, 'gallery_size': 512, 'Recall@10': 89.0625, 'Recall@50': 96.875}, {'category': 'MACRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 87.5, 'Recall@50': 96.35416666666667}, {'category': 'MICRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 87.5, 'Recall@50': 96.35416666666666}]
+Verified 10000/40151 images
+Verified 20000/40151 images
+Verified 30000/40151 images
+Verified 40000/40151 images
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+Saved trial checkpoint: 0/300 updates
+{"update": 1, "samples": 4, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 6.8246918090153486e-06, "loss_ttc": 5.960457656328799e-07, "loss": 7.420737347274553e-06, "grad_norm_before_clip": 0.0009002172737382352, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 3.3340685129996928}
+{"update": 25, "samples": 4, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 2.6134999643545598e-05, "loss_ttc": 0.0, "loss": 2.6134999643545598e-05, "grad_norm_before_clip": 0.0020813564769923687, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.527650910000375}
+{"update": 50, "samples": 4, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 2.3671274902881123e-05, "loss_ttc": 0.0, "loss": 2.3671274902881123e-05, "grad_norm_before_clip": 0.0009152960265055299, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.4599487870000303}
+{"update": 75, "samples": 4, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 1.7284861314692535e-05, "loss_ttc": 0.0, "loss": 1.7284861314692535e-05, "grad_norm_before_clip": 0.0005929532926529646, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.3977786059995196}
+{"update": 100, "samples": 4, "lr": 1e-05, "loss_itc": 1.4901156930591242e-07, "loss_itm": 9.9836597655667e-06, "loss_ttc": 0.0, "loss": 1.0132671377505176e-05, "grad_norm_before_clip": 0.0004171875480096787, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.443496335999953}
+Saved trial checkpoint: 100/300 updates
+{"update": 125, "samples": 4, "lr": 1e-05, "loss_itc": 1.9162411263096146e-05, "loss_itm": 3.760753315873444e-05, "loss_ttc": 0.00011944896687055007, "loss": 0.00017621892038732767, "grad_norm_before_clip": 0.13471944630146027, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.382279853}
+{"update": 150, "samples": 4, "lr": 1e-05, "loss_itc": 0.0002532360376790166, "loss_itm": 0.0005866448627784848, "loss_ttc": 2.3841846541472478e-07, "loss": 0.000840119319036603, "grad_norm_before_clip": 0.20881706476211548, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.3868205830003717}
+{"update": 175, "samples": 4, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 0.00014300648763310164, "loss_ttc": 0.0, "loss": 0.00014300648763310164, "grad_norm_before_clip": 0.01167336106300354, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.504685709000114}
+{"update": 200, "samples": 4, "lr": 1e-05, "loss_itc": 7.659079528821167e-06, "loss_itm": 0.0004128908331040293, "loss_ttc": 0.0, "loss": 0.00042054991354234517, "grad_norm_before_clip": 0.022524947300553322, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.427425076999498}
+Saved trial checkpoint: 200/300 updates
+{"update": 225, "samples": 4, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 0.0006616910104639828, "loss_ttc": 0.0, "loss": 0.0006616910104639828, "grad_norm_before_clip": 0.026310347020626068, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.3626703319996523}
+{"update": 250, "samples": 4, "lr": 1e-05, "loss_itc": 8.745451486902311e-05, "loss_itm": 3.6207369703333825e-05, "loss_ttc": 0.0, "loss": 0.00012366188457235694, "grad_norm_before_clip": 0.08482161164283752, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.2972809319999214}
+{"update": 275, "samples": 4, "lr": 1e-05, "loss_itc": 0.0, "loss_itm": 0.040542665868997574, "loss_ttc": 5.960463766996327e-08, "loss": 0.04054272547364235, "grad_norm_before_clip": 7.53943395614624, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.5319362580003144}
+{"update": 300, "samples": 4, "lr": 1e-05, "loss_itc": 4.643857955932617, "loss_itm": 0.3094142973423004, "loss_ttc": 3.637674331665039, "loss": 8.590946197509766, "grad_norm_before_clip": 849.27099609375, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.470216105999498}
+Saved trial checkpoint: 300/300 updates
+Saved trial checkpoint: 300/300 updates
+Reading and hashing the checkpoint snapshot...
+Verifying 1534 validation images...
+Verifying the frozen EVA-G checkpoint...
+Snapshot progress: {"optimizer_steps": 300, "completed_epochs": null, "next_epoch_one_based": null, "completed_batches_in_current_epoch": null}
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+dress: gallery 100/512
+dress: gallery 200/512
+dress: gallery 300/512
+dress: gallery 400/512
+dress: gallery 500/512
+dress: gallery 512/512
+dress: queries 64/64
+shirt: gallery 100/512
+shirt: gallery 200/512
+shirt: gallery 300/512
+shirt: gallery 400/512
+shirt: gallery 500/512
+shirt: gallery 512/512
+shirt: queries 64/64
+toptee: gallery 100/512
+toptee: gallery 200/512
+toptee: gallery 300/512
+toptee: gallery 400/512
+toptee: gallery 500/512
+toptee: gallery 512/512
+toptee: queries 64/64
+unifashion_image_score [{'category': 'dress', 'queries': 64, 'gallery_size': 512, 'Recall@10': 67.1875, 'Recall@50': 85.9375}, {'category': 'shirt', 'queries': 64, 'gallery_size': 512, 'Recall@10': 84.375, 'Recall@50': 98.4375}, {'category': 'toptee', 'queries': 64, 'gallery_size': 512, 'Recall@10': 64.0625, 'Recall@50': 93.75}, {'category': 'MACRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 71.875, 'Recall@50': 92.70833333333333}, {'category': 'MICRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 71.875, 'Recall@50': 92.70833333333334}]
+unifashion_image_caption_score [{'category': 'dress', 'queries': 64, 'gallery_size': 512, 'Recall@10': 85.9375, 'Recall@50': 92.1875}, {'category': 'shirt', 'queries': 64, 'gallery_size': 512, 'Recall@10': 95.3125, 'Recall@50': 98.4375}, {'category': 'toptee', 'queries': 64, 'gallery_size': 512, 'Recall@10': 89.0625, 'Recall@50': 95.3125}, {'category': 'MACRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 90.10416666666667, 'Recall@50': 95.3125}, {'category': 'MICRO', 'queries': 192, 'gallery_size': None, 'Recall@10': 90.10416666666666, 'Recall@50': 95.3125}]
+{
+  "ready": true,
+  "selected": "lr1e5_b4",
+  "failed_trials": [],
+  "selection_method": "unifashion_image_caption_score",
+  "selection_metric": "mean_macro_recall_10_50",
+  "parent_sha256": "df8226a0e61e41ebb5bf88f1870b0176118f75d14612ceb8c0e04cf91309a683",
+  "warning": "Screening selection only; full validation against base is required."
+}
+{'ready': True, 'selected': 'lr1e5_b4', 'failed_trials': [], 'selection_method': 'unifashion_image_caption_score', 'selection_metric': 'mean_macro_recall_10_50', 'parent_sha256': 'df8226a0e61e41ebb5bf88f1870b0176118f75d14612ceb8c0e04cf91309a683', 'warning': 'Screening selection only; full validation against base is required.'}

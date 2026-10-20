@@ -1,0 +1,44 @@
+{
+  "status": "prepared_not_gpu_trained",
+  "train_examples": 1200,
+  "screen_queries": 192,
+  "screen_gallery_per_category": 512,
+  "train_csv_sha256": "d5fee192b56690aae63c499abf88da80d50175e89f9ac3baedba5d1d643cfaaa",
+  "source_protocol": {
+    "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+    "gallery_sha256": {
+      "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+      "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+      "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+    },
+    "split": "val",
+    "exclude_reference": true,
+    "ks": [
+      10,
+      50
+    ],
+    "tie_break": "descending score, then official gallery order",
+    "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+    "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+  },
+  "screen_protocol": {
+    "queries_sha256": "5137420a4c78ada24ffe258efefeb90319134bc0148d190e378ad28aae7cb497",
+    "gallery_sha256": {
+      "dress": "01b3bbafd0ce8123a11a65eb63004b8f482238254b92ac085be1936f7ba1c2f9",
+      "shirt": "15039201d409c4e87b35966d0c62c827520a7fbf24fff88719e1446658ab2d89",
+      "toptee": "2064b37c059b982a62d6befbcc317f93059dc4eb68186369134133e0de85b6ca"
+    },
+    "split": "val",
+    "exclude_reference": true,
+    "ks": [
+      10,
+      50
+    ],
+    "tie_break": "descending score, then official gallery order",
+    "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+    "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+  },
+  "original_training_source_hashes_unchanged": true,
+  "notebook_cells_compiled": true,
+  "bundle_verified": true
+}

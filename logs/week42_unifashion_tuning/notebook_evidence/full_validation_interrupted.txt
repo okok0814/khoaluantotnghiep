@@ -1,0 +1,56 @@
+Reading and hashing the checkpoint snapshot...
+Verifying 15415 validation images...
+Verifying the frozen EVA-G checkpoint...
+Snapshot progress: {"optimizer_steps": 60000, "completed_epochs": 6, "next_epoch_one_based": 7, "completed_batches_in_current_epoch": 6000}
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+dress: gallery 100/3817
+dress: gallery 200/3817
+dress: gallery 300/3817
+dress: gallery 400/3817
+dress: gallery 500/3817
+dress: gallery 600/3817
+dress: gallery 700/3817
+dress: gallery 800/3817
+dress: gallery 900/3817
+dress: gallery 1000/3817
+dress: gallery 1100/3817
+dress: gallery 1200/3817
+dress: gallery 1300/3817
+dress: gallery 1400/3817
+dress: gallery 1500/3817
+dress: gallery 1600/3817
+dress: gallery 1700/3817
+dress: gallery 1800/3817
+dress: gallery 1900/3817
+dress: gallery 2000/3817
+dress: gallery 2100/3817
+dress: gallery 2200/3817
+dress: gallery 2300/3817
+dress: gallery 2400/3817
+dress: gallery 2500/3817
+dress: gallery 2600/3817
+dress: gallery 2700/3817
+dress: gallery 2800/3817
+dress: gallery 2900/3817
+dress: gallery 3000/3817
+dress: gallery 3100/3817
+dress: gallery 3200/3817
+dress: gallery 3300/3817
+dress: gallery 3400/3817
+dress: gallery 3500/3817
+dress: gallery 3600/3817
+dress: gallery 3700/3817
+dress: gallery 3800/3817
+dress: gallery 3817/3817
+dress: queries 100/2017
+dress: queries 200/2017
+dress: queries 300/2017
+dress: queries 400/2017
+dress: queries 500/2017
+dress: queries 600/2017
+dress: queries 700/2017
+dress: queries 800/2017
+dress: queries 900/2017
