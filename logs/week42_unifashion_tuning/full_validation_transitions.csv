@@ -1,0 +1,5 @@
+method,k,both_hit,trial_only_hit,base_only_hit,both_miss
+unifashion_image_score,10,2194,226,280,3316
+unifashion_image_score,50,3629,199,262,1926
+unifashion_image_caption_score,10,3554,167,208,2087
+unifashion_image_caption_score,50,4625,118,136,1137

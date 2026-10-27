@@ -1,0 +1,7 @@
+{
+  "status": "evaluation_completed",
+  "evaluation_scope": "full_validation",
+  "queries": 6016,
+  "checkpoint_sha256": "6cc2662a43f417309055f2df450f82635ad980ca481e72ca7f5ccf3d57a152c7",
+  "retrieval_evaluated": true
+}

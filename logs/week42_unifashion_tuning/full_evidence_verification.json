@@ -1,0 +1,213 @@
+{
+  "verified_on": "2026-10-27",
+  "archive_sha256": "2a58c031ac70fca2da2be082abc29fa1f64cd8972166ca571d4b361b91bdc3bd",
+  "archive_bytes": 7116615,
+  "evaluations_verified": [
+    {
+      "stage": "screen",
+      "checkpoint": "base",
+      "method": "unifashion_image_score",
+      "queries_verified": 192
+    },
+    {
+      "stage": "screen",
+      "checkpoint": "base",
+      "method": "unifashion_image_caption_score",
+      "queries_verified": 192
+    },
+    {
+      "stage": "screen",
+      "checkpoint": "lr1e5_b2",
+      "method": "unifashion_image_score",
+      "queries_verified": 192
+    },
+    {
+      "stage": "screen",
+      "checkpoint": "lr1e5_b2",
+      "method": "unifashion_image_caption_score",
+      "queries_verified": 192
+    },
+    {
+      "stage": "screen",
+      "checkpoint": "lr5e6_b2",
+      "method": "unifashion_image_score",
+      "queries_verified": 192
+    },
+    {
+      "stage": "screen",
+      "checkpoint": "lr5e6_b2",
+      "method": "unifashion_image_caption_score",
+      "queries_verified": 192
+    },
+    {
+      "stage": "screen",
+      "checkpoint": "lr1e5_b4",
+      "method": "unifashion_image_score",
+      "queries_verified": 192
+    },
+    {
+      "stage": "screen",
+      "checkpoint": "lr1e5_b4",
+      "method": "unifashion_image_caption_score",
+      "queries_verified": 192
+    },
+    {
+      "stage": "full",
+      "checkpoint": "base",
+      "method": "unifashion_image_score",
+      "queries_verified": 6016
+    },
+    {
+      "stage": "full",
+      "checkpoint": "base",
+      "method": "unifashion_image_caption_score",
+      "queries_verified": 6016
+    },
+    {
+      "stage": "full",
+      "checkpoint": "lr1e5_b4",
+      "method": "unifashion_image_score",
+      "queries_verified": 6016
+    },
+    {
+      "stage": "full",
+      "checkpoint": "lr1e5_b4",
+      "method": "unifashion_image_caption_score",
+      "queries_verified": 6016
+    }
+  ],
+  "trial_metrics_verified": [
+    {
+      "trial": "lr1e5_b2",
+      "updates": 600,
+      "examples": 1200,
+      "mean_train_loss": 0.14470855325284296,
+      "max_logged_grad_norm_before_clip": 1123.293701171875
+    },
+    {
+      "trial": "lr5e6_b2",
+      "updates": 600,
+      "examples": 1200,
+      "mean_train_loss": 0.12752596291610643,
+      "max_logged_grad_norm_before_clip": 981.5777587890624
+    },
+    {
+      "trial": "lr1e5_b4",
+      "updates": 300,
+      "examples": 1200,
+      "mean_train_loss": 0.3832631514334389,
+      "max_logged_grad_norm_before_clip": 1134.123291015625
+    }
+  ],
+  "full_data_protocol": {
+    "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+    "gallery_sha256": {
+      "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+      "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+      "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+    },
+    "split": "val",
+    "exclude_reference": true,
+    "ks": [
+      10,
+      50
+    ],
+    "tie_break": "descending score, then official gallery order",
+    "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+    "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+  },
+  "limits": "Verifies exported ranks, summaries and provenance consistency; no model weights or score matrices received, no independent GPU rerun. Current local attention-fusion runtime differs from the original runtime recorded by these runs.",
+  "checks": [
+    "ZIP CRC and study input hashes",
+    "Complete unique queries and exact text",
+    "Valid target ranks and saved top50",
+    "Reference exclusion in top50",
+    "Per-category/macro/micro recomputed",
+    "Same parent/study/budget across trials",
+    "Same checkpoint hashes between screening and full evaluation",
+    "Original training fingerprint matches step29500 evidence",
+    "Reported selection and comparison tables recomputed",
+    "Shared evaluation code hashes and expected FP32 training configs"
+  ],
+  "files_sha256": {
+    "full/base/checkpoint_load.json": "5fc10d88fc251f5cb6db47e7a59989cac1e57642225a0ea9b9e374ee7c32bd8e",
+    "full/base/provenance.json": "d4fbf391fbe9f5dd62a8faba193b3644688be7bf5323eefbf8696afb80cd4454",
+    "full/base/status.json": "56cb443d437536be20e00ea2f93c092e1b892b27aa174035791b43b31d921a1b",
+    "full/base/unifashion_image_caption_score.json": "42c09c30f13e77c9c43daf14c31f5620ab263688310ed297e7f312efa1d09d94",
+    "full/base/unifashion_image_caption_score_per_query.csv": "1c59415e60cbc7535c8de93bad005f2049f29cec756937deac919bede5ccd185",
+    "full/base/unifashion_image_score.json": "f34389b6938e3ebcf953fa4074cc91c6cb3186fbaafd504095405476d0f42b65",
+    "full/base/unifashion_image_score_per_query.csv": "31d4333c817ff7b69eef1e19d1cda463904eb2cce7cd4af5f9a93c4408f7ea95",
+    "full/base_interrupted_20261021T111552Z/checkpoint_load.json": "5fc10d88fc251f5cb6db47e7a59989cac1e57642225a0ea9b9e374ee7c32bd8e",
+    "full/base_interrupted_20261021T111552Z/provenance.json": "d4fbf391fbe9f5dd62a8faba193b3644688be7bf5323eefbf8696afb80cd4454",
+    "full/lr1e5_b4/checkpoint_load.json": "5fc10d88fc251f5cb6db47e7a59989cac1e57642225a0ea9b9e374ee7c32bd8e",
+    "full/lr1e5_b4/provenance.json": "f045fd21d9e49fa7b9679bf7f074ca02c50d73905cf29e0753f1833cec84e445",
+    "full/lr1e5_b4/status.json": "a06b586a5b2a4a447f67686b352d69041b58a221905d787b938181d634b5f6f0",
+    "full/lr1e5_b4/unifashion_image_caption_score.json": "6e47fbe6e59cd92e65da42de7dfb00a1f9d5023dc06357280a466b032dec876e",
+    "full/lr1e5_b4/unifashion_image_caption_score_per_query.csv": "79636f35cfdbf51ebf9beb41714edf8ebe6f5d90002668e30fa45fff83eb44f3",
+    "full/lr1e5_b4/unifashion_image_score.json": "352594840dedd254fdfa14b192d37fb8de9bb1fdb7e438c8fe4ccfd5ec9bd410",
+    "full/lr1e5_b4/unifashion_image_score_per_query.csv": "030ae1009dee0992b08c7e707362388763acbf38f324d3f61641c7a1470a6c6b",
+    "full/lr1e5_b4_interrupted_20261023T105035Z/checkpoint_load.json": "5fc10d88fc251f5cb6db47e7a59989cac1e57642225a0ea9b9e374ee7c32bd8e",
+    "full/lr1e5_b4_interrupted_20261023T105035Z/provenance.json": "f045fd21d9e49fa7b9679bf7f074ca02c50d73905cf29e0753f1833cec84e445",
+    "inputs/screen/evaluation_data/gallery_captions.json": "2c4924cabcb28fa2ca8acb0fa5dae98955e87d00265b5670f9c8502950b509d7",
+    "inputs/screen/evaluation_data/queries.csv": "9ed6cc70cc752364757a9ae0eb3e41d253b9887606db90f367c20d80dd3e3c25",
+    "inputs/screen/evaluation_data/split.dress.val.json": "12c7fd01995800fbd0f72976f184c350149503967dc154651f9ad826752ca87e",
+    "inputs/screen/evaluation_data/split.shirt.val.json": "924fc88a84fa8e70bae1036a95840441dec8c7d8d27f71e19a6bab0533d522d5",
+    "inputs/screen/evaluation_data/split.toptee.val.json": "49351af8af6adbb6c96a554099a1ef0a980c0e5164d8a66dc0fa9ba46ae615be",
+    "inputs/screen/preparation.json": "837bc6f650de33e918373ed15f8391d87d4e1baa769b65be218ead00cadb4a5f",
+    "inputs/study.json": "b7f893bae8b66855f6917bdd1ab3eb5649b1ad253f2cb0fc2a30a4db8fbdaaa6",
+    "inputs/train.csv": "7270d7ff7b805446f9e75d9497492574999319b0330118081143e895818127d9",
+    "parent.json": "383a5635ea3dee8bac6a775cce141a87b10f5ccdd69a82f280baf61290b57476",
+    "report/full_validation.csv": "78089f03bafff682db78714698dc9c0d4c0641520f0bbb0c3bca57ed068e736e",
+    "report/screening.csv": "39431dd05b2c8898b73a6216eb1d1a94f90414dbc803fcbcfc73a714fc7adb38",
+    "report/selection.json": "90cd103bc6a0d953b4ffed8727759670c5479dc31ec0597b0c1375b06672d74a",
+    "report/trial_status.csv": "11166b9bddb0d5b326e110ed22245593ee3cab855eb83e9d1c9d0045ec1f6d9a",
+    "report/weekly_report.md": "fc337c40301e21c6d586f122a8923a870e849db93370a8e302fcde82155be840",
+    "screen/base/checkpoint_load.json": "5fc10d88fc251f5cb6db47e7a59989cac1e57642225a0ea9b9e374ee7c32bd8e",
+    "screen/base/provenance.json": "bfd33e7c81f772f4923a91ae81a069ee70d049a168284451c4119edacbe0db84",
+    "screen/base/status.json": "db1fa0a5e3032adf12280f57e9515dc998b1689e2f610d772bfd753b5aa7d40d",
+    "screen/base/unifashion_image_caption_score.json": "cbb15580939fa2695041e831ba4047e16cfa45be6c86198b2d1f0ef07d741b84",
+    "screen/base/unifashion_image_caption_score_per_query.csv": "6dbe08cea65109e8ae179a297d884b6605b71bde3d9af6ff4380132ff70ebfe0",
+    "screen/base/unifashion_image_score.json": "cd755c9abeff04c8479e1dce5016cb5a58d427c00715219e76623d6643aace45",
+    "screen/base/unifashion_image_score_per_query.csv": "7e3d62cb08227f937db6850f2804faf894d3b73c67c28c599c6e28b307208edf",
+    "screen/lr1e5_b2/checkpoint_load.json": "5fc10d88fc251f5cb6db47e7a59989cac1e57642225a0ea9b9e374ee7c32bd8e",
+    "screen/lr1e5_b2/provenance.json": "ba6e4f0a4b024de1cc56a9fee1921e59294f60df1fa8278f17b032b912b0c054",
+    "screen/lr1e5_b2/status.json": "0527730228800e6f926469ce2a80f3970b8cb0e73da55ffc27009fe07185f0ef",
+    "screen/lr1e5_b2/unifashion_image_caption_score.json": "9d3b710e4df9f896c4ac0371299503d2987ec20fd7e7e86f04314cf6efdf40d2",
+    "screen/lr1e5_b2/unifashion_image_caption_score_per_query.csv": "66693d39d29d750cda964d8846c9ac4f957dab30e362f2aebfe63dc91af9a139",
+    "screen/lr1e5_b2/unifashion_image_score.json": "f5783f793c7b29ea4ade50af48e5d6ae070ed8b1d8214acb106dca6c2fc16c87",
+    "screen/lr1e5_b2/unifashion_image_score_per_query.csv": "1b9279b32ea5dbaa92733ad06c3f2d949d26bdc5287270da024256daf0a89e53",
+    "screen/lr1e5_b4/checkpoint_load.json": "5fc10d88fc251f5cb6db47e7a59989cac1e57642225a0ea9b9e374ee7c32bd8e",
+    "screen/lr1e5_b4/provenance.json": "134fdd750bac5248982f28b7ad234fdb5ff4d3a706e0bf204915f872c2513d4c",
+    "screen/lr1e5_b4/status.json": "1795e96943c16508fb8d9141f833cd68e6fa332e125b31210f5f8ddf47fdceed",
+    "screen/lr1e5_b4/unifashion_image_caption_score.json": "7e6346624ee8536c033a1cae5e0574266c9da96f9e6af3a82bcf7a420d44a443",
+    "screen/lr1e5_b4/unifashion_image_caption_score_per_query.csv": "83b8767626430656cb26ffd9eedfe064b94839f4402f853898ed16c1e7c3f155",
+    "screen/lr1e5_b4/unifashion_image_score.json": "8e22e304adbc51af057efc50ecba2c586f66812dcef717c52a27d6d5a6d5789f",
+    "screen/lr1e5_b4/unifashion_image_score_per_query.csv": "a8b1743e8be462c71f21d13ff355fdbb41b764b2d3f093288d2c5bbd3036f269",
+    "screen/lr5e6_b2/checkpoint_load.json": "5fc10d88fc251f5cb6db47e7a59989cac1e57642225a0ea9b9e374ee7c32bd8e",
+    "screen/lr5e6_b2/provenance.json": "dcdb6d1fd73d147610e90cb13053ae8fa5d05fd95fc925c4b51fa6c0eed5e649",
+    "screen/lr5e6_b2/status.json": "bb78067602c2ed825a29fbf68750c03598f4ff7c9aa63bb1e32440db14e97759",
+    "screen/lr5e6_b2/unifashion_image_caption_score.json": "ac4c6c9fa9cab9408a2d243c10116ecdf6aee9881178dddd386a671ee58921bb",
+    "screen/lr5e6_b2/unifashion_image_caption_score_per_query.csv": "20a7e48d69b2bd7196e9fdde25180bcdef93792e892d2ff3674f4690113c3802",
+    "screen/lr5e6_b2/unifashion_image_score.json": "73940b33385ca4fd72f6060ac60b0ff46eef4d7542c1f5c981c3137969ab7a03",
+    "screen/lr5e6_b2/unifashion_image_score_per_query.csv": "80c550751c060eca3bf29250c5c645297a8dc78178105c0e7fddb62de4eb892c",
+    "trials/lr1e5_b2/checkpoint_load.json": "69362879b1e9cd879421fd6e233a52ba8fc96b8b26bf85e34491c542e17d1795",
+    "trials/lr1e5_b2/config.json": "b24e4daf3c480c5c8b77067f355455fd0c0576cf9ee93c78f12040a50c551131",
+    "trials/lr1e5_b2/environment.json": "d97e17262d586d2b947b6d3b4e82d447930232b6ba009f61ca1ee66f9a17f401",
+    "trials/lr1e5_b2/run.log": "884ad9dabd500b2e72e58f0439fabc4e7bb2adb1440707b66c259bbeaeaa369d",
+    "trials/lr1e5_b2/status.json": "0917907e80fe5359a86a35d26f822e418950099b5302e5c3b3a272e80dd2b9e8",
+    "trials/lr1e5_b2/train_metrics.csv": "310f3b6215d56721273422d99e676b7e3ca8b11fcb41e58122c0693ade86717c",
+    "trials/lr1e5_b4/checkpoint_load.json": "69362879b1e9cd879421fd6e233a52ba8fc96b8b26bf85e34491c542e17d1795",
+    "trials/lr1e5_b4/config.json": "3a395c0e2276ea73395818dfe7d228b3f1de4303675b8936f74689473055dfe4",
+    "trials/lr1e5_b4/environment.json": "36500fdcc175fb3eed54dbc601cead424a99998c4b276da8fce15d1b918cbcd0",
+    "trials/lr1e5_b4/run.log": "73ea0826696cfb0bc08beb0ed9d77e09314a32a988ea89912e6814d07fd09b01",
+    "trials/lr1e5_b4/status.json": "09738ec418573fc4d674da9c471518000faad5113e7951d336367c22cb1eaa95",
+    "trials/lr1e5_b4/train_metrics.csv": "907007792a88cfce0ef8cf15e92feb2106ae59641aa97fdaa0bf2db1e162e07a",
+    "trials/lr5e6_b2/checkpoint_load.json": "69362879b1e9cd879421fd6e233a52ba8fc96b8b26bf85e34491c542e17d1795",
+    "trials/lr5e6_b2/config.json": "60d226ee949eaebe1fcbc66b539e5d146b930fd00a43a1ef6ab0381f13025fa4",
+    "trials/lr5e6_b2/environment.json": "b6e22130002d737fc823f188b64e0e45489c779c32885ca96ca2ccdfc6a70ff6",
+    "trials/lr5e6_b2/run.log": "d89ecd6cc345b89db383d7c4c84abb7b6d6a4e598c1a8736da761aa7885586a9",
+    "trials/lr5e6_b2/status.json": "5da9fcfcbdfbcc1eb2871ba5ee1ff25f183d04c6c13e448d6aa77e430c50706b",
+    "trials/lr5e6_b2/train_metrics.csv": "60d2542f751d70065376ab67ad05b899094093aca4b22f3b13e928fa36be5bfc",
+    "tuning_evidence.zip": "2a58c031ac70fca2da2be082abc29fa1f64cd8972166ca571d4b361b91bdc3bd"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "scope": "screening_only_reduced_gallery",
+  "protocol": {
+    "queries_sha256": "9ed6cc70cc752364757a9ae0eb3e41d253b9887606db90f367c20d80dd3e3c25",
+    "gallery_sha256": {
+      "dress": "12c7fd01995800fbd0f72976f184c350149503967dc154651f9ad826752ca87e",
+      "shirt": "924fc88a84fa8e70bae1036a95840441dec8c7d8d27f71e19a6bab0533d522d5",
+      "toptee": "49351af8af6adbb6c96a554099a1ef0a980c0e5164d8a66dc0fa9ba46ae615be"
+    },
+    "split": "val",
+    "exclude_reference": true,
+    "ks": [
+      10,
+      50
+    ],
+    "tie_break": "descending score, then official gallery order",
+    "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+    "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+  },
+  "files": {
+    "queries.csv": "9ed6cc70cc752364757a9ae0eb3e41d253b9887606db90f367c20d80dd3e3c25",
+    "split.dress.val.json": "12c7fd01995800fbd0f72976f184c350149503967dc154651f9ad826752ca87e",
+    "split.shirt.val.json": "924fc88a84fa8e70bae1036a95840441dec8c7d8d27f71e19a6bab0533d522d5",
+    "split.toptee.val.json": "49351af8af6adbb6c96a554099a1ef0a980c0e5164d8a66dc0fa9ba46ae615be",
+    "gallery_captions.json": "2c4924cabcb28fa2ca8acb0fa5dae98955e87d00265b5670f9c8502950b509d7"
+  },
+  "warning": "Not full-val Recall. Never compare these scores with Week 9 or the paper."
+}

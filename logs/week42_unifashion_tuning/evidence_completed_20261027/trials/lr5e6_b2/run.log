@@ -1,0 +1,41 @@
+Verified 10000/40151 images
+Verified 20000/40151 images
+Verified 30000/40151 images
+Verified 40000/40151 images
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+Saved trial checkpoint: 0/600 updates
+{"update": 1, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 6.596205366804497e-06, "loss_ttc": 0.0, "loss": 6.596205366804497e-06, "grad_norm_before_clip": 0.00016740287537686527, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 2.4441480549994594}
+{"update": 25, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 4.28115417889785e-05, "loss_ttc": 0.0, "loss": 4.28115417889785e-05, "grad_norm_before_clip": 0.002648369176313281, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.2978654580001603}
+{"update": 50, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 2.2251304471865296e-05, "loss_ttc": 0.0, "loss": 2.2251304471865296e-05, "grad_norm_before_clip": 0.0014104919973760843, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4378723469999386}
+{"update": 75, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 1.5715415429440327e-05, "loss_ttc": 0.0, "loss": 1.5715415429440327e-05, "grad_norm_before_clip": 0.0009878466371446848, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.2800036449998515}
+{"update": 100, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 1.7642354578129016e-05, "loss_ttc": 0.0, "loss": 1.7642354578129016e-05, "grad_norm_before_clip": 0.0008168120984919369, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3661506809994535}
+Saved trial checkpoint: 100/600 updates
+{"update": 125, "samples": 2, "lr": 5e-06, "loss_itc": 0.000918616889975965, "loss_itm": 0.000659393088426441, "loss_ttc": 0.002472357591614127, "loss": 0.004050367511808872, "grad_norm_before_clip": 2.3184878826141357, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.7159271359996637}
+{"update": 150, "samples": 2, "lr": 5e-06, "loss_itc": 5.9604641222676946e-08, "loss_itm": 1.1026727406715509e-05, "loss_ttc": 0.0, "loss": 1.10863320514909e-05, "grad_norm_before_clip": 0.00030982165480963886, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.474567711000418}
+{"update": 175, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 1.6708698240108788e-05, "loss_ttc": 0.0, "loss": 1.6708698240108788e-05, "grad_norm_before_clip": 0.0007216790691018105, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.304623207000077}
+{"update": 200, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 4.847827767662238e-06, "loss_ttc": 0.0, "loss": 4.847827767662238e-06, "grad_norm_before_clip": 0.00012152907584095374, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3693057849995967}
+Saved trial checkpoint: 200/600 updates
+{"update": 225, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 6.874364316900028e-06, "loss_ttc": 0.0, "loss": 6.874364316900028e-06, "grad_norm_before_clip": 0.00017461659444961697, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.7539807610000935}
+{"update": 250, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 5.841226538905175e-06, "loss_ttc": 0.0, "loss": 5.841226538905175e-06, "grad_norm_before_clip": 0.00015608605463057756, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4620149100001072}
+{"update": 275, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 2.3364298613159917e-05, "loss_ttc": 0.0, "loss": 2.3364298613159917e-05, "grad_norm_before_clip": 0.0010669083567336202, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3403441359996577}
+{"update": 300, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 3.152850331389345e-05, "loss_ttc": 0.0, "loss": 3.152850331389345e-05, "grad_norm_before_clip": 0.0017338425386697054, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4017068320008548}
+Saved trial checkpoint: 300/600 updates
+{"update": 325, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 5.642546966555528e-06, "loss_ttc": 0.0, "loss": 5.642546966555528e-06, "grad_norm_before_clip": 0.00013929582200944424, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4103552870001295}
+{"update": 350, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 1.3092881999909878e-05, "loss_ttc": 0.0, "loss": 1.3092881999909878e-05, "grad_norm_before_clip": 0.0004098568169865757, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3557318780003698}
+{"update": 375, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 4.6250901505118236e-05, "loss_ttc": 2.1457642560562817e-06, "loss": 4.839666507905349e-05, "grad_norm_before_clip": 0.0034175910986959934, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.415438758000164}
+{"update": 400, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 1.6033205611165613e-05, "loss_ttc": 0.0, "loss": 1.6033205611165613e-05, "grad_norm_before_clip": 0.0009495904087089002, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4033451699997386}
+Saved trial checkpoint: 400/600 updates
+{"update": 425, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 2.1258238120935857e-05, "loss_ttc": 0.0, "loss": 2.1258238120935857e-05, "grad_norm_before_clip": 0.0010376990539953113, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4871677629998885}
+{"update": 450, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 3.299906893516891e-05, "loss_ttc": 0.0, "loss": 3.299906893516891e-05, "grad_norm_before_clip": 0.0017853172030299902, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.2965362329996424}
+{"update": 475, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 5.026638518756954e-06, "loss_ttc": 0.0, "loss": 5.026638518756954e-06, "grad_norm_before_clip": 0.0001215550146298483, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.4490693309999187}
+{"update": 500, "samples": 2, "lr": 5e-06, "loss_itc": 5.8826324675465e-05, "loss_itm": 1.0649273463059217e-05, "loss_ttc": 0.0, "loss": 6.947560177650303e-05, "grad_norm_before_clip": 0.0640069916844368, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3757735389999652}
+Saved trial checkpoint: 500/600 updates
+{"update": 525, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 2.2191708922036923e-05, "loss_ttc": 0.0, "loss": 2.2191708922036923e-05, "grad_norm_before_clip": 0.001006737700663507, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.5851159200001348}
+{"update": 550, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 0.010733518749475479, "loss_ttc": 0.0, "loss": 0.010733518749475479, "grad_norm_before_clip": 2.4171090126037598, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.2950296459994206}
+{"update": 575, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 3.192585063516162e-05, "loss_ttc": 0.0, "loss": 3.192585063516162e-05, "grad_norm_before_clip": 0.002067123306915164, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.715743384000234}
+{"update": 600, "samples": 2, "lr": 5e-06, "loss_itc": 0.0, "loss_itm": 1.2059758773830254e-05, "loss_ttc": 0.0, "loss": 1.2059758773830254e-05, "grad_norm_before_clip": 0.0008880224195308983, "amp_retries": 0, "loss_scale_before": 1.0, "loss_scale_after": 1.0, "seconds": 1.3706897460006076}
+Saved trial checkpoint: 600/600 updates
+Saved trial checkpoint: 600/600 updates

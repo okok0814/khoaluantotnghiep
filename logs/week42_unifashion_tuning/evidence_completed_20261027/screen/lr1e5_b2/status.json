@@ -1,0 +1,7 @@
+{
+  "status": "evaluation_completed",
+  "evaluation_scope": "screening_only_reduced_gallery",
+  "queries": 192,
+  "checkpoint_sha256": "f2cda1145f69ccf8466cac99a43022a2026fc25c05923eb63c206ee9423f83bb",
+  "retrieval_evaluated": true
+}

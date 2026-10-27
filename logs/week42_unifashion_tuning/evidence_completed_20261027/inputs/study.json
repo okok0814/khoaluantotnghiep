@@ -1,0 +1,76 @@
+{
+  "config": {
+    "seed": 42,
+    "train_per_category": 400,
+    "screen_queries_per_category": 64,
+    "screen_gallery_per_category": 512,
+    "precision": "fp32",
+    "scheduler": "constant",
+    "checkpoint_every_updates": 100,
+    "selection_method": "unifashion_image_caption_score",
+    "selection_metric": "mean_macro_recall_10_50",
+    "trials": [
+      {
+        "name": "lr1e5_b2",
+        "learning_rate": 1e-05,
+        "batch_size": 2
+      },
+      {
+        "name": "lr5e6_b2",
+        "learning_rate": 5e-06,
+        "batch_size": 2
+      },
+      {
+        "name": "lr1e5_b4",
+        "learning_rate": 1e-05,
+        "batch_size": 4
+      }
+    ]
+  },
+  "training_data_audit_sha256": "4715235209dc1b8573217a9bc97c1cc41f76d8cc29e66f2a6b56bb9f4ae21bbe",
+  "source_protocol": {
+    "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+    "gallery_sha256": {
+      "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+      "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+      "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+    },
+    "split": "val",
+    "exclude_reference": true,
+    "ks": [
+      10,
+      50
+    ],
+    "tie_break": "descending score, then official gallery order",
+    "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+    "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+  },
+  "train_examples": 1200,
+  "screen_protocol": {
+    "queries_sha256": "9ed6cc70cc752364757a9ae0eb3e41d253b9887606db90f367c20d80dd3e3c25",
+    "gallery_sha256": {
+      "dress": "12c7fd01995800fbd0f72976f184c350149503967dc154651f9ad826752ca87e",
+      "shirt": "924fc88a84fa8e70bae1036a95840441dec8c7d8d27f71e19a6bab0533d522d5",
+      "toptee": "49351af8af6adbb6c96a554099a1ef0a980c0e5164d8a66dc0fa9ba46ae615be"
+    },
+    "split": "val",
+    "exclude_reference": true,
+    "ks": [
+      10,
+      50
+    ],
+    "tie_break": "descending score, then official gallery order",
+    "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+    "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+  },
+  "screen_queries": 192,
+  "files": {
+    "train.csv": "7270d7ff7b805446f9e75d9497492574999319b0330118081143e895818127d9",
+    "screen/preparation.json": "837bc6f650de33e918373ed15f8391d87d4e1baa769b65be218ead00cadb4a5f",
+    "screen/evaluation_data/queries.csv": "9ed6cc70cc752364757a9ae0eb3e41d253b9887606db90f367c20d80dd3e3c25",
+    "screen/evaluation_data/split.dress.val.json": "12c7fd01995800fbd0f72976f184c350149503967dc154651f9ad826752ca87e",
+    "screen/evaluation_data/split.shirt.val.json": "924fc88a84fa8e70bae1036a95840441dec8c7d8d27f71e19a6bab0533d522d5",
+    "screen/evaluation_data/split.toptee.val.json": "49351af8af6adbb6c96a554099a1ef0a980c0e5164d8a66dc0fa9ba46ae615be",
+    "screen/evaluation_data/gallery_captions.json": "2c4924cabcb28fa2ca8acb0fa5dae98955e87d00265b5670f9c8502950b509d7"
+  }
+}

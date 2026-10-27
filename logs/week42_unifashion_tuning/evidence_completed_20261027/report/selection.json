@@ -1,0 +1,9 @@
+{
+  "ready": true,
+  "selected": "lr1e5_b4",
+  "failed_trials": [],
+  "selection_method": "unifashion_image_caption_score",
+  "selection_metric": "mean_macro_recall_10_50",
+  "parent_sha256": "df8226a0e61e41ebb5bf88f1870b0176118f75d14612ceb8c0e04cf91309a683",
+  "warning": "Screening selection only; full validation against base is required."
+}

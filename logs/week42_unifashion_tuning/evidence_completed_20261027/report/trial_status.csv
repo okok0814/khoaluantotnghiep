@@ -1,0 +1,4 @@
+name,learning_rate,batch_size,status,error
+lr1e5_b2,1e-05,2,trial_completed,
+lr5e6_b2,5e-06,2,trial_completed,
+lr1e5_b4,1e-05,4,trial_completed,

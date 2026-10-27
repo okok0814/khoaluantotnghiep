@@ -1,0 +1,35 @@
+{
+  "status": "trial_completed",
+  "checkpoint_updates": 300,
+  "planned_updates": 300,
+  "tuning": {
+    "parent_sha256": "df8226a0e61e41ebb5bf88f1870b0176118f75d14612ceb8c0e04cf91309a683",
+    "parent_progress": {
+      "checkpoint_kind": "full_training",
+      "optimizer_steps": 60000,
+      "completed_epochs": 6,
+      "next_epoch_one_based": 7,
+      "completed_batches_in_current_epoch": 6000,
+      "planned_epochs": 10
+    },
+    "trial": {
+      "name": "lr1e5_b4",
+      "learning_rate": 1e-05,
+      "batch_size": 4
+    },
+    "study_sha256": "b7f893bae8b66855f6917bdd1ab3eb5649b1ad253f2cb0fc2a30a4db8fbdaaa6",
+    "planned_examples": 1200,
+    "optimizer_restarted": true,
+    "schedule": "constant",
+    "precision": "fp32",
+    "checkpoint_every_updates": 100,
+    "code_sha256": {
+      "tune_unifashion.py": "52f9566e6c6652bacc5b4610d76021cfefd14e1b1f67f7082087e369c152a7c1",
+      "unifashion_tuning.py": "4d453aa2c0226c36c85e163d7b53d234061c89972360827b0e8d84c011b44406"
+    },
+    "trial_updates": 300,
+    "trial_examples": 1200,
+    "trial_completed": true
+  },
+  "peak_cuda_allocated_gib": 7.749505996704102
+}

@@ -1,0 +1,41 @@
+{
+  "checkpoint_sha256": "df8226a0e61e41ebb5bf88f1870b0176118f75d14612ceb8c0e04cf91309a683",
+  "progress": {
+    "checkpoint_kind": "full_training",
+    "optimizer_steps": 60000,
+    "completed_epochs": 6,
+    "next_epoch_one_based": 7,
+    "completed_batches_in_current_epoch": 6000,
+    "planned_epochs": 10
+  },
+  "config": {
+    "seed": 42,
+    "epochs": 10,
+    "batch_size": 2,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.05,
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "eps": 1e-07,
+    "scheduler": "one_cycle",
+    "warmup_epochs": 1.5,
+    "div_factor": 100.0,
+    "final_div_factor": 10000.0,
+    "max_grad_norm": 1.0,
+    "image_size": 224,
+    "target_ratio": 1.25,
+    "max_txt_len": 64,
+    "num_workers": 0,
+    "precision": "fp32",
+    "grad_scaler_init_scale": 256.0,
+    "max_amp_retries": 10,
+    "freeze_vit": true,
+    "checkpoint_every_steps": 500,
+    "monitor_per_category": 32,
+    "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+  },
+  "source": "/content/drive/MyDrive/Thesis/UniFashion/week8/runs/full_train_fp32_b2_seed42/last.pt",
+  "next_lr_in_original_run": 6.676078010759317e-06
+}

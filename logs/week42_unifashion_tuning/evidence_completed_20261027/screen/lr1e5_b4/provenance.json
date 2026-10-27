@@ -1,0 +1,93 @@
+{
+  "checkpoint_sha256": "6cc2662a43f417309055f2df450f82635ad980ca481e72ca7f5ccf3d57a152c7",
+  "snapshot": "trial.pt",
+  "checkpoint_kind": "tuning_trial",
+  "optimizer_steps": 300,
+  "completed_epochs": null,
+  "next_epoch_one_based": null,
+  "completed_batches_in_current_epoch": null,
+  "planned_epochs": null,
+  "tuning": {
+    "parent_sha256": "df8226a0e61e41ebb5bf88f1870b0176118f75d14612ceb8c0e04cf91309a683",
+    "parent_progress": {
+      "checkpoint_kind": "full_training",
+      "optimizer_steps": 60000,
+      "completed_epochs": 6,
+      "next_epoch_one_based": 7,
+      "completed_batches_in_current_epoch": 6000,
+      "planned_epochs": 10
+    },
+    "trial": {
+      "name": "lr1e5_b4",
+      "learning_rate": 1e-05,
+      "batch_size": 4
+    },
+    "study_sha256": "b7f893bae8b66855f6917bdd1ab3eb5649b1ad253f2cb0fc2a30a4db8fbdaaa6",
+    "planned_examples": 1200,
+    "optimizer_restarted": true,
+    "schedule": "constant",
+    "precision": "fp32",
+    "checkpoint_every_updates": 100,
+    "code_sha256": {
+      "tune_unifashion.py": "52f9566e6c6652bacc5b4610d76021cfefd14e1b1f67f7082087e369c152a7c1",
+      "unifashion_tuning.py": "4d453aa2c0226c36c85e163d7b53d234061c89972360827b0e8d84c011b44406"
+    },
+    "trial_updates": 300,
+    "trial_examples": 1200,
+    "trial_completed": true
+  },
+  "evaluation_scope": "screening_only_reduced_gallery",
+  "training_config": {
+    "seed": 42,
+    "epochs": 10,
+    "batch_size": 4,
+    "learning_rate": 1e-05,
+    "weight_decay": 0.05,
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "eps": 1e-07,
+    "scheduler": "constant",
+    "warmup_epochs": 1.5,
+    "div_factor": 100.0,
+    "final_div_factor": 10000.0,
+    "max_grad_norm": 1.0,
+    "image_size": 224,
+    "target_ratio": 1.25,
+    "max_txt_len": 64,
+    "num_workers": 0,
+    "precision": "fp32",
+    "grad_scaler_init_scale": 256.0,
+    "max_amp_retries": 10,
+    "freeze_vit": true,
+    "checkpoint_every_steps": 500,
+    "monitor_per_category": 32,
+    "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+  },
+  "training_fingerprint": {
+    "data_audit": "4715235209dc1b8573217a9bc97c1cc41f76d8cc29e66f2a6b56bb9f4ae21bbe",
+    "code": {
+      "train_unifashion_finetune.py": "0c8b1887b00865b00bdfc0b54db745551e19a18f003fab9c59a65fbd0096c09c",
+      "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+      "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+      "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+      "fashioniq_unifashion_dataset.py": "2c252f4297aac573d0e3676e6476a825e611bbe692997b8e2bc9cdffa0b3aa88",
+      "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+    },
+    "assets_manifest": "6728ad447f435cca7253d7c9c9cd933b6abc25a21930bdf77a74d90bcde4bcec"
+  },
+  "eval_batch_size": 4,
+  "precision": "fp32",
+  "gpu": "Tesla T4",
+  "torch": "2.6.0+cu124",
+  "scoring": "Official query_tokens target encoder; max query-to-target-token similarity; optional released gallery-caption similarity",
+  "caption_rerank": "No ITM reranking, no labeled target captions used as query input",
+  "gallery_captions_sha256": "2c4924cabcb28fa2ca8acb0fa5dae98955e87d00265b5670f9c8502950b509d7",
+  "code_sha256": {
+    "evaluate_unifashion_fashioniq.py": "14f01eadcb1684a98300b50363a82267896029694ec00bfcb2a6f7c939d46bd0",
+    "fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+    "unifashion_tuning.py": "4d453aa2c0226c36c85e163d7b53d234061c89972360827b0e8d84c011b44406",
+    "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66"
+  }
+}
