@@ -1,0 +1,90 @@
+{
+  "seed": 42,
+  "sources": {
+    "/content/khoaluantotnghiep/data/processed/fashioniq_triplets_train.csv": "84d3815b7694293dd35e07a9ec0d0dcf28d5a115f73de698e70a76e098ddb3fd",
+    "/content/drive/MyDrive/KHOALUAN/Tu\u1ea7n 37/FashionIQ/fashionIQ_dataset/captions/cap.dress.train.json": "1691bd52e5bbda755b0c1f14d1024000be2c57a0cc29511a327af1372636a946",
+    "/content/drive/MyDrive/KHOALUAN/Tu\u1ea7n 37/FashionIQ/fashionIQ_dataset/image_splits/split.dress.train.json": "dcb1c7329003e85e39a3010147a620cee4b7de6a5ddf2626f253bc9a2cdd78e5",
+    "/content/UniFashion-upstream/dataset/next_llava.train.dress.caption.json": "9ed762288ec881e25ba83b2e88300d164e96961a699d92f62793f64ca23ad105",
+    "/content/drive/MyDrive/KHOALUAN/Tu\u1ea7n 37/FashionIQ/fashionIQ_dataset/captions/cap.shirt.train.json": "0999ce5da01a38f0cef1547941b738f4c56e225fdd9b8e03e2a6edaf292f94c3",
+    "/content/drive/MyDrive/KHOALUAN/Tu\u1ea7n 37/FashionIQ/fashionIQ_dataset/image_splits/split.shirt.train.json": "1552c05d866d31b43321a719b2cb8a65f02c53e9a6bc355861fe1d62498b9983",
+    "/content/UniFashion-upstream/dataset/next_llava.train.shirt.caption.json": "55412eab65256419fd347160384e9c2f857085270c2d5738837f556a5affde71",
+    "/content/drive/MyDrive/KHOALUAN/Tu\u1ea7n 37/FashionIQ/fashionIQ_dataset/captions/cap.toptee.train.json": "6daa171a9e744823087780a3b69b8b697bd05526adb6dd55a38ee6c4904ab348",
+    "/content/drive/MyDrive/KHOALUAN/Tu\u1ea7n 37/FashionIQ/fashionIQ_dataset/image_splits/split.toptee.train.json": "aa9b3a55332340f21360fb6a3fe174badd27ce389fe7d78d890bf2b9032ffe05",
+    "/content/UniFashion-upstream/dataset/next_llava.train.toptee.caption.json": "8c6261985ca5f5b04197e13ab5c7677d20824a6b2d6b84bca5e6365f9bde6575",
+    "/content/khoaluantotnghiep/data/processed/fashioniq_triplets_val.csv": "c645a3e9d9068d8bb27c51e73c433c3b9813da67f86ed3a7485befc34e555775",
+    "/content/drive/MyDrive/KHOALUAN/Tu\u1ea7n 37/FashionIQ/fashionIQ_dataset/captions/cap.dress.val.json": "5e5117d45695df9c3ca91fac3e0bc49e6422ae9c8b3793f0ac9b3ab83adb7de9",
+    "/content/drive/MyDrive/KHOALUAN/Tu\u1ea7n 37/FashionIQ/fashionIQ_dataset/image_splits/split.dress.val.json": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+    "/content/UniFashion-upstream/dataset/next_llava.val.dress.caption.json": "a29a479169f123fadf2bf12f3075d0c3f62813ef3f66cdbbe4bacbeb4134bf75",
+    "/content/drive/MyDrive/KHOALUAN/Tu\u1ea7n 37/FashionIQ/fashionIQ_dataset/captions/cap.shirt.val.json": "7b7ca3797b85dddfd83e74cdb4454cb63e3e7c09acef2590155efbacea6d7feb",
+    "/content/drive/MyDrive/KHOALUAN/Tu\u1ea7n 37/FashionIQ/fashionIQ_dataset/image_splits/split.shirt.val.json": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+    "/content/UniFashion-upstream/dataset/next_llava.val.shirt.caption.json": "b85e34c10ea354141b55e544acc607dd084b7b82a7302d14e22665e07ba34bfc",
+    "/content/drive/MyDrive/KHOALUAN/Tu\u1ea7n 37/FashionIQ/fashionIQ_dataset/captions/cap.toptee.val.json": "b4e09f428e6c255cc4b4ec46e77908305ab83075d82840c960be81af15cdc5eb",
+    "/content/drive/MyDrive/KHOALUAN/Tu\u1ea7n 37/FashionIQ/fashionIQ_dataset/image_splits/split.toptee.val.json": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412",
+    "/content/UniFashion-upstream/dataset/next_llava.val.toptee.caption.json": "8c9bd9f554f0ba9bd678cfa3f4afbad47b2e7aacd9dce8ecfaa953fe5930d577"
+  },
+  "splits": {
+    "train": {
+      "dress": {
+        "triplets": 5985,
+        "gallery_size": 11452,
+        "repeated_target_rows": 0
+      },
+      "shirt": {
+        "triplets": 5988,
+        "gallery_size": 19036,
+        "repeated_target_rows": 0
+      },
+      "toptee": {
+        "triplets": 6027,
+        "gallery_size": 16121,
+        "repeated_target_rows": 0
+      }
+    },
+    "val": {
+      "dress": {
+        "triplets": 2017,
+        "gallery_size": 3817,
+        "repeated_target_rows": 0
+      },
+      "shirt": {
+        "triplets": 2038,
+        "gallery_size": 6346,
+        "repeated_target_rows": 0
+      },
+      "toptee": {
+        "triplets": 1961,
+        "gallery_size": 5373,
+        "repeated_target_rows": 0
+      }
+    }
+  },
+  "files": {
+    "galleries/split.dress.val.json": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+    "galleries/split.shirt.val.json": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+    "galleries/split.toptee.val.json": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412",
+    "images_manifest.json": "8c0d66cc278eb9d674f11cccb6c10676b9a864426876687a43057f25a9106885",
+    "monitor.csv": "90160860b0bbb334fa54f754b8b7c02760c0e6bd10efdeb00d4736f2f719f060",
+    "train.csv": "1b98bd69c00854d5960eca981d1ae979cd3d59ec87fb5e8c84e32131eb8739bd",
+    "val.csv": "98fc135b804be358689fc45f09a48134bcbb1bc407962c365bfde91644ba4d7b"
+  },
+  "protocol": "All official train/val rows retained; disjoint fixed monitor subset for loss only",
+  "official_overlap_by_category": {
+    "dress_train__dress_val": 0,
+    "dress_train__shirt_val": 0,
+    "dress_train__toptee_val": 0,
+    "shirt_train__dress_val": 0,
+    "shirt_train__shirt_val": 0,
+    "shirt_train__toptee_val": 392,
+    "toptee_train__dress_val": 0,
+    "toptee_train__shirt_val": 419,
+    "toptee_train__toptee_val": 0
+  },
+  "monitor": {
+    "rows": 96,
+    "per_category": 32,
+    "overlap_with_train_gallery": 0,
+    "metric": "fixed-batch validation loss; not Recall@K"
+  },
+  "decoded_images": 40151,
+  "status": "data_prepared"
+}

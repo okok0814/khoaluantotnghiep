@@ -1,0 +1,29 @@
+{
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "torch": "2.11.0+cu130",
+  "gpu": "NVIDIA L4",
+  "cuda": "13.0",
+  "packages": {
+    "torch": "2.11.0+cu130",
+    "torchvision": "0.26.0+cu130",
+    "transformers": "4.36.2",
+    "timm": "1.0.30",
+    "accelerate": "1.15.0",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "Pillow": "11.3.0"
+  },
+  "fingerprint": {
+    "data_audit": "a66d5cf77502afab948354d81f43c5f66eb25a1b005257f5b2c96e804b4e27ff",
+    "code": {
+      "train_unifashion_finetune.py": "e0fd5941c3ee0c09b6fdc9e7b685a8b9b5c0cd5d739bd05d534f4e3c14981092",
+      "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+      "unifashion_runtime.py": "fd36f07c0eb8b60db043187e4e5f638fa31258c83620a8d7dae9c0adf6fa58b5",
+      "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+      "fashioniq_unifashion_dataset.py": "45f0ff80009431523c17107e541a5556f89c2817ca7350555ee029cd6eedc433",
+      "attention_fusion.py": "0b9b0dd2512665d889dad38b51983e556cdd3814fdbebbf1f69f03b2b7a3f30f",
+      "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+    },
+    "assets_manifest": "c36684415c28e0b0f4ad39c5eb7cf7f608fe8e8e613013ee362e331ec477dc6b"
+  }
+}

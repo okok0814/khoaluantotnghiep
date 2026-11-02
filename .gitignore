@@ -3,6 +3,7 @@ embeddings/
 !/logs/week41_fashioniq_evaluation/
 !/logs/week42_unifashion_tuning/
 !/logs/week43_44_unifashion_completion/
+!/logs/week41_unifashion_training/
 /logs/week43_44_unifashion_completion/**/*.pt
 /logs/week43_44_unifashion_completion/**/*.pth
 /logs/week43_44_unifashion_completion/**/*.zip
