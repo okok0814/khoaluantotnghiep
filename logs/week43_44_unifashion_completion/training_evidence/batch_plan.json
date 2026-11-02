@@ -1,0 +1,62 @@
+[
+  {
+    "epoch": 1,
+    "batches": 9000,
+    "samples": 18000,
+    "dropped_row_indices": []
+  },
+  {
+    "epoch": 2,
+    "batches": 9000,
+    "samples": 18000,
+    "dropped_row_indices": []
+  },
+  {
+    "epoch": 3,
+    "batches": 9000,
+    "samples": 18000,
+    "dropped_row_indices": []
+  },
+  {
+    "epoch": 4,
+    "batches": 9000,
+    "samples": 18000,
+    "dropped_row_indices": []
+  },
+  {
+    "epoch": 5,
+    "batches": 9000,
+    "samples": 18000,
+    "dropped_row_indices": []
+  },
+  {
+    "epoch": 6,
+    "batches": 9000,
+    "samples": 18000,
+    "dropped_row_indices": []
+  },
+  {
+    "epoch": 7,
+    "batches": 9000,
+    "samples": 18000,
+    "dropped_row_indices": []
+  },
+  {
+    "epoch": 8,
+    "batches": 9000,
+    "samples": 18000,
+    "dropped_row_indices": []
+  },
+  {
+    "epoch": 9,
+    "batches": 9000,
+    "samples": 18000,
+    "dropped_row_indices": []
+  },
+  {
+    "epoch": 10,
+    "batches": 9000,
+    "samples": 18000,
+    "dropped_row_indices": []
+  }
+]

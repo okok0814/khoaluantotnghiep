@@ -1,0 +1,15 @@
+{
+  "source": "/content/drive/MyDrive/Thesis/UniFashion/week8/runs/full_train_fp32_b2_seed42/last.pt",
+  "checkpoint": "/content/drive/MyDrive/Thesis/UniFashion/week8/evaluations/completion_fp32_step90000/fp32_step90000.pt",
+  "checkpoint_sha256": "1b41d1f442785030c51148b0538097b17fd1aec8b3d7653c0b4829adf448b9e5",
+  "optimizer_steps": 90000,
+  "completed_epochs": 10,
+  "cursor": [
+    10,
+    0
+  ],
+  "nonvision_tensors": 351,
+  "copy_sha256_verified": true,
+  "cpu_deserialization_verified": true,
+  "note": "Full model state loading is checked by GPU evaluation; this receipt verifies copying and CPU deserialization."
+}

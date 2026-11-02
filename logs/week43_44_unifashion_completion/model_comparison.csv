@@ -1,0 +1,26 @@
+model,split,method,category,queries,gallery_size,Recall@10,Recall@50
+FashionCLIP additive,val,fashionclip_additive,dress,2017,3817.0,21.913733267228558,41.79474467030243
+FashionCLIP additive,val,fashionclip_additive,shirt,2038,6346.0,22.129538763493624,37.63493621197252
+FashionCLIP additive,val,fashionclip_additive,toptee,1961,5373.0,26.823049464558903,45.18103008669046
+FashionCLIP additive,val,fashionclip_additive,MACRO,6016,,23.622107165093695,41.536903656321805
+FashionCLIP additive,val,fashionclip_additive,MICRO,6016,,23.587101063829788,41.48936170212766
+UniFashion step60000 + caption,val,unifashion_image_caption_score,dress,2017,3817.0,62.369856222112055,78.48289538919187
+UniFashion step60000 + caption,val,unifashion_image_caption_score,shirt,2038,6346.0,59.61727183513248,76.30029440628067
+UniFashion step60000 + caption,val,unifashion_image_caption_score,toptee,1961,5373.0,65.7317695053544,82.76389597144315
+UniFashion step60000 + caption,val,unifashion_image_caption_score,MACRO,6016,,62.57296585419965,79.18236192230523
+UniFashion step60000 + caption,val,unifashion_image_caption_score,MICRO,6016,,62.53324468085106,79.13896276595744
+UniFashion step60000 no caption score,val,unifashion_image_score,dress,2017,3817.0,34.45711452652454,59.54387704511651
+UniFashion step60000 no caption score,val,unifashion_image_score,shirt,2038,6346.0,43.13052011776251,64.37684003925416
+UniFashion step60000 no caption score,val,unifashion_image_score,toptee,1961,5373.0,45.89495155532891,70.27027027027027
+UniFashion step60000 no caption score,val,unifashion_image_score,MACRO,6016,,41.16086206653865,64.73032911821365
+UniFashion step60000 no caption score,val,unifashion_image_score,MICRO,6016,,41.12367021276596,64.67752659574468
+UniFashion step90000 + caption,val,unifashion_image_caption_score,dress,2017,3817.0,65.19583539910758,80.66435299950422
+UniFashion step90000 + caption,val,unifashion_image_caption_score,shirt,2038,6346.0,61.236506378802744,77.57605495583906
+UniFashion step90000 + caption,val,unifashion_image_caption_score,toptee,1961,5373.0,67.9245283018868,83.68179500254972
+UniFashion step90000 + caption,val,unifashion_image_caption_score,MACRO,6016,,64.78562335993237,80.64073431929766
+UniFashion step90000 + caption,val,unifashion_image_caption_score,MICRO,6016,,64.7440159574468,80.60172872340425
+UniFashion step90000 no caption score,val,unifashion_image_score,dress,2017,3817.0,39.46455131383242,65.34457114526523
+UniFashion step90000 no caption score,val,unifashion_image_score,shirt,2038,6346.0,48.086359175662416,67.27183513248282
+UniFashion step90000 no caption score,val,unifashion_image_score,toptee,1961,5373.0,47.88373278939317,72.97297297297297
+UniFashion step90000 no caption score,val,unifashion_image_score,MACRO,6016,,45.14488109296267,68.52979308357368
+UniFashion step90000 no caption score,val,unifashion_image_score,MICRO,6016,,45.12965425531915,68.4840425531915

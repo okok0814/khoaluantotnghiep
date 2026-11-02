@@ -1,0 +1,92 @@
+{
+  "archive_sha256": "31f7382fafbcba8d3bb873e6c473deed26a73e18a6c32867598654cfe6d68eef",
+  "archive_bytes": 4918062,
+  "training_completed": true,
+  "epochs": 10,
+  "optimizer_steps": 90000,
+  "examples_processed": 180000,
+  "best_monitor_epoch": 7,
+  "best_monitor_loss": 0.2231929200167448,
+  "final_train_loss": 0.1209886650550646,
+  "final_monitor_loss": 0.2663184599300494,
+  "recorded_update_hours": 29.885825023935325,
+  "update_time_excludes": "data loading outside train_batch timer, setup, validation, checkpoint I/O and replayed work",
+  "amp_retries": 0,
+  "max_grad_norm_before_clip": 3405.768798828125,
+  "reported_peak_allocated_gib": 7.0461812019348145,
+  "gpu": "Tesla T4",
+  "tests_from_exported_xml": {
+    "tests": 16,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "fingerprint": {
+    "data_audit": "4715235209dc1b8573217a9bc97c1cc41f76d8cc29e66f2a6b56bb9f4ae21bbe",
+    "code": {
+      "train_unifashion_finetune.py": "0c8b1887b00865b00bdfc0b54db745551e19a18f003fab9c59a65fbd0096c09c",
+      "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+      "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+      "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+      "fashioniq_unifashion_dataset.py": "2c252f4297aac573d0e3676e6476a825e611bbe692997b8e2bc9cdffa0b3aa88",
+      "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+    },
+    "assets_manifest": "6728ad447f435cca7253d7c9c9cd933b6abc25a21930bdf77a74d90bcde4bcec"
+  },
+  "training_config": {
+    "seed": 42,
+    "epochs": 10,
+    "batch_size": 2,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.05,
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "eps": 1e-07,
+    "scheduler": "one_cycle",
+    "warmup_epochs": 1.5,
+    "div_factor": 100.0,
+    "final_div_factor": 10000.0,
+    "max_grad_norm": 1.0,
+    "image_size": 224,
+    "target_ratio": 1.25,
+    "max_txt_len": 64,
+    "num_workers": 0,
+    "precision": "fp32",
+    "grad_scaler_init_scale": 256.0,
+    "max_amp_retries": 10,
+    "freeze_vit": true,
+    "checkpoint_every_steps": 500,
+    "monitor_per_category": 32,
+    "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+  },
+  "final_checkpoint_recall_evaluated": false,
+  "checkpoint_weights_received": false,
+  "checkpoint_copy_reload_verified": false,
+  "limits": "Checks exported log consistency, not GPU execution or checkpoint file contents. Historical Recall at steps 29500/60000 remains separate from final-checkpoint evaluation.",
+  "checks": [
+    "ZIP CRC",
+    "original-run fingerprint/config",
+    "90000 consecutive finite updates",
+    "18000 examples and 9000 batches per epoch",
+    "recomputed epoch means",
+    "monitor selection",
+    "recorded learning-rate bounds"
+  ],
+  "files_sha256": {
+    "batch_plan.json": "b30a782380fc0149fd8728d78cfb9f35ec5de322587e22519539192acca45615",
+    "checkpoint_load.json": "5fc10d88fc251f5cb6db47e7a59989cac1e57642225a0ea9b9e374ee7c32bd8e",
+    "config.json": "dd8b196657a7d40cd05dc3b7187b594a7f3de336ef688f1c3c24ffbb1988d269",
+    "data_audit.json": "a57a081d0a7c1dbe64711cb5b596457a47f2f8287ef506d408841abe61df48d5",
+    "environment.json": "948581a7ccd3eca8651c3a171657172208fe181aa63c7855237ea8201fb625a9",
+    "epoch_metrics.csv": "026caec82f617235c7ea5e8dc5e4ba8d36f28aa72c3917fd5225427e0e57ee88",
+    "run.log": "25416372609dcfea2ecc96716cbab720340ae475aa89e0b879d67aaa2bd5df2c",
+    "status.json": "3bed097a70e3ddd1c1aaac309f500aa8de7b3ba861d5fc5a69f82494db8f4940",
+    "tests_gpu_environment.xml": "3188f11f6fee8c85b7913cf5770f95be695b0d2bd0ddcbcb7ecfd66e2f6ca976",
+    "train_metrics.csv": "84fe4eececb987039c48db740a1bab0c925cd04f19bc14ee535a4e169cf6129e",
+    "training_curves.png": "ab3614211783192f76b67d9c2f508912c47901f9ce0fb0ae7d4496b8b2b00aa3",
+    "training_report.md": "844310625d901107302a23fdc80b15710246a6cbb2c48fd67674aef023ba69ae",
+    "validation_before.json": "f9c96f5efdc4f3e7f0f0da93c596bd18bd90f6bb8d2244e7820fcdd88d07d284"
+  }
+}

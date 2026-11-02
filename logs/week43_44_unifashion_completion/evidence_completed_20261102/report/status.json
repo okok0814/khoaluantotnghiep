@@ -1,0 +1,12 @@
+{
+  "original_training_completed": true,
+  "original_final_evaluated": true,
+  "selected_checkpoint_copy_receipt_valid": true,
+  "attention_fusion_evaluated": false,
+  "comparison_split": "val",
+  "official_test_recall_available": false,
+  "test_blocker": "6118 public test queries have no target labels in the supplied data",
+  "last_week_task_completed": true,
+  "three_model_validation_comparison_completed": false,
+  "original_test_task_completed": false
+}

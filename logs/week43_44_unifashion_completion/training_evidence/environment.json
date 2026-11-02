@@ -1,0 +1,28 @@
+{
+  "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+  "torch": "2.6.0+cu124",
+  "gpu": "Tesla T4",
+  "cuda": "12.4",
+  "packages": {
+    "torch": "2.6.0",
+    "torchvision": "0.21.0",
+    "transformers": "4.36.2",
+    "timm": "0.9.12",
+    "accelerate": "0.27.2",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "Pillow": "11.1.0"
+  },
+  "fingerprint": {
+    "data_audit": "4715235209dc1b8573217a9bc97c1cc41f76d8cc29e66f2a6b56bb9f4ae21bbe",
+    "code": {
+      "train_unifashion_finetune.py": "0c8b1887b00865b00bdfc0b54db745551e19a18f003fab9c59a65fbd0096c09c",
+      "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+      "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+      "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+      "fashioniq_unifashion_dataset.py": "2c252f4297aac573d0e3676e6476a825e611bbe692997b8e2bc9cdffa0b3aa88",
+      "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+    },
+    "assets_manifest": "6728ad447f435cca7253d7c9c9cd933b6abc25a21930bdf77a74d90bcde4bcec"
+  }
+}
