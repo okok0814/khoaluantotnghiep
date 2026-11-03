@@ -1,0 +1,25 @@
+{
+  "checkpoint": "/content/drive/MyDrive/KHOALUAN/Tu\u1ea7n 41/UniFashionResults_run2/best_monitor.pt",
+  "keys": [
+    "config",
+    "epoch",
+    "model",
+    "monitor_loss",
+    "selection"
+  ],
+  "epoch": 8,
+  "monitor_loss": 0.31285399156263777,
+  "selection": "fixed monitor loss, NOT Recall@K",
+  "model_keys": 359,
+  "attention_fusion_keys": [
+    "attention_fusion.gate_network.0.bias",
+    "attention_fusion.gate_network.0.weight",
+    "attention_fusion.gate_network.3.bias",
+    "attention_fusion.gate_network.3.weight",
+    "attention_fusion.projection.0.bias",
+    "attention_fusion.projection.0.weight",
+    "attention_fusion.projection.3.bias",
+    "attention_fusion.projection.3.weight"
+  ],
+  "attention_fusion_present": true
+}

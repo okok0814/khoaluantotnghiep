@@ -1,0 +1,35 @@
+{
+  "counts": {
+    "images": 44114,
+    "captions": 42544,
+    "shape_rows": 42544,
+    "fabric_rows": 44096,
+    "pattern_rows": 44096
+  },
+  "missing": {
+    "caption": 0,
+    "shape": 0,
+    "fabric": 0,
+    "pattern": 0
+  },
+  "unique_categories": [
+    "Blouses_Shirts",
+    "Cardigans",
+    "Denim",
+    "Dresses",
+    "Graphic_Tees",
+    "Jackets_Coats",
+    "Jackets_Vests",
+    "Leggings",
+    "Pants",
+    "Rompers_Jumpsuits",
+    "Shirts_Polos",
+    "Shorts",
+    "Skirts",
+    "Suiting",
+    "Sweaters",
+    "Sweatshirts_Hoodies",
+    "Tees_Tanks"
+  ],
+  "note": "shape annotations may cover fewer images than fabric/pattern; no missing shape label is invented."
+}

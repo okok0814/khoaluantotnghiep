@@ -1,0 +1,7 @@
+score_type,tier,queries,mean_positive_count,mean_best_rank,Recall@1,Recall@5,Recall@10,Recall@50
+image_caption_score,detailed,1000,221.066,109.848,29.799999999999997,55.2,65.5,84.3
+image_caption_score,fabric_pattern,1000,1797.975,22.147,36.7,71.3,82.8,94.8
+image_caption_score,sleeve_fabric_pattern,1000,685.468,50.95,37.8,62.5,73.8,90.3
+image_score,detailed,1000,221.066,318.012,14.399999999999999,32.1,41.8,65.60000000000001
+image_score,fabric_pattern,1000,1797.975,64.133,22.2,49.2,63.5,85.39999999999999
+image_score,sleeve_fabric_pattern,1000,685.468,119.144,22.8,48.199999999999996,59.8,81.3

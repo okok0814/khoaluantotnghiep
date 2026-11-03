@@ -1,0 +1,39 @@
+{
+  "name": "DeepFashion-MultiModal custom multi-positive attribute retrieval",
+  "official_benchmark": false,
+  "evaluation_mode": "full",
+  "seed": 42,
+  "gallery_size": 41571,
+  "query_count": 3000,
+  "queries_per_tier": {
+    "fabric_pattern": 1000,
+    "sleeve_fabric_pattern": 1000,
+    "detailed": 1000
+  },
+  "tiers": {
+    "fabric_pattern": [
+      "upper_fabric",
+      "upper_pattern"
+    ],
+    "sleeve_fabric_pattern": [
+      "sleeve",
+      "upper_fabric",
+      "upper_pattern"
+    ],
+    "detailed": [
+      "sleeve",
+      "neckline",
+      "upper_fabric",
+      "upper_pattern"
+    ]
+  },
+  "ks": [
+    1,
+    5,
+    10,
+    50
+  ],
+  "reference_excluded": true,
+  "positive_definition": "same gender/category and exact match on all queried official annotation fields",
+  "query_storage": "compact attribute codes; positive set is reconstructed from gallery during evaluation"
+}

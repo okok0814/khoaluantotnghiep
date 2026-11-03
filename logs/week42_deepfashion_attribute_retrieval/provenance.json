@@ -1,0 +1,70 @@
+{
+  "checkpoint": "/content/drive/MyDrive/KHOALUAN/Tuần 41/UniFashionResults_run2/best_monitor.pt",
+  "checkpoint_epoch": 8,
+  "checkpoint_monitor_loss": 0.31285399156263777,
+  "checkpoint_selection": "fixed monitor loss, NOT Recall@K",
+  "attention_fusion_keys": [
+    "attention_fusion.gate_network.0.weight",
+    "attention_fusion.gate_network.0.bias",
+    "attention_fusion.gate_network.3.weight",
+    "attention_fusion.gate_network.3.bias",
+    "attention_fusion.projection.0.weight",
+    "attention_fusion.projection.0.bias",
+    "attention_fusion.projection.3.weight",
+    "attention_fusion.projection.3.bias"
+  ],
+  "gallery_size": 41571,
+  "queries": 3000,
+  "config": {
+    "seed": 42,
+    "epochs": 10,
+    "batch_size": 2,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.05,
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "eps": 1e-07,
+    "scheduler": "one_cycle",
+    "warmup_epochs": 1.5,
+    "div_factor": 100.0,
+    "final_div_factor": 10000.0,
+    "max_grad_norm": 1.0,
+    "image_size": 224,
+    "target_ratio": 1.25,
+    "max_txt_len": 64,
+    "num_workers": 0,
+    "precision": "fp32",
+    "grad_scaler_init_scale": 256.0,
+    "max_amp_retries": 10,
+    "freeze_vit": true,
+    "checkpoint_every_steps": 500,
+    "monitor_per_category": 32,
+    "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+  },
+  "seconds_current_session": 23924.353388857002,
+  "resume_enabled": true,
+  "gallery_chunk_size": 256,
+  "query_chunk_size": 20,
+  "fingerprint": {
+    "schema": 3,
+    "gallery_semantic": {
+      "checkpoint_sha256": "e7031c11bc9d748981c650e9a0d7a8ad9501372be4c470c97667b8414b5cbe28",
+      "gallery_csv_sha256": "e34ac40981a088dcd98d3480b3da6169d2632d992bac3c2f71adbbdd8a62a08c",
+      "captions_sha256": "fffc647fc1ef8653a33e8ebbc086c8e765a7ed292c44122d05ed831145038c76"
+    },
+    "query_semantic": {
+      "checkpoint_sha256": "e7031c11bc9d748981c650e9a0d7a8ad9501372be4c470c97667b8414b5cbe28",
+      "gallery_csv_sha256": "e34ac40981a088dcd98d3480b3da6169d2632d992bac3c2f71adbbdd8a62a08c",
+      "captions_sha256": "fffc647fc1ef8653a33e8ebbc086c8e765a7ed292c44122d05ed831145038c76",
+      "queries_csv_sha256": "d17b419dfb478c5268c3c2da0722b63fccb3f5d750ec51ca0ac48c283fc4a232"
+    },
+    "layout": {
+      "batch_size": 2,
+      "gallery_chunk_size": 256,
+      "query_chunk_size": 20
+    }
+  },
+  "note": "custom DeepFashion-MultiModal attribute-retrieval protocol; not an official benchmark"
+}
