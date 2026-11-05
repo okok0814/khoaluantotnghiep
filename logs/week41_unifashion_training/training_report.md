@@ -1,8 +1,8 @@
 # Báo cáo fine-tuning UniFashion (bản tối thiểu)
 
-- Trạng thái: training
-- Tiến độ: 9/10 epoch, 81000 cập nhật tối ưu
-- Loss huấn luyện gần nhất: 0.4144 (TB 100 bước cuối)
+- Trạng thái: completed
+- Tiến độ: 10/10 epoch, 90000 cập nhật tối ưu
+- Loss huấn luyện gần nhất: 0.0492 (TB 100 bước cuối)
 - Monitor loss tốt nhất: 0.3129 (epoch 8)
 
 | epoch | train_loss | monitor_loss |
@@ -16,5 +16,6 @@
 | 7 | 0.1698 | 0.3266 |
 | 8 | 0.1337 | 0.3129 |
 | 9 | 0.1030 | 0.3480 |
+| 10 | 0.1310 | 0.3517 |
 
 Lưu ý: monitor loss là loss trên tập cố định, KHÔNG phải Recall@K.
