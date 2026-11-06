@@ -1,0 +1,26 @@
+{
+  "last_path": "/content/drive/MyDrive/KHOALUAN/Tuần 41/UniFashionResults_run2/last.pt",
+  "last_size_bytes": 2350526301,
+  "last_cursor": [
+    10,
+    0
+  ],
+  "last_epochs": 10,
+  "last_optimizer_steps": 90000,
+  "best_path": "/content/drive/MyDrive/KHOALUAN/Tuần 41/UniFashionResults_run2/best_monitor.pt",
+  "best_size_bytes": 843297841,
+  "best_epoch": 8,
+  "best_monitor_loss": 0.31285399156263777,
+  "fusion_parameter_key_count": 8,
+  "fusion_parameter_keys": [
+    "attention_fusion.gate_network.0.bias",
+    "attention_fusion.gate_network.0.weight",
+    "attention_fusion.gate_network.3.bias",
+    "attention_fusion.gate_network.3.weight",
+    "attention_fusion.projection.0.bias",
+    "attention_fusion.projection.0.weight",
+    "attention_fusion.projection.3.bias",
+    "attention_fusion.projection.3.weight"
+  ],
+  "checked_with": "torch.load(map_location=cpu, mmap=True); this is a metadata/state check, not a forward-pass evaluation"
+}

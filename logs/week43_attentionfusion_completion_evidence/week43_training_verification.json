@@ -1,0 +1,14 @@
+{
+  "task_week": 43,
+  "report_week": 45,
+  "source": "/content/drive/MyDrive/KHOALUAN/Tuần 41/UniFashionResults_run2",
+  "status": "completed",
+  "completed_epochs": 10,
+  "optimizer_steps": 90000,
+  "best_monitor_epoch": 8,
+  "best_monitor_loss": 0.3128539915626377,
+  "final_epoch_train_loss": 0.1310214419508846,
+  "final_epoch_monitor_loss": 0.3517183473807913,
+  "checkpoint_checked": true,
+  "note": "Không chạy huấn luyện mới; tổng hợp và xác minh kết quả huấn luyện gốc. Monitor loss không phải Recall@K."
+}
