@@ -1,0 +1,27 @@
+{
+  "variant": "UniFashion + Attention-Gated Fusion",
+  "weight_origin": "best_monitor.pt",
+  "epoch": 8,
+  "optimizer_step_at_epoch": 72000,
+  "monitor_loss": 0.31285399156263777,
+  "best_original_sha256": "e7031c11bc9d748981c650e9a0d7a8ad9501372be4c470c97667b8414b5cbe28",
+  "last_original_sha256": "e0fc51a92dc11061550a015cdcb4dccbdcf420a84200476c0867404e41737442",
+  "evaluation_snapshot_sha256": "38ed31c953fb0cee37f5e6be82c07b21cb6150ada7e7932c194a68732152e7f1",
+  "fusion_parameter_keys": [
+    "attention_fusion.gate_network.0.weight",
+    "attention_fusion.gate_network.0.bias",
+    "attention_fusion.gate_network.3.weight",
+    "attention_fusion.gate_network.3.bias",
+    "attention_fusion.projection.0.weight",
+    "attention_fusion.projection.0.bias",
+    "attention_fusion.projection.3.weight",
+    "attention_fusion.projection.3.bias"
+  ],
+  "source_signature": {
+    "best_bytes": 843297841,
+    "best_mtime_ns": 1793054482000000000,
+    "last_bytes": 2350526301,
+    "last_mtime_ns": 1793873384000000000
+  },
+  "snapshot_note": "Được tạo chỉ để tái sử dụng script evaluator; weights=best_monitor, history=last truncated to best epoch. Không phải checkpoint train mới."
+}

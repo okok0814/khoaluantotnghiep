@@ -1,0 +1,16 @@
+{
+  "status": "evaluation_completed",
+  "dataset": "FashionIQ validation",
+  "queries": 6016,
+  "checkpoint_origin": "/content/drive/MyDrive/KHOALUAN/Tuần 41/UniFashionResults_run2/best_monitor.pt",
+  "checkpoint_epoch": 8,
+  "checkpoint_sha256": "e7031c11bc9d748981c650e9a0d7a8ad9501372be4c470c97667b8414b5cbe28",
+  "evaluation_snapshot_sha256": "38ed31c953fb0cee37f5e6be82c07b21cb6150ada7e7932c194a68732152e7f1",
+  "fusion_macro_recall_10": 64.28461712162381,
+  "fusion_macro_recall_50": 80.73869945665076,
+  "reproduction_note": "Paper results are published references, not same-run reproduction.",
+  "protocol_reconciliation": "/content/drive/MyDrive/KHOALUAN/Tuần 45/Week45_Baseline_SOTA_Evidence/protocol_reconciliation.json",
+  "ablation_verified": false,
+  "sota_current_verified": false,
+  "no_fusion_same_run": "Chưa có đánh giá baseline cùng điều kiện được kiểm chứng."
+}

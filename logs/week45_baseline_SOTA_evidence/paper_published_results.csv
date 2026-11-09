@@ -1,0 +1,5 @@
+method,Recall@10,Recall@50,dataset,source,type
+CASE,48.79,70.68,FashionIQ validation,"UniFashion (2024), Table 4, page 8; https://arxiv.org/abs/2408.11305","Công bố, không tự chạy"
+FAME-ViL,46.84,69.75,FashionIQ validation,"UniFashion (2024), Table 4, page 8; https://arxiv.org/abs/2408.11305","Công bố, không tự chạy"
+SPRC,54.92,74.97,FashionIQ validation,"UniFashion (2024), Table 4, page 8; https://arxiv.org/abs/2408.11305","Công bố, không tự chạy"
+UniFashion (paper gốc),58.93,76.93,FashionIQ validation,"UniFashion (2024), Table 4, page 8; https://arxiv.org/abs/2408.11305","Công bố, không tự chạy"

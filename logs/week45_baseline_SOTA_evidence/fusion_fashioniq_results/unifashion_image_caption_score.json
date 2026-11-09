@@ -1,0 +1,124 @@
+{
+  "method": "unifashion_image_caption_score",
+  "protocol": {
+    "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+    "gallery_sha256": {
+      "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+      "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+      "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+    },
+    "split": "val",
+    "exclude_reference": true,
+    "ks": [
+      10,
+      50
+    ],
+    "tie_break": "descending score, then official gallery order",
+    "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+    "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+  },
+  "provenance": {
+    "checkpoint_sha256": "38ed31c953fb0cee37f5e6be82c07b21cb6150ada7e7932c194a68732152e7f1",
+    "snapshot": "best_monitor_eval_snapshot.pt",
+    "checkpoint_kind": "full_training",
+    "optimizer_steps": 72000,
+    "completed_epochs": 8,
+    "next_epoch_one_based": 9,
+    "completed_batches_in_current_epoch": 0,
+    "planned_epochs": 10,
+    "evaluation_scope": "full_validation",
+    "training_config": {
+      "seed": 42,
+      "epochs": 10,
+      "batch_size": 2,
+      "learning_rate": 2e-05,
+      "weight_decay": 0.05,
+      "betas": [
+        0.9,
+        0.98
+      ],
+      "eps": 1e-07,
+      "scheduler": "one_cycle",
+      "warmup_epochs": 1.5,
+      "div_factor": 100.0,
+      "final_div_factor": 10000.0,
+      "max_grad_norm": 1.0,
+      "image_size": 224,
+      "target_ratio": 1.25,
+      "max_txt_len": 64,
+      "num_workers": 0,
+      "precision": "fp32",
+      "grad_scaler_init_scale": 256.0,
+      "max_amp_retries": 10,
+      "freeze_vit": true,
+      "checkpoint_every_steps": 500,
+      "monitor_per_category": 32,
+      "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+    },
+    "training_fingerprint": {
+      "data_audit": "a66d5cf77502afab948354d81f43c5f66eb25a1b005257f5b2c96e804b4e27ff",
+      "code": {
+        "train_unifashion_finetune.py": "e0fd5941c3ee0c09b6fdc9e7b685a8b9b5c0cd5d739bd05d534f4e3c14981092",
+        "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+        "unifashion_runtime.py": "fd36f07c0eb8b60db043187e4e5f638fa31258c83620a8d7dae9c0adf6fa58b5",
+        "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+        "fashioniq_unifashion_dataset.py": "45f0ff80009431523c17107e541a5556f89c2817ca7350555ee029cd6eedc433",
+        "attention_fusion.py": "0b9b0dd2512665d889dad38b51983e556cdd3814fdbebbf1f69f03b2b7a3f30f",
+        "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+      },
+      "assets_manifest": "c36684415c28e0b0f4ad39c5eb7cf7f608fe8e8e613013ee362e331ec477dc6b"
+    },
+    "eval_batch_size": 2,
+    "precision": "fp32",
+    "gpu": "Tesla T4",
+    "torch": "2.6.0+cu124",
+    "scoring": "Official query_tokens target encoder; max query-to-target-token similarity; optional released gallery-caption similarity",
+    "caption_rerank": "No ITM reranking, no labeled target captions used as query input",
+    "gallery_captions_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+    "code_sha256": {
+      "evaluate_unifashion_fashioniq.py": "c3296300fe95c4a3fd5852b66e735f743add2a7fb27e7af24c80488d96a77ee8",
+      "fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+      "unifashion_tuning.py": "4d453aa2c0226c36c85e163d7b53d234061c89972360827b0e8d84c011b44406",
+      "unifashion_runtime.py": "fd36f07c0eb8b60db043187e4e5f638fa31258c83620a8d7dae9c0adf6fa58b5",
+      "attention_fusion.py": "0b9b0dd2512665d889dad38b51983e556cdd3814fdbebbf1f69f03b2b7a3f30f"
+    },
+    "evaluation_seconds": 4385.021986943
+  },
+  "summary": [
+    {
+      "category": "dress",
+      "queries": 2017,
+      "gallery_size": 3817,
+      "Recall@10": 65.74119980168567,
+      "Recall@50": 80.61477441745166
+    },
+    {
+      "category": "shirt",
+      "queries": 2038,
+      "gallery_size": 6346,
+      "Recall@10": 60.15701668302257,
+      "Recall@50": 77.91952894995093
+    },
+    {
+      "category": "toptee",
+      "queries": 1961,
+      "gallery_size": 5373,
+      "Recall@10": 66.95563488016319,
+      "Recall@50": 83.68179500254972
+    },
+    {
+      "category": "MACRO",
+      "queries": 6016,
+      "gallery_size": null,
+      "Recall@10": 64.28461712162381,
+      "Recall@50": 80.73869945665076
+    },
+    {
+      "category": "MICRO",
+      "queries": 6016,
+      "gallery_size": null,
+      "Recall@10": 64.24534574468085,
+      "Recall@50": 80.70146276595744
+    }
+  ]
+}

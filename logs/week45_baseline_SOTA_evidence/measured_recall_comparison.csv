@@ -1,0 +1,36 @@
+method,category,Recall@10,Recall@50,source,comparison_level
+UniFashion + Attention-Gated Fusion / image+caption,dress,65.74119980168567,80.61477441745166,Đo mới: best_monitor.pt epoch 8,Đo mới / cùng protocol trong Cell 4
+UniFashion + Attention-Gated Fusion / image+caption,shirt,60.15701668302257,77.91952894995093,Đo mới: best_monitor.pt epoch 8,Đo mới / cùng protocol trong Cell 4
+UniFashion + Attention-Gated Fusion / image+caption,toptee,66.95563488016319,83.68179500254972,Đo mới: best_monitor.pt epoch 8,Đo mới / cùng protocol trong Cell 4
+UniFashion + Attention-Gated Fusion / image+caption,MACRO,64.28461712162381,80.73869945665076,Đo mới: best_monitor.pt epoch 8,Đo mới / cùng protocol trong Cell 4
+UniFashion + Attention-Gated Fusion / image+caption,MICRO,64.24534574468085,80.70146276595744,Đo mới: best_monitor.pt epoch 8,Đo mới / cùng protocol trong Cell 4
+UniFashion + Attention-Gated Fusion / image,dress,40.10907288051562,64.74962816063461,Đo mới: best_monitor.pt epoch 8,Đo mới / cùng protocol trong Cell 4
+UniFashion + Attention-Gated Fusion / image,shirt,47.05593719332679,67.86064769381747,Đo mới: best_monitor.pt epoch 8,Đo mới / cùng protocol trong Cell 4
+UniFashion + Attention-Gated Fusion / image,toptee,48.80163182049975,73.1769505354411,Đo mới: best_monitor.pt epoch 8,Đo mới / cùng protocol trong Cell 4
+UniFashion + Attention-Gated Fusion / image,MACRO,45.32221396478072,68.59574212996439,Đo mới: best_monitor.pt epoch 8,Đo mới / cùng protocol trong Cell 4
+UniFashion + Attention-Gated Fusion / image,MICRO,45.295877659574465,68.55053191489363,Đo mới: best_monitor.pt epoch 8,Đo mới / cùng protocol trong Cell 4
+fashionclip_additive,dress,21.91373326722856,41.79474467030243,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_additive,shirt,22.129538763493624,37.63493621197252,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_additive,toptee,26.823049464558903,45.18103008669046,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_additive,MACRO,23.62210716509369,41.536903656321805,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_additive,MICRO,23.587101063829788,41.48936170212766,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_image_only,dress,6.395637084779375,15.220624690133864,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_image_only,shirt,8.979391560353287,18.10598626104024,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_image_only,toptee,7.445181030086691,17.440081591024985,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_image_only,MACRO,7.606736558406451,16.922230847399696,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_image_only,MICRO,7.613031914893617,16.92154255319149,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_text_only,dress,24.39266236985622,44.67030242935052,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_text_only,shirt,26.005888125613343,42.9342492639843,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_text_only,toptee,32.94237633860276,53.69709331973483,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_text_only,MACRO,27.780308944690773,47.10054833768989,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+fashionclip_text_only,MICRO,27.726063829787236,47.024601063829785,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+unifashion_image_caption_score,dress,54.28854734754586,73.029251363411,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+unifashion_image_caption_score,shirt,55.64278704612365,73.40529931305201,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+unifashion_image_caption_score,toptee,61.29525752167262,79.85721570627231,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+unifashion_image_caption_score,MACRO,57.07553063844738,75.43058879424511,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+unifashion_image_caption_score,MICRO,57.03125,75.38231382978722,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+unifashion_image_score,dress,28.16063460585027,54.1398116013882,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+unifashion_image_score,shirt,38.86162904808636,60.84396467124632,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+unifashion_image_score,toptee,41.61142274349822,66.24171341152473,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+unifashion_image_score,MACRO,36.21122879914495,60.408496561386414,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
+unifashion_image_score,MICRO,36.17021276595745,60.35571808510638,"Kết quả thực đo lịch sử Tuần 41, checkpoint riêng (có thể thuộc bước 29500)",Tham khảo lịch sử; chưa là ablation fusion
