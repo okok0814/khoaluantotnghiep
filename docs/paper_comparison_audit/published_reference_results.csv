@@ -1,0 +1,5 @@
+method,Recall@10,Recall@50,source,table,year,status
+UniFashion with gallery captions,58.93,76.93,https://aclanthology.org/2024.emnlp-main.89.pdf,4,2024,Published reference; not rerun in this audit
+UniFashion without gallery-caption score,55.27,74.8,https://aclanthology.org/2024.emnlp-main.89.pdf,4,2024,Published reference; not rerun in this audit
+SPRC original full model,54.92,74.97,https://proceedings.iclr.cc/paper_files/paper/2024/file/8204f54f6cd8f0db1765a274e94ceaac-Paper-Conference.pdf,1,2024,Published reference; not rerun in this project
+QuRe BLIP-2 ViT-L,52.6,73.48,https://arxiv.org/html/2507.12416v1,2 and 7,2025,Published reference; not rerun in this project

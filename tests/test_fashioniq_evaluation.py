@@ -72,6 +72,10 @@ def test_official_inference_single_query_matches_batch_and_caption_score():
     torch.set_num_threads(2)
     torch.manual_seed(42)
     model = Tiny(embed_dim=16, max_txt_len=12).eval()
+    # Current main injects the gate into official inference; the tiny fixture
+    # must construct the same module as LocalUniFashion, at the fixture width.
+    from src.attention_fusion import AttentionGatedFusion
+    model.attention_fusion = AttentionGatedFusion(16, 16).eval()
     assert Tiny.inference is official.inference
     assert Tiny.extract_target_features is official.extract_target_features
     images = torch.randn(3, 3, 16, 16)

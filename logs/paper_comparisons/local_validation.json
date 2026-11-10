@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-04",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "packages": {
+    "torch": "2.6.0+cpu",
+    "torchvision": "0.21.0+cpu",
+    "transformers": "4.36.2",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "timm": "0.9.12",
+    "accelerate": "0.27.2",
+    "pytest": "8.3.5"
+  },
+  "local_tests": {
+    "comparison_and_existing_evaluation_checks": 22,
+    "isolated_bundle_tests": 8,
+    "full_external_checkpoint_gpu_execution": false
+  },
+  "completed_new_experiments": [
+    "Full-validation re-evaluation of existing standalone FashionCLIP gate"
+  ],
+  "pending_gpu": [
+    "matched pixel FashionCLIP extraction and three-seed fusion controls",
+    "SPRC ViT-L checkpoint evaluation",
+    "CLIP4CIR RN50x4 fullft checkpoint evaluation",
+    "UniFashion before-fine-tuning initialization control"
+  ],
+  "pending_external_input": [
+    "integrated UniFashion attention-fusion checkpoint and exact training runtime"
+  ],
+  "code_sha256": {
+    "scripts/build_paper_error_review.py": "8e2717499b013c708fdaf1e6b2c39e3adceae315059ddbf5359f2d29882da6f4",
+    "scripts/evaluate_paper_models.py": "3261adc516b9aeddcf0079a2eb1a342d18cd6e4b5b9cf8c4f868f96624d72847",
+    "scripts/export_paper_comparisons.py": "35128ce855e8156f17ff825a8eb687e46c28cbaf4f8b3be57f9006df15caa476",
+    "scripts/extract_paper_fashionclip.py": "812a1b222675d7c2f2c96de2c8ed0b6820d625e9b869fd0aade31e5b14d3d35e",
+    "scripts/package_paper_comparisons.py": "0271bf14bd96ac5c9f73311e874a18d6054b73b3416b68351dd2d38778b0ba3f",
+    "scripts/prepare_paper_models.py": "883b1d2485440d3127869b177d58a3651e9ee35b3ba31831effed728237d8f38",
+    "scripts/report_paper_comparisons.py": "4be6fa333866c11f4ad36649dac7a6e7f5c1418119a24b872070fe67920afd21",
+    "scripts/run_fashionclip_controls.py": "437ad96e21d0d4166f89bb41db2c961e9fc8b7dc45e3ed12bb6cfd75a3863874",
+    "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+    "src/paper_model_adapters.py": "7146ef293415e0ed76e81415677cd1ff8dd1998d2a89a0e0c29241c2a251ee26",
+    "configs/paper_comparisons.json": "b7da033a390934f53f6d92839b267255128cf3349115a664580cf3e9c87fc6e0",
+    "tests/test_paper_comparisons.py": "082a1a8f71ffbe578d9f8b091005021427a8014a8ae0ffe87ce3fe4a2bda3e88",
+    "notebooks/45_11_Conference_Comparisons.ipynb": "72dbd8609a5bef92b12c97b38605221e109532ed1e7607364b029285f87ad681"
+  },
+  "isolated_bundle_test_exit_code": 0
+}

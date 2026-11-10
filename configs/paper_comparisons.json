@@ -1,0 +1,145 @@
+{
+  "clip4cir": {
+    "repository": "ABaldrati/CLIP4Cir",
+    "revision": "56bb547909d57bd8b5d2ef7ba55149962f77d482",
+    "files": [
+      {
+        "path": "src/combiner.py",
+        "git_blob": "d6da44719cf5ff713e5b2fe451c7864dad09fd39"
+      },
+      {
+        "path": "src/data_utils.py",
+        "git_blob": "064e7123836d1ef3a8981525feecac16342dc2f6"
+      },
+      {
+        "path": "src/validate.py",
+        "git_blob": "f8d4a4c84759f53918d0de075c07beb269a80c14"
+      },
+      {
+        "path": "README.md",
+        "git_blob": "89c1b94ebd4d9877d799fd3360464a5fefbb0eb9"
+      },
+      {
+        "path": "LICENSE",
+        "git_blob": "b72614c2ce76e5ebe5edb44541b684eaaa700400"
+      }
+    ],
+    "checkpoint_variant": "FashionIQ/RN50x4_fullft",
+    "backbone": "RN50x4",
+    "release": "https://github.com/ABaldrati/CLIP4Cir/releases/tag/weights",
+    "assets": [
+      {
+        "name": "pretrained_models.tar.gz.part-000",
+        "url": "https://github.com/ABaldrati/CLIP4Cir/releases/download/weights/pretrained_models.tar.gz.part-000",
+        "sha256": "7a70c0e9f52edbfb2c479b747430391f25bba2f34a01d292fbd672a955964106",
+        "bytes": 1900000000
+      },
+      {
+        "name": "pretrained_models.tar.gz.part-001",
+        "url": "https://github.com/ABaldrati/CLIP4Cir/releases/download/weights/pretrained_models.tar.gz.part-001",
+        "sha256": "8a976c834d36f206f8b3c5782b6abbb33331589313de5fe602d530def643fcb3",
+        "bytes": 1900000000
+      },
+      {
+        "name": "pretrained_models.tar.gz.part-002",
+        "url": "https://github.com/ABaldrati/CLIP4Cir/releases/download/weights/pretrained_models.tar.gz.part-002",
+        "sha256": "849e141225607e096f74748527cc3acbb936f71109779eca0e09f7ab2b16378e",
+        "bytes": 1900000000
+      },
+      {
+        "name": "pretrained_models.tar.gz.part-003",
+        "url": "https://github.com/ABaldrati/CLIP4Cir/releases/download/weights/pretrained_models.tar.gz.part-003",
+        "sha256": "45098bbf6d01c09856cdcce745a301458a1243f2b33904318f5c38cd5f5df89c",
+        "bytes": 1900000000
+      },
+      {
+        "name": "pretrained_models.tar.gz.part-004",
+        "url": "https://github.com/ABaldrati/CLIP4Cir/releases/download/weights/pretrained_models.tar.gz.part-004",
+        "sha256": "8f999d94ed58edb7b3fe20bf01beb534a9c6f95d98a40b546793fd9655d10a1c",
+        "bytes": 945777978
+      }
+    ]
+  },
+  "sprc": {
+    "repository": "chunmeifeng/SPRC",
+    "revision": "2935a5397732260d1db6fa577e5926f963e36f0f",
+    "files": [
+      {
+        "path": "README.md",
+        "git_blob": "c602e3de2048f818c963b3eea4325edc706bcb1f"
+      },
+      {
+        "path": "src/blip_validate.py",
+        "git_blob": "7b5620ab446516e3366840dceb92f2449835bb9d"
+      },
+      {
+        "path": "src/data_utils.py",
+        "git_blob": "0d7223a76a69595b364cfb41f1d77cf3ac09c662"
+      },
+      {
+        "path": "src/lavis/common/dist_utils.py",
+        "git_blob": "296a3c86f29c6e82fa8f1108c7dd9fa7d3e9ce45"
+      },
+      {
+        "path": "src/lavis/common/logger.py",
+        "git_blob": "aa1ea0d096db7b4914c6ba2c031c06a40fd793f3"
+      },
+      {
+        "path": "src/lavis/common/registry.py",
+        "git_blob": "9039d8aaa580f19cc0d43ed9330bd90055045867"
+      },
+      {
+        "path": "src/lavis/common/utils.py",
+        "git_blob": "29b35e5159634f9b114f2ddd608da1db67893840"
+      },
+      {
+        "path": "src/lavis/configs/models/blip2/blip2_pretrain_vitL.yaml",
+        "git_blob": "a0a0fc6464abcfea3e08655e43e381c9456f62b5"
+      },
+      {
+        "path": "src/lavis/models/base_model.py",
+        "git_blob": "3434c33cdf2c4bb271ce73508b52ff7112352e27"
+      },
+      {
+        "path": "src/lavis/models/blip2_models/Qformer.py",
+        "git_blob": "df30dadc4bc5a047a55a07169b57418e7cb70a9b"
+      },
+      {
+        "path": "src/lavis/models/blip2_models/blip2.py",
+        "git_blob": "6446f476b809b9e5ba0d4f2b53212435900e42e5"
+      },
+      {
+        "path": "src/lavis/models/blip2_models/blip2_qformer_cir_align_prompt.py",
+        "git_blob": "5b1cb5da385501a6ad94da22851d28b7f994f1d9"
+      },
+      {
+        "path": "src/lavis/models/blip_models/blip_outputs.py",
+        "git_blob": "9d18ddcabb68f09e1b4952d337d0206efcd8e8ad"
+      },
+      {
+        "path": "src/lavis/models/clip_vit.py",
+        "git_blob": "6b73df57abeb1d894bfd7b41ae03be8ede86845c"
+      },
+      {
+        "path": "src/lavis/models/eva_vit.py",
+        "git_blob": "5b80b8206e35456ef3c7eb3278e2b65901a8aa7e"
+      },
+      {
+        "path": "src/validate_blip.py",
+        "git_blob": "57065aaae1ad89910888e6fd88d8d9f8ba4f752d"
+      }
+    ],
+    "checkpoint_url": "https://drive.google.com/file/d/11p95msuuTAU6Pej7d_a-KjUHHpP3kH8Y/view",
+    "checkpoint_variant": "SPRC FashionIQ ViT-L; not the original full-model paper row",
+    "base_url": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_vitL.pth",
+    "vision_url": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/clip_vit_L.pth"
+  },
+  "fashionclip": {
+    "model": "patrickjohncyh/fashion-clip",
+    "revision": "7e3ba62"
+  },
+  "openai_clip": {
+    "repository": "openai/CLIP",
+    "revision": "d05afc436d78f1c48dc0dbf8e5980a9d471f35f6"
+  }
+}

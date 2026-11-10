@@ -1,0 +1,53 @@
+{
+  "protocol": {
+    "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+    "gallery_sha256": {
+      "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+      "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+      "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+    },
+    "split": "val",
+    "exclude_reference": true,
+    "ks": [
+      10,
+      50
+    ],
+    "tie_break": "descending score, then official gallery order",
+    "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+    "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+  },
+  "input_sha256": {
+    "D:\\code\\khoaluantotnghiep\\logs\\week41_fashioniq_evaluation\\baselines\\fashionclip_image_only.json": "f0dced466cd90da43194d1053ea648441e3e259646df6c16eeb368d8ac582ab3",
+    "D:\\code\\khoaluantotnghiep\\logs\\week41_fashioniq_evaluation\\baselines\\fashionclip_image_only_per_query.csv": "05c8aabaa2c00f0158aef2abdddb93c888b2bca98d8ec33f3556b13510cf9472",
+    "D:\\code\\khoaluantotnghiep\\logs\\week41_fashioniq_evaluation\\baselines\\fashionclip_text_only.json": "fa04f8640d4e9a760023dcff50940af08a9c5525551347dc6aa959db12d51d78",
+    "D:\\code\\khoaluantotnghiep\\logs\\week41_fashioniq_evaluation\\baselines\\fashionclip_text_only_per_query.csv": "f9a6d91ccd5a975b910699256028f8ff500ff0235e556d13f9407e672f0633f5",
+    "D:\\code\\khoaluantotnghiep\\logs\\week41_fashioniq_evaluation\\baselines\\fashionclip_additive.json": "c10340a4068eba3aae12dcc36db82d3cadb71d9a430dc97ddda9e940df38a00a",
+    "D:\\code\\khoaluantotnghiep\\logs\\week41_fashioniq_evaluation\\baselines\\fashionclip_additive_per_query.csv": "b40338666008f84c97c189790a72ca39efae54d244fdc2edda837f5f41777671",
+    "D:\\code\\khoaluantotnghiep\\logs\\week43_44_unifashion_completion\\evidence_completed_20261102\\final_results\\unifashion_image_score.json": "ae88bfff95cf46d96cc74eceecee5364c6ad09b0f421a67a5951a619216daddf",
+    "D:\\code\\khoaluantotnghiep\\logs\\week43_44_unifashion_completion\\evidence_completed_20261102\\final_results\\unifashion_image_score_per_query.csv": "e4d092059e2e6cc4611f066f14b61c2518badd54a3efc0d0950f357ef5715059",
+    "D:\\code\\khoaluantotnghiep\\logs\\week43_44_unifashion_completion\\evidence_completed_20261102\\final_results\\unifashion_image_caption_score.json": "56b4646b0bc5a1f7288b26a82f33f2556e045d8978a3be78b256971106719198",
+    "D:\\code\\khoaluantotnghiep\\logs\\week43_44_unifashion_completion\\evidence_completed_20261102\\final_results\\unifashion_image_caption_score_per_query.csv": "15ed610e35fa4c2e359458e3c266d21c31a1dd7a9db0a1e5dabdce3239671c66",
+    "D:\\code\\khoaluantotnghiep\\logs\\paper_comparisons\\legacy_gate\\fashionclip_legacy_gate.json": "94168cd244b2beab2ebb272617a863ddd059c45c37274f5c7c0981f64df5fedf",
+    "D:\\code\\khoaluantotnghiep\\logs\\paper_comparisons\\legacy_gate\\fashionclip_legacy_gate_per_query.csv": "9186a4c3280e8662b6a9d267b3f721b7bab6c086c0a9ac2c82ef291626ff7c4d"
+  },
+  "completed_methods": [
+    "fashionclip_image_only",
+    "fashionclip_text_only",
+    "fashionclip_additive",
+    "unifashion_image_score",
+    "unifashion_image_caption_score",
+    "fashionclip_legacy_gate"
+  ],
+  "queries_per_method": 6016,
+  "bootstrap_replicates": 5000,
+  "remaining_work": {
+    "matched_pixels_and_three_seed_controls": false,
+    "CLIP4CIR_released_weights": false,
+    "SPRC_released_weights": false,
+    "UniFashion_initialization_control": false,
+    "integrated_UniFashion_gate": false,
+    "human_error_annotation": false,
+    "caption_generation_equivalence_to_paper": false
+  },
+  "all_comparisons_complete": false
+}

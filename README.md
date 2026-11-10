@@ -1,6 +1,8 @@
 # khoaluantotnghiep
 Recommending Fashion Products Based on Images and Text Descriptions
 
+Conference comparisons (10/11/2026): [weekly report](logs/paper_comparisons/weekly_report.md), [T4 notebook](notebooks/45_11_Conference_Comparisons.ipynb), and [run guide](docs/Conference_Comparisons_Runbook.md). Full-validation comparisons now include matched-image FashionCLIP baselines, three-seed weighted-additive/MLP controls, released CLIP4CIR/SPRC checkpoints and UniFashion initialization. Macro R@10/R@50: MLP **34.75%/56.75%**, CLIP4CIR **40.87%/64.37%**, SPRC **49.88%/71.36%**; final UniFashion **45.14%/68.53%** without gallery-caption scoring and **64.79%/80.64%** with it. The report includes verified tables and paired intervals, excludes teammate fusion results, and does not claim SOTA superiority across unequal caption resources.
+
 Tuần 7 - UniFashion: [notebook sanity đã chạy](notebooks/39_17_UniFashion_Finetune_Sanity.ipynb).
 Output notebook ghi nhận sanity thành công: 24 train queries, 12 update, checkpoint reload verified.
 

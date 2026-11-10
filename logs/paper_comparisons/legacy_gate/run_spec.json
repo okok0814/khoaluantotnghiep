@@ -1,0 +1,39 @@
+{
+  "protocol": {
+    "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+    "gallery_sha256": {
+      "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+      "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+      "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+    },
+    "split": "val",
+    "exclude_reference": true,
+    "ks": [
+      10,
+      50
+    ],
+    "tie_break": "descending score, then official gallery order",
+    "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+    "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+  },
+  "sources": {
+    "source_sha256": {
+      "fashionclip_image_ids.csv": "b9d62bc9bf1f6aa6f830d7ff71ca65320bd80f69809d33260da0542d4661d90d",
+      "fashionclip_image_embeddings.npy": "8000b26407e1440c10ad313ebba08fa0c9e47add3524aa1704de11fcec41da50",
+      "fashionclip_text_metadata.csv": "839a06637abcc514725fd19ead82aee058bf58ac52c5d4f551e684fabb8a1641",
+      "fashionclip_text_embeddings.npy": "d79c3e2bffba6353c4a817e196be88f9b2366c868e2faad2040b35eb68da1793"
+    },
+    "features": {
+      "pixels": "legacy cache; original pixels unverified"
+    },
+    "code_sha256": {
+      "scripts\\run_fashionclip_controls.py": "2f8fc2fbeb17a502b88e904f572308e7db7d67ff6ff6dd9b580e7f74dbc5cd3c",
+      "src\\attention_fusion.py": "b5b943e46a81111e5fb3f783e5b2c6293d552a76e6b450eb0cd8fd861af7034f",
+      "src\\paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+      "src\\fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485"
+    }
+  },
+  "checkpoint_sha256": "e80816c7623418d851980a6d5515088dad251a85d071e7e070ff8ebe6ebae1c3",
+  "model": "historical standalone FashionCLIP gate; not integrated UniFashion",
+  "device": "cpu"
+}

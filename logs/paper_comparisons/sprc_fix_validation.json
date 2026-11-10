@@ -1,0 +1,22 @@
+{
+  "fix": "Exclude unused SPRC LM head before strict retrieval checkpoint loading; preserve initialization-only attempts on retry",
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "17",
+    "time": "14.274",
+    "timestamp": "2026-11-04T20:53:34.093987+07:00",
+    "hostname": "Dieu"
+  },
+  "bundle_sha256": "e054f589077f76ed802737ed30244326212499bf85297dc008a272886e10eae4",
+  "bundle_files_verified": 86,
+  "full_Colab_checkpoint_run_verified_locally": false,
+  "source_sha256": {
+    "src/paper_model_adapters.py": "79cf87647c5e9ed43f3b0f0fb01560d9bf8a6f46ad72a0989f10c8eaea4a0b8e",
+    "scripts/evaluate_paper_models.py": "9b5a6c900dd5645e3a71d8259c8334883a5572b16e973bcfe3e0b0ca87fae709",
+    "tests/test_paper_comparisons.py": "acd557bcbb7d3409e5e1aec91066c2e633bb2549ffb46132c2905a7fd7c13289",
+    "docs/Conference_Comparisons_Runbook.md": "d4d37d9b1f920b41ec7085721f2465de2471b26b4ad50b36fa26d939a99f2f6b"
+  }
+}

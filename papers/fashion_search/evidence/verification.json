@@ -1,0 +1,1887 @@
+{
+  "archive": "paper_comparison_evidence.zip",
+  "archive_sha256": "0a4ca91adbc735927846d9be625f50fb8e14b1eec3d05a140d95da0925b40e86",
+  "manifest_files_checked": 64,
+  "verified_new_methods": [
+    "clip4cir_combiner",
+    "fashionclip_legacy_gate",
+    "fashionclip_additive_matched",
+    "fashionclip_image_only_matched",
+    "fashionclip_text_only_matched",
+    "fashionclip_gate_seed42",
+    "fashionclip_gate_seed43",
+    "fashionclip_gate_seed44",
+    "fashionclip_mlp_seed42",
+    "fashionclip_mlp_seed43",
+    "fashionclip_mlp_seed44",
+    "fashionclip_weighted_seed42",
+    "fashionclip_weighted_seed43",
+    "fashionclip_weighted_seed44",
+    "sprc_vitl",
+    "unifashion_initial_image_caption_score",
+    "unifashion_initial_image_score"
+  ],
+  "excluded_teammate_methods": [
+    "fashionclip_legacy_gate",
+    "fashionclip_gate_seed42",
+    "fashionclip_gate_seed43",
+    "fashionclip_gate_seed44"
+  ],
+  "included_method_snapshots": 21,
+  "queries_per_method": 6016,
+  "galleries": {
+    "dress": 3817,
+    "shirt": 6346,
+    "toptee": 5373
+  },
+  "protocol": {
+    "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+    "gallery_sha256": {
+      "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+      "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+      "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+    },
+    "split": "val",
+    "exclude_reference": true,
+    "ks": [
+      10,
+      50
+    ],
+    "tie_break": "descending score, then official gallery order",
+    "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+    "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+  },
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 42,
+  "verification_scope": "Hashes, complete query/gallery coverage, ranks/top50/hits, summaries; no new GPU inference",
+  "sources": {
+    "clip4cir_combiner": {
+      "path": "results/clip4cir/clip4cir_combiner_per_query.csv",
+      "sha256": "01e9c0ebc4adf64fe2816db873b32117ebc0859064dc76197c3897853096aef4",
+      "result_sha256": "f9a57e2320ab4d345e498d0bea68f1b20c88ea6ff955419fcf5b6a6724d41426",
+      "provenance": {
+        "model": "clip4cir",
+        "protocol": {
+          "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+          "gallery_sha256": {
+            "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+            "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+            "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+          },
+          "split": "val",
+          "exclude_reference": true,
+          "ks": [
+            10,
+            50
+          ],
+          "tie_break": "descending score, then official gallery order",
+          "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+          "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+        },
+        "image_manifest_sha256": "f20d130f954615795c70571f97abd0ad9a167fa124039d4fc5329642021f4f56",
+        "caption_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+        "reference_sha256": "ae88bfff95cf46d96cc74eceecee5364c6ad09b0f421a67a5951a619216daddf",
+        "original_code_sha256": "60a3e62d18ff33258f2e8f4a96f2974ffd54a47ff41261243f4b1f3f9c4ca9aa",
+        "asset_manifest": {
+          "config": {
+            "repository": "ABaldrati/CLIP4Cir",
+            "revision": "56bb547909d57bd8b5d2ef7ba55149962f77d482",
+            "files": [
+              {
+                "path": "src/combiner.py",
+                "git_blob": "d6da44719cf5ff713e5b2fe451c7864dad09fd39"
+              },
+              {
+                "path": "src/data_utils.py",
+                "git_blob": "064e7123836d1ef3a8981525feecac16342dc2f6"
+              },
+              {
+                "path": "src/validate.py",
+                "git_blob": "f8d4a4c84759f53918d0de075c07beb269a80c14"
+              },
+              {
+                "path": "README.md",
+                "git_blob": "89c1b94ebd4d9877d799fd3360464a5fefbb0eb9"
+              },
+              {
+                "path": "LICENSE",
+                "git_blob": "b72614c2ce76e5ebe5edb44541b684eaaa700400"
+              }
+            ],
+            "checkpoint_variant": "FashionIQ/RN50x4_fullft",
+            "backbone": "RN50x4",
+            "release": "https://github.com/ABaldrati/CLIP4Cir/releases/tag/weights",
+            "assets": [
+              {
+                "name": "pretrained_models.tar.gz.part-000",
+                "url": "https://github.com/ABaldrati/CLIP4Cir/releases/download/weights/pretrained_models.tar.gz.part-000",
+                "sha256": "7a70c0e9f52edbfb2c479b747430391f25bba2f34a01d292fbd672a955964106",
+                "bytes": 1900000000
+              },
+              {
+                "name": "pretrained_models.tar.gz.part-001",
+                "url": "https://github.com/ABaldrati/CLIP4Cir/releases/download/weights/pretrained_models.tar.gz.part-001",
+                "sha256": "8a976c834d36f206f8b3c5782b6abbb33331589313de5fe602d530def643fcb3",
+                "bytes": 1900000000
+              },
+              {
+                "name": "pretrained_models.tar.gz.part-002",
+                "url": "https://github.com/ABaldrati/CLIP4Cir/releases/download/weights/pretrained_models.tar.gz.part-002",
+                "sha256": "849e141225607e096f74748527cc3acbb936f71109779eca0e09f7ab2b16378e",
+                "bytes": 1900000000
+              },
+              {
+                "name": "pretrained_models.tar.gz.part-003",
+                "url": "https://github.com/ABaldrati/CLIP4Cir/releases/download/weights/pretrained_models.tar.gz.part-003",
+                "sha256": "45098bbf6d01c09856cdcce745a301458a1243f2b33904318f5c38cd5f5df89c",
+                "bytes": 1900000000
+              },
+              {
+                "name": "pretrained_models.tar.gz.part-004",
+                "url": "https://github.com/ABaldrati/CLIP4Cir/releases/download/weights/pretrained_models.tar.gz.part-004",
+                "sha256": "8f999d94ed58edb7b3fe20bf01beb534a9c6f95d98a40b546793fd9655d10a1c",
+                "bytes": 945777978
+              }
+            ]
+          },
+          "files": {
+            "checkpoints.json": "8304e8a9bd7d3ab81a4a937579ab2c0ef10b96774a21898367d9b5ce8e44513b",
+            "source/README.md": "a58d95430b0feaa6fe4ee21ced5cb14a6a128fb62587a9e4c99c0c2e9de9f37d",
+            "source/LICENSE": "edd2cec48ba6d07b120ff2a1cca34f172c34c4f5c79b033162f8e1bfdf5ad618",
+            "source/src/combiner.py": "8c7cf22aece540ca41c6540fc2f40cf43e7aaf3dbb6e8007b3285f5200db08be",
+            "source/src/data_utils.py": "bd8ecc90417b2258681a4085b3dab4098db6f2f54ec924c3d35ee9a93a57c3bd",
+            "source/src/validate.py": "bc0b3e6e88e73d56d6e8ae3b076d5ad71b357118f1e5b2b0212dacd187c4f16c",
+            "FashionIQ/RN50x4_fullft/fiq_clip_RN50x4_fullft.pt": "4111ac139cf96ac0cf31b30bf8f55b654247b06f0f5fbee4fe8dcc8c1c7cfd2f",
+            "FashionIQ/RN50x4_fullft/fiq_comb_RN50x4_fullft.pt": "7c7c0a10fb4c995cb1ded9ad70a58891d50c622263c54131523bfb232b493f8e"
+          },
+          "weights_downloaded": true
+        },
+        "precision": "fp32",
+        "batch_size": 4,
+        "torch": "2.11.0+cu128",
+        "gpu": "Tesla T4",
+        "code_sha256": {
+          "scripts/evaluate_paper_models.py": "9b5a6c900dd5645e3a71d8259c8334883a5572b16e973bcfe3e0b0ca87fae709",
+          "src/paper_model_adapters.py": "79cf87647c5e9ed43f3b0f0fb01560d9bf8a6f46ad72a0989f10c8eaea4a0b8e",
+          "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+          "src/fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+          "src/unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b"
+        },
+        "variant": "FashionIQ/RN50x4_fullft",
+        "checkpoints": {
+          "clip": {
+            "path": "FashionIQ/RN50x4_fullft/fiq_clip_RN50x4_fullft.pt",
+            "sha256": "4111ac139cf96ac0cf31b30bf8f55b654247b06f0f5fbee4fe8dcc8c1c7cfd2f"
+          },
+          "combiner": {
+            "path": "FashionIQ/RN50x4_fullft/fiq_comb_RN50x4_fullft.pt",
+            "sha256": "7c7c0a10fb4c995cb1ded9ad70a58891d50c622263c54131523bfb232b493f8e"
+          }
+        },
+        "extra_gallery_captions": false,
+        "protocol_adaptation": "Shared raw modifier text, audited resized images, reference excluded, stable ties; differs from native published protocol",
+        "evaluation_scope": "full_validation",
+        "no_reranking": true,
+        "caption_resource": "released next_llava.val captions; only UniFashion uses them",
+        "this_invocation_seconds": 508.7765195179999
+      }
+    },
+    "fashionclip_additive_matched": {
+      "path": "results/matched_controls/fixed/fashionclip_additive_matched_per_query.csv",
+      "sha256": "602bd07b124d06de5699e4e95356559fb61509ed574ad31a76357c22e3386fdd",
+      "result_sha256": "24f2ac7e71333450cb76f5be8074f8115faf7e132fff47e0846920f72b7d9452",
+      "provenance": {
+        "source_sha256": {
+          "fashionclip_image_ids.csv": "662e2e0aa92f812b79fc0937fad8ec799d0c8e222d3c6df4af0f089c3cbfa3fa",
+          "fashionclip_image_embeddings.npy": "6d09d08390b7ba29a96f615b3df34094d0b7a4e163cdebc5ca2c673d727a8544",
+          "fashionclip_text_metadata.csv": "adebea833d8394269be2e0023ded4e4153703fa60c6b605e0dd264be22d371c1",
+          "fashionclip_text_embeddings.npy": "5ab7a90120f234fe528e7b4a6a30a14d68579ce7703e74d5206ab6720d354f4a"
+        },
+        "features": {
+          "model": "patrickjohncyh/fashion-clip",
+          "revision": "7e3ba62ce16b379a1ab479346b66f192e76f51b7",
+          "precision": "fp32",
+          "batch_size": 32,
+          "protocol": {
+            "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+            "gallery_sha256": {
+              "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+              "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+              "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+            },
+            "split": "val",
+            "exclude_reference": true,
+            "ks": [
+              10,
+              50
+            ],
+            "tie_break": "descending score, then official gallery order",
+            "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+            "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+          },
+          "pixels": "same audited resized files as UniFashion",
+          "images_manifest_sha256": "f20d130f954615795c70571f97abd0ad9a167fa124039d4fc5329642021f4f56",
+          "metadata_sha256": "839a06637abcc514725fd19ead82aee058bf58ac52c5d4f551e684fabb8a1641",
+          "code_sha256": "812a1b222675d7c2f2c96de2c8ed0b6820d625e9b869fd0aade31e5b14d3d35e",
+          "transform": "model's CLIPProcessor (resize/center crop); same image bytes, model-specific transform",
+          "torch": "2.11.0+cu128"
+        },
+        "code_sha256": {
+          "scripts/run_fashionclip_controls.py": "437ad96e21d0d4166f89bb41db2c961e9fc8b7dc45e3ed12bb6cfd75a3863874",
+          "src/attention_fusion.py": "b5b943e46a81111e5fb3f783e5b2c6293d552a76e6b450eb0cd8fd861af7034f",
+          "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+          "src/fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485"
+        }
+      }
+    },
+    "fashionclip_image_only_matched": {
+      "path": "results/matched_controls/fixed/fashionclip_image_only_matched_per_query.csv",
+      "sha256": "be893d0e44ae580e168f3401ccd3f82139ac6440edfa328e380de6ef8f03e5d3",
+      "result_sha256": "1e476964952cb4b9cdf8d8cb39fe6478ea9651ea1888393f8458be182266b714",
+      "provenance": {
+        "source_sha256": {
+          "fashionclip_image_ids.csv": "662e2e0aa92f812b79fc0937fad8ec799d0c8e222d3c6df4af0f089c3cbfa3fa",
+          "fashionclip_image_embeddings.npy": "6d09d08390b7ba29a96f615b3df34094d0b7a4e163cdebc5ca2c673d727a8544",
+          "fashionclip_text_metadata.csv": "adebea833d8394269be2e0023ded4e4153703fa60c6b605e0dd264be22d371c1",
+          "fashionclip_text_embeddings.npy": "5ab7a90120f234fe528e7b4a6a30a14d68579ce7703e74d5206ab6720d354f4a"
+        },
+        "features": {
+          "model": "patrickjohncyh/fashion-clip",
+          "revision": "7e3ba62ce16b379a1ab479346b66f192e76f51b7",
+          "precision": "fp32",
+          "batch_size": 32,
+          "protocol": {
+            "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+            "gallery_sha256": {
+              "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+              "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+              "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+            },
+            "split": "val",
+            "exclude_reference": true,
+            "ks": [
+              10,
+              50
+            ],
+            "tie_break": "descending score, then official gallery order",
+            "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+            "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+          },
+          "pixels": "same audited resized files as UniFashion",
+          "images_manifest_sha256": "f20d130f954615795c70571f97abd0ad9a167fa124039d4fc5329642021f4f56",
+          "metadata_sha256": "839a06637abcc514725fd19ead82aee058bf58ac52c5d4f551e684fabb8a1641",
+          "code_sha256": "812a1b222675d7c2f2c96de2c8ed0b6820d625e9b869fd0aade31e5b14d3d35e",
+          "transform": "model's CLIPProcessor (resize/center crop); same image bytes, model-specific transform",
+          "torch": "2.11.0+cu128"
+        },
+        "code_sha256": {
+          "scripts/run_fashionclip_controls.py": "437ad96e21d0d4166f89bb41db2c961e9fc8b7dc45e3ed12bb6cfd75a3863874",
+          "src/attention_fusion.py": "b5b943e46a81111e5fb3f783e5b2c6293d552a76e6b450eb0cd8fd861af7034f",
+          "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+          "src/fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485"
+        }
+      }
+    },
+    "fashionclip_text_only_matched": {
+      "path": "results/matched_controls/fixed/fashionclip_text_only_matched_per_query.csv",
+      "sha256": "f4d5a226efec1b61272628d8861d948a5e1ab924d19f657b5dde32b59b54fa75",
+      "result_sha256": "344883103818bb83205715d66b070f133c3bc19c30b265a723839bf27265179a",
+      "provenance": {
+        "source_sha256": {
+          "fashionclip_image_ids.csv": "662e2e0aa92f812b79fc0937fad8ec799d0c8e222d3c6df4af0f089c3cbfa3fa",
+          "fashionclip_image_embeddings.npy": "6d09d08390b7ba29a96f615b3df34094d0b7a4e163cdebc5ca2c673d727a8544",
+          "fashionclip_text_metadata.csv": "adebea833d8394269be2e0023ded4e4153703fa60c6b605e0dd264be22d371c1",
+          "fashionclip_text_embeddings.npy": "5ab7a90120f234fe528e7b4a6a30a14d68579ce7703e74d5206ab6720d354f4a"
+        },
+        "features": {
+          "model": "patrickjohncyh/fashion-clip",
+          "revision": "7e3ba62ce16b379a1ab479346b66f192e76f51b7",
+          "precision": "fp32",
+          "batch_size": 32,
+          "protocol": {
+            "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+            "gallery_sha256": {
+              "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+              "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+              "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+            },
+            "split": "val",
+            "exclude_reference": true,
+            "ks": [
+              10,
+              50
+            ],
+            "tie_break": "descending score, then official gallery order",
+            "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+            "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+          },
+          "pixels": "same audited resized files as UniFashion",
+          "images_manifest_sha256": "f20d130f954615795c70571f97abd0ad9a167fa124039d4fc5329642021f4f56",
+          "metadata_sha256": "839a06637abcc514725fd19ead82aee058bf58ac52c5d4f551e684fabb8a1641",
+          "code_sha256": "812a1b222675d7c2f2c96de2c8ed0b6820d625e9b869fd0aade31e5b14d3d35e",
+          "transform": "model's CLIPProcessor (resize/center crop); same image bytes, model-specific transform",
+          "torch": "2.11.0+cu128"
+        },
+        "code_sha256": {
+          "scripts/run_fashionclip_controls.py": "437ad96e21d0d4166f89bb41db2c961e9fc8b7dc45e3ed12bb6cfd75a3863874",
+          "src/attention_fusion.py": "b5b943e46a81111e5fb3f783e5b2c6293d552a76e6b450eb0cd8fd861af7034f",
+          "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+          "src/fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485"
+        }
+      }
+    },
+    "fashionclip_mlp_seed42": {
+      "path": "results/matched_controls/mlp_seed42/fashionclip_mlp_seed42_per_query.csv",
+      "sha256": "6301c0c1427fa83983c8390e367661d302746d1be7769b57adebf5b9ab536211",
+      "result_sha256": "5c4312d96de8f2b846baa0e9dfef1177ac66e461d7c07c6b52a4f56aeb2d5e0c",
+      "provenance": {
+        "protocol": {
+          "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+          "gallery_sha256": {
+            "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+            "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+            "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+          },
+          "split": "val",
+          "exclude_reference": true,
+          "ks": [
+            10,
+            50
+          ],
+          "tie_break": "descending score, then official gallery order",
+          "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+          "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+        },
+        "sources": {
+          "source_sha256": {
+            "fashionclip_image_ids.csv": "662e2e0aa92f812b79fc0937fad8ec799d0c8e222d3c6df4af0f089c3cbfa3fa",
+            "fashionclip_image_embeddings.npy": "6d09d08390b7ba29a96f615b3df34094d0b7a4e163cdebc5ca2c673d727a8544",
+            "fashionclip_text_metadata.csv": "adebea833d8394269be2e0023ded4e4153703fa60c6b605e0dd264be22d371c1",
+            "fashionclip_text_embeddings.npy": "5ab7a90120f234fe528e7b4a6a30a14d68579ce7703e74d5206ab6720d354f4a"
+          },
+          "features": {
+            "model": "patrickjohncyh/fashion-clip",
+            "revision": "7e3ba62ce16b379a1ab479346b66f192e76f51b7",
+            "precision": "fp32",
+            "batch_size": 32,
+            "protocol": {
+              "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+              "gallery_sha256": {
+                "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+                "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+                "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+              },
+              "split": "val",
+              "exclude_reference": true,
+              "ks": [
+                10,
+                50
+              ],
+              "tie_break": "descending score, then official gallery order",
+              "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+              "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+            },
+            "pixels": "same audited resized files as UniFashion",
+            "images_manifest_sha256": "f20d130f954615795c70571f97abd0ad9a167fa124039d4fc5329642021f4f56",
+            "metadata_sha256": "839a06637abcc514725fd19ead82aee058bf58ac52c5d4f551e684fabb8a1641",
+            "code_sha256": "812a1b222675d7c2f2c96de2c8ed0b6820d625e9b869fd0aade31e5b14d3d35e",
+            "transform": "model's CLIPProcessor (resize/center crop); same image bytes, model-specific transform",
+            "torch": "2.11.0+cu128"
+          },
+          "code_sha256": {
+            "scripts/run_fashionclip_controls.py": "437ad96e21d0d4166f89bb41db2c961e9fc8b7dc45e3ed12bb6cfd75a3863874",
+            "src/attention_fusion.py": "b5b943e46a81111e5fb3f783e5b2c6293d552a76e6b450eb0cd8fd861af7034f",
+            "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+            "src/fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485"
+          }
+        },
+        "seed": 42,
+        "epochs": 15,
+        "batch_size": 256,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "temperature": 0.07,
+        "drop_last": true,
+        "model": "mlp",
+        "device": "cuda",
+        "parameters": 1313110,
+        "selection": "fixed final epoch; no validation-based selection",
+        "loss": "one-way in-batch CE, identical to historical gate; duplicate targets not masked",
+        "checkpoint_sha256": "8c599979a4b82ccce49a5c5d500db880d8063e0adca4d829b009c87dedda19a7"
+      }
+    },
+    "fashionclip_mlp_seed43": {
+      "path": "results/matched_controls/mlp_seed43/fashionclip_mlp_seed43_per_query.csv",
+      "sha256": "32c37bbedfe3e903a87f2e7a8cac743ee5b537f7b859777593baeaed341589a4",
+      "result_sha256": "2f5e170b9c60a360e405789f389dbd7655914a2b5d6528991c20395a993c484c",
+      "provenance": {
+        "protocol": {
+          "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+          "gallery_sha256": {
+            "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+            "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+            "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+          },
+          "split": "val",
+          "exclude_reference": true,
+          "ks": [
+            10,
+            50
+          ],
+          "tie_break": "descending score, then official gallery order",
+          "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+          "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+        },
+        "sources": {
+          "source_sha256": {
+            "fashionclip_image_ids.csv": "662e2e0aa92f812b79fc0937fad8ec799d0c8e222d3c6df4af0f089c3cbfa3fa",
+            "fashionclip_image_embeddings.npy": "6d09d08390b7ba29a96f615b3df34094d0b7a4e163cdebc5ca2c673d727a8544",
+            "fashionclip_text_metadata.csv": "adebea833d8394269be2e0023ded4e4153703fa60c6b605e0dd264be22d371c1",
+            "fashionclip_text_embeddings.npy": "5ab7a90120f234fe528e7b4a6a30a14d68579ce7703e74d5206ab6720d354f4a"
+          },
+          "features": {
+            "model": "patrickjohncyh/fashion-clip",
+            "revision": "7e3ba62ce16b379a1ab479346b66f192e76f51b7",
+            "precision": "fp32",
+            "batch_size": 32,
+            "protocol": {
+              "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+              "gallery_sha256": {
+                "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+                "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+                "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+              },
+              "split": "val",
+              "exclude_reference": true,
+              "ks": [
+                10,
+                50
+              ],
+              "tie_break": "descending score, then official gallery order",
+              "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+              "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+            },
+            "pixels": "same audited resized files as UniFashion",
+            "images_manifest_sha256": "f20d130f954615795c70571f97abd0ad9a167fa124039d4fc5329642021f4f56",
+            "metadata_sha256": "839a06637abcc514725fd19ead82aee058bf58ac52c5d4f551e684fabb8a1641",
+            "code_sha256": "812a1b222675d7c2f2c96de2c8ed0b6820d625e9b869fd0aade31e5b14d3d35e",
+            "transform": "model's CLIPProcessor (resize/center crop); same image bytes, model-specific transform",
+            "torch": "2.11.0+cu128"
+          },
+          "code_sha256": {
+            "scripts/run_fashionclip_controls.py": "437ad96e21d0d4166f89bb41db2c961e9fc8b7dc45e3ed12bb6cfd75a3863874",
+            "src/attention_fusion.py": "b5b943e46a81111e5fb3f783e5b2c6293d552a76e6b450eb0cd8fd861af7034f",
+            "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+            "src/fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485"
+          }
+        },
+        "seed": 43,
+        "epochs": 15,
+        "batch_size": 256,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "temperature": 0.07,
+        "drop_last": true,
+        "model": "mlp",
+        "device": "cuda",
+        "parameters": 1313110,
+        "selection": "fixed final epoch; no validation-based selection",
+        "loss": "one-way in-batch CE, identical to historical gate; duplicate targets not masked",
+        "checkpoint_sha256": "4fa293352fbd158328efdf5b084f3c24fd3cbbfd4ba958e239d0c1151625b349"
+      }
+    },
+    "fashionclip_mlp_seed44": {
+      "path": "results/matched_controls/mlp_seed44/fashionclip_mlp_seed44_per_query.csv",
+      "sha256": "30f275a01096ccd037c1afc4008c4f9c9e58f885645fdd1b3d3a000dd3654c05",
+      "result_sha256": "f439d59d7c1fdecdeaac0e4e2749f5bb957d5a1118be76b0f04039eeef3fa78a",
+      "provenance": {
+        "protocol": {
+          "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+          "gallery_sha256": {
+            "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+            "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+            "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+          },
+          "split": "val",
+          "exclude_reference": true,
+          "ks": [
+            10,
+            50
+          ],
+          "tie_break": "descending score, then official gallery order",
+          "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+          "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+        },
+        "sources": {
+          "source_sha256": {
+            "fashionclip_image_ids.csv": "662e2e0aa92f812b79fc0937fad8ec799d0c8e222d3c6df4af0f089c3cbfa3fa",
+            "fashionclip_image_embeddings.npy": "6d09d08390b7ba29a96f615b3df34094d0b7a4e163cdebc5ca2c673d727a8544",
+            "fashionclip_text_metadata.csv": "adebea833d8394269be2e0023ded4e4153703fa60c6b605e0dd264be22d371c1",
+            "fashionclip_text_embeddings.npy": "5ab7a90120f234fe528e7b4a6a30a14d68579ce7703e74d5206ab6720d354f4a"
+          },
+          "features": {
+            "model": "patrickjohncyh/fashion-clip",
+            "revision": "7e3ba62ce16b379a1ab479346b66f192e76f51b7",
+            "precision": "fp32",
+            "batch_size": 32,
+            "protocol": {
+              "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+              "gallery_sha256": {
+                "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+                "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+                "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+              },
+              "split": "val",
+              "exclude_reference": true,
+              "ks": [
+                10,
+                50
+              ],
+              "tie_break": "descending score, then official gallery order",
+              "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+              "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+            },
+            "pixels": "same audited resized files as UniFashion",
+            "images_manifest_sha256": "f20d130f954615795c70571f97abd0ad9a167fa124039d4fc5329642021f4f56",
+            "metadata_sha256": "839a06637abcc514725fd19ead82aee058bf58ac52c5d4f551e684fabb8a1641",
+            "code_sha256": "812a1b222675d7c2f2c96de2c8ed0b6820d625e9b869fd0aade31e5b14d3d35e",
+            "transform": "model's CLIPProcessor (resize/center crop); same image bytes, model-specific transform",
+            "torch": "2.11.0+cu128"
+          },
+          "code_sha256": {
+            "scripts/run_fashionclip_controls.py": "437ad96e21d0d4166f89bb41db2c961e9fc8b7dc45e3ed12bb6cfd75a3863874",
+            "src/attention_fusion.py": "b5b943e46a81111e5fb3f783e5b2c6293d552a76e6b450eb0cd8fd861af7034f",
+            "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+            "src/fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485"
+          }
+        },
+        "seed": 44,
+        "epochs": 15,
+        "batch_size": 256,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "temperature": 0.07,
+        "drop_last": true,
+        "model": "mlp",
+        "device": "cuda",
+        "parameters": 1313110,
+        "selection": "fixed final epoch; no validation-based selection",
+        "loss": "one-way in-batch CE, identical to historical gate; duplicate targets not masked",
+        "checkpoint_sha256": "29ebe28515a4545fd5804db9cdd44f5262309ae37ee44d6e7b8760b368bae5b6"
+      }
+    },
+    "fashionclip_weighted_seed42": {
+      "path": "results/matched_controls/weighted_seed42/fashionclip_weighted_seed42_per_query.csv",
+      "sha256": "6fbb392f2fe6460e81b4cb7f6ac7c7c2e9c8e65aeea626b2c23e783853f9746e",
+      "result_sha256": "bb650aee4c7ac7868856fc0f764936409008bda566975f1bb6fc4d4d34eaab26",
+      "provenance": {
+        "protocol": {
+          "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+          "gallery_sha256": {
+            "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+            "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+            "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+          },
+          "split": "val",
+          "exclude_reference": true,
+          "ks": [
+            10,
+            50
+          ],
+          "tie_break": "descending score, then official gallery order",
+          "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+          "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+        },
+        "sources": {
+          "source_sha256": {
+            "fashionclip_image_ids.csv": "662e2e0aa92f812b79fc0937fad8ec799d0c8e222d3c6df4af0f089c3cbfa3fa",
+            "fashionclip_image_embeddings.npy": "6d09d08390b7ba29a96f615b3df34094d0b7a4e163cdebc5ca2c673d727a8544",
+            "fashionclip_text_metadata.csv": "adebea833d8394269be2e0023ded4e4153703fa60c6b605e0dd264be22d371c1",
+            "fashionclip_text_embeddings.npy": "5ab7a90120f234fe528e7b4a6a30a14d68579ce7703e74d5206ab6720d354f4a"
+          },
+          "features": {
+            "model": "patrickjohncyh/fashion-clip",
+            "revision": "7e3ba62ce16b379a1ab479346b66f192e76f51b7",
+            "precision": "fp32",
+            "batch_size": 32,
+            "protocol": {
+              "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+              "gallery_sha256": {
+                "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+                "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+                "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+              },
+              "split": "val",
+              "exclude_reference": true,
+              "ks": [
+                10,
+                50
+              ],
+              "tie_break": "descending score, then official gallery order",
+              "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+              "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+            },
+            "pixels": "same audited resized files as UniFashion",
+            "images_manifest_sha256": "f20d130f954615795c70571f97abd0ad9a167fa124039d4fc5329642021f4f56",
+            "metadata_sha256": "839a06637abcc514725fd19ead82aee058bf58ac52c5d4f551e684fabb8a1641",
+            "code_sha256": "812a1b222675d7c2f2c96de2c8ed0b6820d625e9b869fd0aade31e5b14d3d35e",
+            "transform": "model's CLIPProcessor (resize/center crop); same image bytes, model-specific transform",
+            "torch": "2.11.0+cu128"
+          },
+          "code_sha256": {
+            "scripts/run_fashionclip_controls.py": "437ad96e21d0d4166f89bb41db2c961e9fc8b7dc45e3ed12bb6cfd75a3863874",
+            "src/attention_fusion.py": "b5b943e46a81111e5fb3f783e5b2c6293d552a76e6b450eb0cd8fd861af7034f",
+            "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+            "src/fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485"
+          }
+        },
+        "seed": 42,
+        "epochs": 15,
+        "batch_size": 256,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "temperature": 0.07,
+        "drop_last": true,
+        "model": "weighted",
+        "device": "cuda",
+        "parameters": 1,
+        "selection": "fixed final epoch; no validation-based selection",
+        "loss": "one-way in-batch CE, identical to historical gate; duplicate targets not masked",
+        "checkpoint_sha256": "33354a8837d54bc835c4b73acc6ccb1826e37d271a2620bdb3b49349258221b3",
+        "image_weight": 0.4964480698108673
+      }
+    },
+    "fashionclip_weighted_seed43": {
+      "path": "results/matched_controls/weighted_seed43/fashionclip_weighted_seed43_per_query.csv",
+      "sha256": "04be032954760470faaac64c621b3884975f238f1b0f8397a89f44b29f0aecbb",
+      "result_sha256": "177f380f8b34a6dd16d1d52db2d7bc41caa16052ccc05c3af3f4d7181e77d3f8",
+      "provenance": {
+        "protocol": {
+          "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+          "gallery_sha256": {
+            "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+            "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+            "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+          },
+          "split": "val",
+          "exclude_reference": true,
+          "ks": [
+            10,
+            50
+          ],
+          "tie_break": "descending score, then official gallery order",
+          "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+          "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+        },
+        "sources": {
+          "source_sha256": {
+            "fashionclip_image_ids.csv": "662e2e0aa92f812b79fc0937fad8ec799d0c8e222d3c6df4af0f089c3cbfa3fa",
+            "fashionclip_image_embeddings.npy": "6d09d08390b7ba29a96f615b3df34094d0b7a4e163cdebc5ca2c673d727a8544",
+            "fashionclip_text_metadata.csv": "adebea833d8394269be2e0023ded4e4153703fa60c6b605e0dd264be22d371c1",
+            "fashionclip_text_embeddings.npy": "5ab7a90120f234fe528e7b4a6a30a14d68579ce7703e74d5206ab6720d354f4a"
+          },
+          "features": {
+            "model": "patrickjohncyh/fashion-clip",
+            "revision": "7e3ba62ce16b379a1ab479346b66f192e76f51b7",
+            "precision": "fp32",
+            "batch_size": 32,
+            "protocol": {
+              "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+              "gallery_sha256": {
+                "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+                "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+                "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+              },
+              "split": "val",
+              "exclude_reference": true,
+              "ks": [
+                10,
+                50
+              ],
+              "tie_break": "descending score, then official gallery order",
+              "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+              "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+            },
+            "pixels": "same audited resized files as UniFashion",
+            "images_manifest_sha256": "f20d130f954615795c70571f97abd0ad9a167fa124039d4fc5329642021f4f56",
+            "metadata_sha256": "839a06637abcc514725fd19ead82aee058bf58ac52c5d4f551e684fabb8a1641",
+            "code_sha256": "812a1b222675d7c2f2c96de2c8ed0b6820d625e9b869fd0aade31e5b14d3d35e",
+            "transform": "model's CLIPProcessor (resize/center crop); same image bytes, model-specific transform",
+            "torch": "2.11.0+cu128"
+          },
+          "code_sha256": {
+            "scripts/run_fashionclip_controls.py": "437ad96e21d0d4166f89bb41db2c961e9fc8b7dc45e3ed12bb6cfd75a3863874",
+            "src/attention_fusion.py": "b5b943e46a81111e5fb3f783e5b2c6293d552a76e6b450eb0cd8fd861af7034f",
+            "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+            "src/fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485"
+          }
+        },
+        "seed": 43,
+        "epochs": 15,
+        "batch_size": 256,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "temperature": 0.07,
+        "drop_last": true,
+        "model": "weighted",
+        "device": "cuda",
+        "parameters": 1,
+        "selection": "fixed final epoch; no validation-based selection",
+        "loss": "one-way in-batch CE, identical to historical gate; duplicate targets not masked",
+        "checkpoint_sha256": "6adbb456a78ba2a7686e52c30d07d29a260fb566ac6a99f2b9cbeab51e596160",
+        "image_weight": 0.4970390796661377
+      }
+    },
+    "fashionclip_weighted_seed44": {
+      "path": "results/matched_controls/weighted_seed44/fashionclip_weighted_seed44_per_query.csv",
+      "sha256": "23ba24ee4242ae0dbd7a0cd8a5ad8d8cdd95d67f2ec731e8bbadfa10603b01bd",
+      "result_sha256": "a593abebf371d8e8cb3bac854361aa52cbcfcc5c4e61ea5e179eba89b19ca525",
+      "provenance": {
+        "protocol": {
+          "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+          "gallery_sha256": {
+            "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+            "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+            "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+          },
+          "split": "val",
+          "exclude_reference": true,
+          "ks": [
+            10,
+            50
+          ],
+          "tie_break": "descending score, then official gallery order",
+          "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+          "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+        },
+        "sources": {
+          "source_sha256": {
+            "fashionclip_image_ids.csv": "662e2e0aa92f812b79fc0937fad8ec799d0c8e222d3c6df4af0f089c3cbfa3fa",
+            "fashionclip_image_embeddings.npy": "6d09d08390b7ba29a96f615b3df34094d0b7a4e163cdebc5ca2c673d727a8544",
+            "fashionclip_text_metadata.csv": "adebea833d8394269be2e0023ded4e4153703fa60c6b605e0dd264be22d371c1",
+            "fashionclip_text_embeddings.npy": "5ab7a90120f234fe528e7b4a6a30a14d68579ce7703e74d5206ab6720d354f4a"
+          },
+          "features": {
+            "model": "patrickjohncyh/fashion-clip",
+            "revision": "7e3ba62ce16b379a1ab479346b66f192e76f51b7",
+            "precision": "fp32",
+            "batch_size": 32,
+            "protocol": {
+              "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+              "gallery_sha256": {
+                "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+                "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+                "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+              },
+              "split": "val",
+              "exclude_reference": true,
+              "ks": [
+                10,
+                50
+              ],
+              "tie_break": "descending score, then official gallery order",
+              "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+              "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+            },
+            "pixels": "same audited resized files as UniFashion",
+            "images_manifest_sha256": "f20d130f954615795c70571f97abd0ad9a167fa124039d4fc5329642021f4f56",
+            "metadata_sha256": "839a06637abcc514725fd19ead82aee058bf58ac52c5d4f551e684fabb8a1641",
+            "code_sha256": "812a1b222675d7c2f2c96de2c8ed0b6820d625e9b869fd0aade31e5b14d3d35e",
+            "transform": "model's CLIPProcessor (resize/center crop); same image bytes, model-specific transform",
+            "torch": "2.11.0+cu128"
+          },
+          "code_sha256": {
+            "scripts/run_fashionclip_controls.py": "437ad96e21d0d4166f89bb41db2c961e9fc8b7dc45e3ed12bb6cfd75a3863874",
+            "src/attention_fusion.py": "b5b943e46a81111e5fb3f783e5b2c6293d552a76e6b450eb0cd8fd861af7034f",
+            "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+            "src/fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485"
+          }
+        },
+        "seed": 44,
+        "epochs": 15,
+        "batch_size": 256,
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "temperature": 0.07,
+        "drop_last": true,
+        "model": "weighted",
+        "device": "cuda",
+        "parameters": 1,
+        "selection": "fixed final epoch; no validation-based selection",
+        "loss": "one-way in-batch CE, identical to historical gate; duplicate targets not masked",
+        "checkpoint_sha256": "5ff2a59607d14e0136ceca9483ec4d689a174d8c5544625912607a99a860b09f",
+        "image_weight": 0.4963974058628082
+      }
+    },
+    "sprc_vitl": {
+      "path": "results/sprc/sprc_vitl_per_query.csv",
+      "sha256": "c8b836f9dd6384728304323da93c0293b541e129157a95e7b9696468b16443c4",
+      "result_sha256": "1fce79bf4f8863720ac2247019db3775c982b172201cefaa042c9065b9b8dd83",
+      "provenance": {
+        "model": "sprc",
+        "protocol": {
+          "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+          "gallery_sha256": {
+            "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+            "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+            "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+          },
+          "split": "val",
+          "exclude_reference": true,
+          "ks": [
+            10,
+            50
+          ],
+          "tie_break": "descending score, then official gallery order",
+          "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+          "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+        },
+        "image_manifest_sha256": "f20d130f954615795c70571f97abd0ad9a167fa124039d4fc5329642021f4f56",
+        "caption_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+        "reference_sha256": "ae88bfff95cf46d96cc74eceecee5364c6ad09b0f421a67a5951a619216daddf",
+        "original_code_sha256": "60a3e62d18ff33258f2e8f4a96f2974ffd54a47ff41261243f4b1f3f9c4ca9aa",
+        "asset_manifest": {
+          "config": {
+            "repository": "chunmeifeng/SPRC",
+            "revision": "2935a5397732260d1db6fa577e5926f963e36f0f",
+            "files": [
+              {
+                "path": "README.md",
+                "git_blob": "c602e3de2048f818c963b3eea4325edc706bcb1f"
+              },
+              {
+                "path": "src/blip_validate.py",
+                "git_blob": "7b5620ab446516e3366840dceb92f2449835bb9d"
+              },
+              {
+                "path": "src/data_utils.py",
+                "git_blob": "0d7223a76a69595b364cfb41f1d77cf3ac09c662"
+              },
+              {
+                "path": "src/lavis/common/dist_utils.py",
+                "git_blob": "296a3c86f29c6e82fa8f1108c7dd9fa7d3e9ce45"
+              },
+              {
+                "path": "src/lavis/common/logger.py",
+                "git_blob": "aa1ea0d096db7b4914c6ba2c031c06a40fd793f3"
+              },
+              {
+                "path": "src/lavis/common/registry.py",
+                "git_blob": "9039d8aaa580f19cc0d43ed9330bd90055045867"
+              },
+              {
+                "path": "src/lavis/common/utils.py",
+                "git_blob": "29b35e5159634f9b114f2ddd608da1db67893840"
+              },
+              {
+                "path": "src/lavis/configs/models/blip2/blip2_pretrain_vitL.yaml",
+                "git_blob": "a0a0fc6464abcfea3e08655e43e381c9456f62b5"
+              },
+              {
+                "path": "src/lavis/models/base_model.py",
+                "git_blob": "3434c33cdf2c4bb271ce73508b52ff7112352e27"
+              },
+              {
+                "path": "src/lavis/models/blip2_models/Qformer.py",
+                "git_blob": "df30dadc4bc5a047a55a07169b57418e7cb70a9b"
+              },
+              {
+                "path": "src/lavis/models/blip2_models/blip2.py",
+                "git_blob": "6446f476b809b9e5ba0d4f2b53212435900e42e5"
+              },
+              {
+                "path": "src/lavis/models/blip2_models/blip2_qformer_cir_align_prompt.py",
+                "git_blob": "5b1cb5da385501a6ad94da22851d28b7f994f1d9"
+              },
+              {
+                "path": "src/lavis/models/blip_models/blip_outputs.py",
+                "git_blob": "9d18ddcabb68f09e1b4952d337d0206efcd8e8ad"
+              },
+              {
+                "path": "src/lavis/models/clip_vit.py",
+                "git_blob": "6b73df57abeb1d894bfd7b41ae03be8ede86845c"
+              },
+              {
+                "path": "src/lavis/models/eva_vit.py",
+                "git_blob": "5b80b8206e35456ef3c7eb3278e2b65901a8aa7e"
+              },
+              {
+                "path": "src/validate_blip.py",
+                "git_blob": "57065aaae1ad89910888e6fd88d8d9f8ba4f752d"
+              }
+            ],
+            "checkpoint_url": "https://drive.google.com/file/d/11p95msuuTAU6Pej7d_a-KjUHHpP3kH8Y/view",
+            "checkpoint_variant": "SPRC FashionIQ ViT-L; not the original full-model paper row",
+            "base_url": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_vitL.pth",
+            "vision_url": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/clip_vit_L.pth"
+          },
+          "files": {
+            "blip2_pretrained_vitL.pth": "73d7bf2c8b00eab4d44022a87b1ecf8435b6658c3f355b4d33dea38e37cb37bc",
+            "clip_vit_L.pth": "13a278da24d2a5996d016912bda3b1acb458ffe1981cd0173385c186ef72acbb",
+            "sprc_fiq_vitl.pt": "19386104271c01ea03ee2177575c0e55f98edd3ba61a116d78f2e61ab5dbea08",
+            "source/README.md": "d5ab763ffecd13b8f0047d90e92f0f0d677b5d21961d191f1a5edf07b2bb9527",
+            "source/src/blip_validate.py": "30f8e52bb4e198c473c69ac2f4fea37f45d1e76c933445b98d87192d9ca5a6fc",
+            "source/src/data_utils.py": "a4e6accd23027e92dbbb46db2479264ae3361ac35b34ac526e91ca9617c8deee",
+            "source/src/validate_blip.py": "741272d4973416e16dd3908c0539fe3989d992229b6696ab353edb62f8eb7b3e",
+            "source/src/lavis/common/dist_utils.py": "80ac52911e1f4f2dc6aa551272a25cf75a8adb1db288b4d6a7488566b8b916e9",
+            "source/src/lavis/common/logger.py": "482b247740ff93529e902e5b3a4de7690b562ff891d1a26303b7b61d30c4ac29",
+            "source/src/lavis/common/registry.py": "10b1c5042593e71e2f57c34069a0a14655ae07f5c60bd27b03f9b0146f3c74d0",
+            "source/src/lavis/common/utils.py": "df2d956141a7a0eabe058d69418796ffb633bc6ed350a0962a5d48b297ebacf9",
+            "source/src/lavis/models/base_model.py": "1aac2c08a772386c80dd5e747022b9cd2734e1afe9ac65465897660ca20997c9",
+            "source/src/lavis/models/clip_vit.py": "156077469df4b7bb09b26623ad4ec65601a8071e07909b7c0999af78bd180009",
+            "source/src/lavis/models/eva_vit.py": "21c0aa5d1ec7e3e8d94cd98fac643b472864fdeb051b43706636c12e7ed863e5",
+            "source/src/lavis/configs/models/blip2/blip2_pretrain_vitL.yaml": "ec058594cf76483c92078f889c7f5ac3cdf20614371d22aabc6a1f9bec620cce",
+            "source/src/lavis/models/blip2_models/Qformer.py": "f2f2504f7c8b561cee073a6ccd38859f3905b1e2c9ee31053122c27492097973",
+            "source/src/lavis/models/blip2_models/blip2.py": "265755bbb90884e2906219816a834458fd7bcfb0b15d1490acca29423e5d512e",
+            "source/src/lavis/models/blip2_models/blip2_qformer_cir_align_prompt.py": "2e0026263d3c604942c6effc0734fcb590c8e3b91ace76603f9413c6daee4fe7",
+            "source/src/lavis/models/blip_models/blip_outputs.py": "d655e46f9c61dd0d4c609b066a24e0df203053250c0c1954af69093bca750602"
+          },
+          "weights_downloaded": true
+        },
+        "precision": "fp32",
+        "batch_size": 4,
+        "torch": "2.11.0+cu128",
+        "gpu": "Tesla T4",
+        "code_sha256": {
+          "scripts/evaluate_paper_models.py": "9b5a6c900dd5645e3a71d8259c8334883a5572b16e973bcfe3e0b0ca87fae709",
+          "src/paper_model_adapters.py": "79cf87647c5e9ed43f3b0f0fb01560d9bf8a6f46ad72a0989f10c8eaea4a0b8e",
+          "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+          "src/fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+          "src/unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b"
+        },
+        "variant": "SPRC FashionIQ ViT-L (not the paper's full-model variant)",
+        "retrieval_weight_loading": {
+          "matched_keys": 621,
+          "ignored_language_head_keys": [
+            "Qformer.cls.predictions.bias",
+            "Qformer.cls.predictions.decoder.bias",
+            "Qformer.cls.predictions.decoder.weight",
+            "Qformer.cls.predictions.transform.LayerNorm.bias",
+            "Qformer.cls.predictions.transform.LayerNorm.weight",
+            "Qformer.cls.predictions.transform.dense.bias",
+            "Qformer.cls.predictions.transform.dense.weight"
+          ],
+          "reconstructed_buffers": [],
+          "missing_retrieval_keys": []
+        },
+        "extra_gallery_captions": false,
+        "max_txt_len": 32,
+        "protocol_adaptation": "Shared raw text followed by BLIP cleanup; reference excluded; audited resized images; stable ties",
+        "evaluation_scope": "full_validation",
+        "no_reranking": true,
+        "caption_resource": "released next_llava.val captions; only UniFashion uses them",
+        "this_invocation_seconds": 1593.3885689140002
+      }
+    },
+    "unifashion_initial_image_caption_score": {
+      "path": "results/unifashion-initial/unifashion_initial_image_caption_score_per_query.csv",
+      "sha256": "067d0804917708a361a8119e366fdefcb987fdc9baa11a47f6e91c746027023e",
+      "result_sha256": "4e1b71e8f9293705a59f49ef78e26ff7b2d41c254ab3d3b28e59423aa46bf9a3",
+      "provenance": {
+        "model": "unifashion-initial",
+        "protocol": {
+          "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+          "gallery_sha256": {
+            "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+            "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+            "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+          },
+          "split": "val",
+          "exclude_reference": true,
+          "ks": [
+            10,
+            50
+          ],
+          "tie_break": "descending score, then official gallery order",
+          "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+          "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+        },
+        "image_manifest_sha256": "f20d130f954615795c70571f97abd0ad9a167fa124039d4fc5329642021f4f56",
+        "caption_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+        "reference_sha256": "ae88bfff95cf46d96cc74eceecee5364c6ad09b0f421a67a5951a619216daddf",
+        "original_code_sha256": "60a3e62d18ff33258f2e8f4a96f2974ffd54a47ff41261243f4b1f3f9c4ca9aa",
+        "asset_manifest": null,
+        "precision": "fp32",
+        "batch_size": 4,
+        "torch": "2.11.0+cu128",
+        "gpu": "Tesla T4",
+        "code_sha256": {
+          "scripts/evaluate_paper_models.py": "9b5a6c900dd5645e3a71d8259c8334883a5572b16e973bcfe3e0b0ca87fae709",
+          "src/paper_model_adapters.py": "79cf87647c5e9ed43f3b0f0fb01560d9bf8a6f46ad72a0989f10c8eaea4a0b8e",
+          "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+          "src/fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+          "src/unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b"
+        },
+        "variant": "domain-pretraining to CIR initialization, BEFORE fine-tuning",
+        "random_retrieval_heads": [
+          "prompt_tokens",
+          "Qformer.bert.embeddings.position_ids",
+          "Qformer.cls.predictions.bias",
+          "Qformer.cls.predictions.transform.dense.weight",
+          "Qformer.cls.predictions.transform.dense.bias",
+          "Qformer.cls.predictions.transform.LayerNorm.weight",
+          "Qformer.cls.predictions.transform.LayerNorm.bias",
+          "Qformer.cls.predictions.decoder.weight",
+          "Qformer.cls.predictions.decoder.bias",
+          "caption_proj.weight",
+          "caption_proj.bias",
+          "query_proj.weight",
+          "query_proj.bias"
+        ],
+        "seed": 42,
+        "training_config": {
+          "seed": 42,
+          "epochs": 10,
+          "batch_size": 2,
+          "learning_rate": 2e-05,
+          "weight_decay": 0.05,
+          "betas": [
+            0.9,
+            0.98
+          ],
+          "eps": 1e-07,
+          "scheduler": "one_cycle",
+          "warmup_epochs": 1.5,
+          "div_factor": 100.0,
+          "final_div_factor": 10000.0,
+          "max_grad_norm": 1.0,
+          "image_size": 224,
+          "target_ratio": 1.25,
+          "max_txt_len": 64,
+          "num_workers": 0,
+          "precision": "fp32",
+          "grad_scaler_init_scale": 256.0,
+          "max_amp_retries": 10,
+          "freeze_vit": true,
+          "checkpoint_every_steps": 500,
+          "monitor_per_category": 32,
+          "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+        },
+        "original_runtime_sha256": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+        "load_report": {
+          "matched_keys": 338,
+          "missing_nonvision_keys": [
+            "prompt_tokens",
+            "Qformer.bert.embeddings.position_ids",
+            "Qformer.cls.predictions.bias",
+            "Qformer.cls.predictions.transform.dense.weight",
+            "Qformer.cls.predictions.transform.dense.bias",
+            "Qformer.cls.predictions.transform.LayerNorm.weight",
+            "Qformer.cls.predictions.transform.LayerNorm.bias",
+            "Qformer.cls.predictions.decoder.weight",
+            "Qformer.cls.predictions.decoder.bias",
+            "caption_proj.weight",
+            "caption_proj.bias",
+            "query_proj.weight",
+            "query_proj.bias"
+          ],
+          "pretrained_extra_keys": [
+            "llm_proj.bias",
+            "llm_proj.weight",
+            "llm_query_tokens",
+            "proj_layer.LayerNorm.bias",
+            "proj_layer.LayerNorm.weight",
+            "proj_layer.dense1.bias",
+            "proj_layer.dense1.weight",
+            "proj_layer.dense2.bias",
+            "proj_layer.dense2.weight"
+          ],
+          "visual_backbone": "separate official frozen EVA-G checkpoint",
+          "trainable_parameters": 210434366,
+          "vision_checkpoint": {
+            "loaded": true,
+            "matched_keys": 511,
+            "ignored_checkpoint_keys": [
+              "blocks.39.attn.proj.bias",
+              "blocks.39.attn.proj.weight",
+              "blocks.39.attn.q_bias",
+              "blocks.39.attn.qkv.weight",
+              "blocks.39.attn.v_bias",
+              "blocks.39.mlp.fc1.bias",
+              "blocks.39.mlp.fc1.weight",
+              "blocks.39.mlp.fc2.bias",
+              "blocks.39.mlp.fc2.weight",
+              "blocks.39.norm1.bias",
+              "blocks.39.norm1.weight",
+              "blocks.39.norm2.bias",
+              "blocks.39.norm2.weight",
+              "head.bias",
+              "head.weight",
+              "norm.bias",
+              "norm.weight"
+            ],
+            "missing_keys": []
+          },
+          "inspection_only": false
+        },
+        "caution": "Not a fully pretrained CIR checkpoint; random heads are part of this initialization control",
+        "evaluation_scope": "full_validation",
+        "no_reranking": true,
+        "caption_resource": "released next_llava.val captions; only UniFashion uses them",
+        "this_invocation_seconds": 4326.87768502
+      }
+    },
+    "unifashion_initial_image_score": {
+      "path": "results/unifashion-initial/unifashion_initial_image_score_per_query.csv",
+      "sha256": "5a80cd30bdeaca1e987faa64cbc91125d8b249dc53291edbd39e9921002016e8",
+      "result_sha256": "7214c28de89aede7d386c1c7fae7ecbfbfdf0d473446f14360d29d6c3273fab7",
+      "provenance": {
+        "model": "unifashion-initial",
+        "protocol": {
+          "queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+          "gallery_sha256": {
+            "dress": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab",
+            "shirt": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234",
+            "toptee": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+          },
+          "split": "val",
+          "exclude_reference": true,
+          "ks": [
+            10,
+            50
+          ],
+          "tie_break": "descending score, then official gallery order",
+          "query_text": "Week6 FashionCLIP metadata text; identical raw text for all methods",
+          "aggregation": "per-category, unweighted category macro, query-weighted micro; percentages"
+        },
+        "image_manifest_sha256": "f20d130f954615795c70571f97abd0ad9a167fa124039d4fc5329642021f4f56",
+        "caption_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+        "reference_sha256": "ae88bfff95cf46d96cc74eceecee5364c6ad09b0f421a67a5951a619216daddf",
+        "original_code_sha256": "60a3e62d18ff33258f2e8f4a96f2974ffd54a47ff41261243f4b1f3f9c4ca9aa",
+        "asset_manifest": null,
+        "precision": "fp32",
+        "batch_size": 4,
+        "torch": "2.11.0+cu128",
+        "gpu": "Tesla T4",
+        "code_sha256": {
+          "scripts/evaluate_paper_models.py": "9b5a6c900dd5645e3a71d8259c8334883a5572b16e973bcfe3e0b0ca87fae709",
+          "src/paper_model_adapters.py": "79cf87647c5e9ed43f3b0f0fb01560d9bf8a6f46ad72a0989f10c8eaea4a0b8e",
+          "src/paper_comparison.py": "9253761f8af97fa2a319bc4f83910db658c1db379b092f51bb14ee8044143aea",
+          "src/fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+          "src/unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b"
+        },
+        "variant": "domain-pretraining to CIR initialization, BEFORE fine-tuning",
+        "random_retrieval_heads": [
+          "prompt_tokens",
+          "Qformer.bert.embeddings.position_ids",
+          "Qformer.cls.predictions.bias",
+          "Qformer.cls.predictions.transform.dense.weight",
+          "Qformer.cls.predictions.transform.dense.bias",
+          "Qformer.cls.predictions.transform.LayerNorm.weight",
+          "Qformer.cls.predictions.transform.LayerNorm.bias",
+          "Qformer.cls.predictions.decoder.weight",
+          "Qformer.cls.predictions.decoder.bias",
+          "caption_proj.weight",
+          "caption_proj.bias",
+          "query_proj.weight",
+          "query_proj.bias"
+        ],
+        "seed": 42,
+        "training_config": {
+          "seed": 42,
+          "epochs": 10,
+          "batch_size": 2,
+          "learning_rate": 2e-05,
+          "weight_decay": 0.05,
+          "betas": [
+            0.9,
+            0.98
+          ],
+          "eps": 1e-07,
+          "scheduler": "one_cycle",
+          "warmup_epochs": 1.5,
+          "div_factor": 100.0,
+          "final_div_factor": 10000.0,
+          "max_grad_norm": 1.0,
+          "image_size": 224,
+          "target_ratio": 1.25,
+          "max_txt_len": 64,
+          "num_workers": 0,
+          "precision": "fp32",
+          "grad_scaler_init_scale": 256.0,
+          "max_amp_retries": 10,
+          "freeze_vit": true,
+          "checkpoint_every_steps": 500,
+          "monitor_per_category": 32,
+          "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+        },
+        "original_runtime_sha256": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+        "load_report": {
+          "matched_keys": 338,
+          "missing_nonvision_keys": [
+            "prompt_tokens",
+            "Qformer.bert.embeddings.position_ids",
+            "Qformer.cls.predictions.bias",
+            "Qformer.cls.predictions.transform.dense.weight",
+            "Qformer.cls.predictions.transform.dense.bias",
+            "Qformer.cls.predictions.transform.LayerNorm.weight",
+            "Qformer.cls.predictions.transform.LayerNorm.bias",
+            "Qformer.cls.predictions.decoder.weight",
+            "Qformer.cls.predictions.decoder.bias",
+            "caption_proj.weight",
+            "caption_proj.bias",
+            "query_proj.weight",
+            "query_proj.bias"
+          ],
+          "pretrained_extra_keys": [
+            "llm_proj.bias",
+            "llm_proj.weight",
+            "llm_query_tokens",
+            "proj_layer.LayerNorm.bias",
+            "proj_layer.LayerNorm.weight",
+            "proj_layer.dense1.bias",
+            "proj_layer.dense1.weight",
+            "proj_layer.dense2.bias",
+            "proj_layer.dense2.weight"
+          ],
+          "visual_backbone": "separate official frozen EVA-G checkpoint",
+          "trainable_parameters": 210434366,
+          "vision_checkpoint": {
+            "loaded": true,
+            "matched_keys": 511,
+            "ignored_checkpoint_keys": [
+              "blocks.39.attn.proj.bias",
+              "blocks.39.attn.proj.weight",
+              "blocks.39.attn.q_bias",
+              "blocks.39.attn.qkv.weight",
+              "blocks.39.attn.v_bias",
+              "blocks.39.mlp.fc1.bias",
+              "blocks.39.mlp.fc1.weight",
+              "blocks.39.mlp.fc2.bias",
+              "blocks.39.mlp.fc2.weight",
+              "blocks.39.norm1.bias",
+              "blocks.39.norm1.weight",
+              "blocks.39.norm2.bias",
+              "blocks.39.norm2.weight",
+              "head.bias",
+              "head.weight",
+              "norm.bias",
+              "norm.weight"
+            ],
+            "missing_keys": []
+          },
+          "inspection_only": false
+        },
+        "caution": "Not a fully pretrained CIR checkpoint; random heads are part of this initialization control",
+        "evaluation_scope": "full_validation",
+        "no_reranking": true,
+        "caption_resource": "released next_llava.val captions; only UniFashion uses them",
+        "this_invocation_seconds": 4326.87768502
+      }
+    },
+    "final_unifashion_image_score": {
+      "path": "logs/week43_44_unifashion_completion/evidence_completed_20261102/final_results/unifashion_image_score_per_query.csv",
+      "sha256": "e4d092059e2e6cc4611f066f14b61c2518badd54a3efc0d0950f357ef5715059",
+      "result_sha256": "ae88bfff95cf46d96cc74eceecee5364c6ad09b0f421a67a5951a619216daddf",
+      "provenance": {
+        "checkpoint_sha256": "1b41d1f442785030c51148b0538097b17fd1aec8b3d7653c0b4829adf448b9e5",
+        "snapshot": "fp32_step90000.pt",
+        "checkpoint_kind": "full_training",
+        "optimizer_steps": 90000,
+        "completed_epochs": 10,
+        "next_epoch_one_based": 11,
+        "completed_batches_in_current_epoch": 0,
+        "planned_epochs": 10,
+        "evaluation_scope": "full_validation",
+        "training_config": {
+          "seed": 42,
+          "epochs": 10,
+          "batch_size": 2,
+          "learning_rate": 2e-05,
+          "weight_decay": 0.05,
+          "betas": [
+            0.9,
+            0.98
+          ],
+          "eps": 1e-07,
+          "scheduler": "one_cycle",
+          "warmup_epochs": 1.5,
+          "div_factor": 100.0,
+          "final_div_factor": 10000.0,
+          "max_grad_norm": 1.0,
+          "image_size": 224,
+          "target_ratio": 1.25,
+          "max_txt_len": 64,
+          "num_workers": 0,
+          "precision": "fp32",
+          "grad_scaler_init_scale": 256.0,
+          "max_amp_retries": 10,
+          "freeze_vit": true,
+          "checkpoint_every_steps": 500,
+          "monitor_per_category": 32,
+          "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+        },
+        "training_fingerprint": {
+          "data_audit": "4715235209dc1b8573217a9bc97c1cc41f76d8cc29e66f2a6b56bb9f4ae21bbe",
+          "code": {
+            "train_unifashion_finetune.py": "0c8b1887b00865b00bdfc0b54db745551e19a18f003fab9c59a65fbd0096c09c",
+            "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+            "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+            "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+            "fashioniq_unifashion_dataset.py": "2c252f4297aac573d0e3676e6476a825e611bbe692997b8e2bc9cdffa0b3aa88",
+            "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+          },
+          "assets_manifest": "6728ad447f435cca7253d7c9c9cd933b6abc25a21930bdf77a74d90bcde4bcec"
+        },
+        "eval_batch_size": 4,
+        "precision": "fp32",
+        "gpu": "Tesla T4",
+        "torch": "2.6.0+cu124",
+        "scoring": "Official query_tokens target encoder; max query-to-target-token similarity; optional released gallery-caption similarity",
+        "caption_rerank": "No ITM reranking, no labeled target captions used as query input",
+        "gallery_captions_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+        "code_sha256": {
+          "evaluate_unifashion_fashioniq.py": "f29ced4459395038638087b5674f5898025c0b0dba3963021a614f359fb4df0f",
+          "fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+          "unifashion_tuning.py": "06141d49a92c98fd50a1f6480f328e57e5addcb5514415ec98a87d2068fd48ac",
+          "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+          "attention_fusion.py": "b5b943e46a81111e5fb3f783e5b2c6293d552a76e6b450eb0cd8fd861af7034f"
+        },
+        "evaluation_seconds": 4866.253733959
+      }
+    },
+    "final_unifashion_image_caption_score": {
+      "path": "logs/week43_44_unifashion_completion/evidence_completed_20261102/final_results/unifashion_image_caption_score_per_query.csv",
+      "sha256": "15ed610e35fa4c2e359458e3c266d21c31a1dd7a9db0a1e5dabdce3239671c66",
+      "result_sha256": "56b4646b0bc5a1f7288b26a82f33f2556e045d8978a3be78b256971106719198",
+      "provenance": {
+        "checkpoint_sha256": "1b41d1f442785030c51148b0538097b17fd1aec8b3d7653c0b4829adf448b9e5",
+        "snapshot": "fp32_step90000.pt",
+        "checkpoint_kind": "full_training",
+        "optimizer_steps": 90000,
+        "completed_epochs": 10,
+        "next_epoch_one_based": 11,
+        "completed_batches_in_current_epoch": 0,
+        "planned_epochs": 10,
+        "evaluation_scope": "full_validation",
+        "training_config": {
+          "seed": 42,
+          "epochs": 10,
+          "batch_size": 2,
+          "learning_rate": 2e-05,
+          "weight_decay": 0.05,
+          "betas": [
+            0.9,
+            0.98
+          ],
+          "eps": 1e-07,
+          "scheduler": "one_cycle",
+          "warmup_epochs": 1.5,
+          "div_factor": 100.0,
+          "final_div_factor": 10000.0,
+          "max_grad_norm": 1.0,
+          "image_size": 224,
+          "target_ratio": 1.25,
+          "max_txt_len": 64,
+          "num_workers": 0,
+          "precision": "fp32",
+          "grad_scaler_init_scale": 256.0,
+          "max_amp_retries": 10,
+          "freeze_vit": true,
+          "checkpoint_every_steps": 500,
+          "monitor_per_category": 32,
+          "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+        },
+        "training_fingerprint": {
+          "data_audit": "4715235209dc1b8573217a9bc97c1cc41f76d8cc29e66f2a6b56bb9f4ae21bbe",
+          "code": {
+            "train_unifashion_finetune.py": "0c8b1887b00865b00bdfc0b54db745551e19a18f003fab9c59a65fbd0096c09c",
+            "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+            "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+            "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+            "fashioniq_unifashion_dataset.py": "2c252f4297aac573d0e3676e6476a825e611bbe692997b8e2bc9cdffa0b3aa88",
+            "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+          },
+          "assets_manifest": "6728ad447f435cca7253d7c9c9cd933b6abc25a21930bdf77a74d90bcde4bcec"
+        },
+        "eval_batch_size": 4,
+        "precision": "fp32",
+        "gpu": "Tesla T4",
+        "torch": "2.6.0+cu124",
+        "scoring": "Official query_tokens target encoder; max query-to-target-token similarity; optional released gallery-caption similarity",
+        "caption_rerank": "No ITM reranking, no labeled target captions used as query input",
+        "gallery_captions_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+        "code_sha256": {
+          "evaluate_unifashion_fashioniq.py": "f29ced4459395038638087b5674f5898025c0b0dba3963021a614f359fb4df0f",
+          "fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+          "unifashion_tuning.py": "06141d49a92c98fd50a1f6480f328e57e5addcb5514415ec98a87d2068fd48ac",
+          "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+          "attention_fusion.py": "b5b943e46a81111e5fb3f783e5b2c6293d552a76e6b450eb0cd8fd861af7034f"
+        },
+        "evaluation_seconds": 4866.253733959
+      }
+    },
+    "step60000_unifashion_image_score": {
+      "path": "logs/week42_unifashion_tuning/evidence_completed_20261027/full/base/unifashion_image_score_per_query.csv",
+      "sha256": "31d4333c817ff7b69eef1e19d1cda463904eb2cce7cd4af5f9a93c4408f7ea95",
+      "result_sha256": "f34389b6938e3ebcf953fa4074cc91c6cb3186fbaafd504095405476d0f42b65",
+      "provenance": {
+        "checkpoint_sha256": "df8226a0e61e41ebb5bf88f1870b0176118f75d14612ceb8c0e04cf91309a683",
+        "snapshot": "parent_snapshot.pt",
+        "checkpoint_kind": "full_training",
+        "optimizer_steps": 60000,
+        "completed_epochs": 6,
+        "next_epoch_one_based": 7,
+        "completed_batches_in_current_epoch": 6000,
+        "planned_epochs": 10,
+        "evaluation_scope": "full_validation",
+        "training_config": {
+          "seed": 42,
+          "epochs": 10,
+          "batch_size": 2,
+          "learning_rate": 2e-05,
+          "weight_decay": 0.05,
+          "betas": [
+            0.9,
+            0.98
+          ],
+          "eps": 1e-07,
+          "scheduler": "one_cycle",
+          "warmup_epochs": 1.5,
+          "div_factor": 100.0,
+          "final_div_factor": 10000.0,
+          "max_grad_norm": 1.0,
+          "image_size": 224,
+          "target_ratio": 1.25,
+          "max_txt_len": 64,
+          "num_workers": 0,
+          "precision": "fp32",
+          "grad_scaler_init_scale": 256.0,
+          "max_amp_retries": 10,
+          "freeze_vit": true,
+          "checkpoint_every_steps": 500,
+          "monitor_per_category": 32,
+          "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+        },
+        "training_fingerprint": {
+          "data_audit": "4715235209dc1b8573217a9bc97c1cc41f76d8cc29e66f2a6b56bb9f4ae21bbe",
+          "code": {
+            "train_unifashion_finetune.py": "0c8b1887b00865b00bdfc0b54db745551e19a18f003fab9c59a65fbd0096c09c",
+            "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+            "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+            "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+            "fashioniq_unifashion_dataset.py": "2c252f4297aac573d0e3676e6476a825e611bbe692997b8e2bc9cdffa0b3aa88",
+            "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+          },
+          "assets_manifest": "6728ad447f435cca7253d7c9c9cd933b6abc25a21930bdf77a74d90bcde4bcec"
+        },
+        "eval_batch_size": 4,
+        "precision": "fp32",
+        "gpu": "Tesla T4",
+        "torch": "2.6.0+cu124",
+        "scoring": "Official query_tokens target encoder; max query-to-target-token similarity; optional released gallery-caption similarity",
+        "caption_rerank": "No ITM reranking, no labeled target captions used as query input",
+        "gallery_captions_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+        "code_sha256": {
+          "evaluate_unifashion_fashioniq.py": "14f01eadcb1684a98300b50363a82267896029694ec00bfcb2a6f7c939d46bd0",
+          "fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+          "unifashion_tuning.py": "4d453aa2c0226c36c85e163d7b53d234061c89972360827b0e8d84c011b44406",
+          "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66"
+        },
+        "evaluation_seconds": 4312.2704465570005
+      }
+    },
+    "step60000_unifashion_image_caption_score": {
+      "path": "logs/week42_unifashion_tuning/evidence_completed_20261027/full/base/unifashion_image_caption_score_per_query.csv",
+      "sha256": "1c59415e60cbc7535c8de93bad005f2049f29cec756937deac919bede5ccd185",
+      "result_sha256": "42c09c30f13e77c9c43daf14c31f5620ab263688310ed297e7f312efa1d09d94",
+      "provenance": {
+        "checkpoint_sha256": "df8226a0e61e41ebb5bf88f1870b0176118f75d14612ceb8c0e04cf91309a683",
+        "snapshot": "parent_snapshot.pt",
+        "checkpoint_kind": "full_training",
+        "optimizer_steps": 60000,
+        "completed_epochs": 6,
+        "next_epoch_one_based": 7,
+        "completed_batches_in_current_epoch": 6000,
+        "planned_epochs": 10,
+        "evaluation_scope": "full_validation",
+        "training_config": {
+          "seed": 42,
+          "epochs": 10,
+          "batch_size": 2,
+          "learning_rate": 2e-05,
+          "weight_decay": 0.05,
+          "betas": [
+            0.9,
+            0.98
+          ],
+          "eps": 1e-07,
+          "scheduler": "one_cycle",
+          "warmup_epochs": 1.5,
+          "div_factor": 100.0,
+          "final_div_factor": 10000.0,
+          "max_grad_norm": 1.0,
+          "image_size": 224,
+          "target_ratio": 1.25,
+          "max_txt_len": 64,
+          "num_workers": 0,
+          "precision": "fp32",
+          "grad_scaler_init_scale": 256.0,
+          "max_amp_retries": 10,
+          "freeze_vit": true,
+          "checkpoint_every_steps": 500,
+          "monitor_per_category": 32,
+          "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+        },
+        "training_fingerprint": {
+          "data_audit": "4715235209dc1b8573217a9bc97c1cc41f76d8cc29e66f2a6b56bb9f4ae21bbe",
+          "code": {
+            "train_unifashion_finetune.py": "0c8b1887b00865b00bdfc0b54db745551e19a18f003fab9c59a65fbd0096c09c",
+            "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+            "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+            "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+            "fashioniq_unifashion_dataset.py": "2c252f4297aac573d0e3676e6476a825e611bbe692997b8e2bc9cdffa0b3aa88",
+            "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+          },
+          "assets_manifest": "6728ad447f435cca7253d7c9c9cd933b6abc25a21930bdf77a74d90bcde4bcec"
+        },
+        "eval_batch_size": 4,
+        "precision": "fp32",
+        "gpu": "Tesla T4",
+        "torch": "2.6.0+cu124",
+        "scoring": "Official query_tokens target encoder; max query-to-target-token similarity; optional released gallery-caption similarity",
+        "caption_rerank": "No ITM reranking, no labeled target captions used as query input",
+        "gallery_captions_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+        "code_sha256": {
+          "evaluate_unifashion_fashioniq.py": "14f01eadcb1684a98300b50363a82267896029694ec00bfcb2a6f7c939d46bd0",
+          "fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+          "unifashion_tuning.py": "4d453aa2c0226c36c85e163d7b53d234061c89972360827b0e8d84c011b44406",
+          "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66"
+        },
+        "evaluation_seconds": 4312.2704465570005
+      }
+    },
+    "step29500_unifashion_image_score": {
+      "path": "logs/week41_fashioniq_evaluation/evidence_fp32_step29500/results/unifashion_image_score_per_query.csv",
+      "sha256": "66d4249799fbc2d3a724d3a6e591eaa99b65046b07d25c4430546013c42fe283",
+      "result_sha256": "ed0325ab750d42c0a35c5e1e4cdd36f27c906461bfe09e7a0f365b764716d8a8",
+      "provenance": {
+        "checkpoint_sha256": "f4e9ee1f8c2dda190e7d4854e963426ef466b60455154a01e3b12cd0647872fb",
+        "snapshot": "fp32_snapshot.pt",
+        "optimizer_steps": 29500,
+        "completed_epochs": 3,
+        "next_epoch_one_based": 4,
+        "completed_batches_in_current_epoch": 2500,
+        "planned_epochs": 10,
+        "training_config": {
+          "seed": 42,
+          "epochs": 10,
+          "batch_size": 2,
+          "learning_rate": 2e-05,
+          "weight_decay": 0.05,
+          "betas": [
+            0.9,
+            0.98
+          ],
+          "eps": 1e-07,
+          "scheduler": "one_cycle",
+          "warmup_epochs": 1.5,
+          "div_factor": 100.0,
+          "final_div_factor": 10000.0,
+          "max_grad_norm": 1.0,
+          "image_size": 224,
+          "target_ratio": 1.25,
+          "max_txt_len": 64,
+          "num_workers": 0,
+          "precision": "fp32",
+          "grad_scaler_init_scale": 256.0,
+          "max_amp_retries": 10,
+          "freeze_vit": true,
+          "checkpoint_every_steps": 500,
+          "monitor_per_category": 32,
+          "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+        },
+        "training_fingerprint": {
+          "data_audit": "4715235209dc1b8573217a9bc97c1cc41f76d8cc29e66f2a6b56bb9f4ae21bbe",
+          "code": {
+            "train_unifashion_finetune.py": "0c8b1887b00865b00bdfc0b54db745551e19a18f003fab9c59a65fbd0096c09c",
+            "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+            "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+            "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+            "fashioniq_unifashion_dataset.py": "2c252f4297aac573d0e3676e6476a825e611bbe692997b8e2bc9cdffa0b3aa88",
+            "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+          },
+          "assets_manifest": "6728ad447f435cca7253d7c9c9cd933b6abc25a21930bdf77a74d90bcde4bcec"
+        },
+        "eval_batch_size": 4,
+        "precision": "fp32",
+        "gpu": "Tesla T4",
+        "torch": "2.6.0+cu124",
+        "scoring": "Official query_tokens target encoder; max query-to-target-token similarity; optional released gallery-caption similarity",
+        "caption_rerank": "No ITM reranking, no labeled target captions used as query input",
+        "gallery_captions_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+        "code_sha256": {
+          "evaluate_unifashion_fashioniq.py": "59a8c050e0a49a5d12b77676439fb52b449e678fdf034e8c5a275ba4f7a7b1c8",
+          "fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+          "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66"
+        },
+        "evaluation_seconds": 3713.936543667
+      }
+    },
+    "step29500_unifashion_image_caption_score": {
+      "path": "logs/week41_fashioniq_evaluation/evidence_fp32_step29500/results/unifashion_image_caption_score_per_query.csv",
+      "sha256": "b7d36215b3e1bb88582ffa8faf244a3b856663046648aefd029486004108f39b",
+      "result_sha256": "60965704d1b90c49009da4d23cd20fa6dbbfdc52aa3b5ab71259a05af6b6b1a4",
+      "provenance": {
+        "checkpoint_sha256": "f4e9ee1f8c2dda190e7d4854e963426ef466b60455154a01e3b12cd0647872fb",
+        "snapshot": "fp32_snapshot.pt",
+        "optimizer_steps": 29500,
+        "completed_epochs": 3,
+        "next_epoch_one_based": 4,
+        "completed_batches_in_current_epoch": 2500,
+        "planned_epochs": 10,
+        "training_config": {
+          "seed": 42,
+          "epochs": 10,
+          "batch_size": 2,
+          "learning_rate": 2e-05,
+          "weight_decay": 0.05,
+          "betas": [
+            0.9,
+            0.98
+          ],
+          "eps": 1e-07,
+          "scheduler": "one_cycle",
+          "warmup_epochs": 1.5,
+          "div_factor": 100.0,
+          "final_div_factor": 10000.0,
+          "max_grad_norm": 1.0,
+          "image_size": 224,
+          "target_ratio": 1.25,
+          "max_txt_len": 64,
+          "num_workers": 0,
+          "precision": "fp32",
+          "grad_scaler_init_scale": 256.0,
+          "max_amp_retries": 10,
+          "freeze_vit": true,
+          "checkpoint_every_steps": 500,
+          "monitor_per_category": 32,
+          "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+        },
+        "training_fingerprint": {
+          "data_audit": "4715235209dc1b8573217a9bc97c1cc41f76d8cc29e66f2a6b56bb9f4ae21bbe",
+          "code": {
+            "train_unifashion_finetune.py": "0c8b1887b00865b00bdfc0b54db745551e19a18f003fab9c59a65fbd0096c09c",
+            "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+            "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+            "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+            "fashioniq_unifashion_dataset.py": "2c252f4297aac573d0e3676e6476a825e611bbe692997b8e2bc9cdffa0b3aa88",
+            "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+          },
+          "assets_manifest": "6728ad447f435cca7253d7c9c9cd933b6abc25a21930bdf77a74d90bcde4bcec"
+        },
+        "eval_batch_size": 4,
+        "precision": "fp32",
+        "gpu": "Tesla T4",
+        "torch": "2.6.0+cu124",
+        "scoring": "Official query_tokens target encoder; max query-to-target-token similarity; optional released gallery-caption similarity",
+        "caption_rerank": "No ITM reranking, no labeled target captions used as query input",
+        "gallery_captions_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+        "code_sha256": {
+          "evaluate_unifashion_fashioniq.py": "59a8c050e0a49a5d12b77676439fb52b449e678fdf034e8c5a275ba4f7a7b1c8",
+          "fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+          "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66"
+        },
+        "evaluation_seconds": 3713.936543667
+      }
+    },
+    "tuned_unifashion_image_score": {
+      "path": "logs/week42_unifashion_tuning/evidence_completed_20261027/full/lr1e5_b4/unifashion_image_score_per_query.csv",
+      "sha256": "030ae1009dee0992b08c7e707362388763acbf38f324d3f61641c7a1470a6c6b",
+      "result_sha256": "352594840dedd254fdfa14b192d37fb8de9bb1fdb7e438c8fe4ccfd5ec9bd410",
+      "provenance": {
+        "checkpoint_sha256": "6cc2662a43f417309055f2df450f82635ad980ca481e72ca7f5ccf3d57a152c7",
+        "snapshot": "trial.pt",
+        "checkpoint_kind": "tuning_trial",
+        "optimizer_steps": 300,
+        "completed_epochs": null,
+        "next_epoch_one_based": null,
+        "completed_batches_in_current_epoch": null,
+        "planned_epochs": null,
+        "tuning": {
+          "parent_sha256": "df8226a0e61e41ebb5bf88f1870b0176118f75d14612ceb8c0e04cf91309a683",
+          "parent_progress": {
+            "checkpoint_kind": "full_training",
+            "optimizer_steps": 60000,
+            "completed_epochs": 6,
+            "next_epoch_one_based": 7,
+            "completed_batches_in_current_epoch": 6000,
+            "planned_epochs": 10
+          },
+          "trial": {
+            "name": "lr1e5_b4",
+            "learning_rate": 1e-05,
+            "batch_size": 4
+          },
+          "study_sha256": "b7f893bae8b66855f6917bdd1ab3eb5649b1ad253f2cb0fc2a30a4db8fbdaaa6",
+          "planned_examples": 1200,
+          "optimizer_restarted": true,
+          "schedule": "constant",
+          "precision": "fp32",
+          "checkpoint_every_updates": 100,
+          "code_sha256": {
+            "tune_unifashion.py": "52f9566e6c6652bacc5b4610d76021cfefd14e1b1f67f7082087e369c152a7c1",
+            "unifashion_tuning.py": "4d453aa2c0226c36c85e163d7b53d234061c89972360827b0e8d84c011b44406"
+          },
+          "trial_updates": 300,
+          "trial_examples": 1200,
+          "trial_completed": true
+        },
+        "evaluation_scope": "full_validation",
+        "training_config": {
+          "seed": 42,
+          "epochs": 10,
+          "batch_size": 4,
+          "learning_rate": 1e-05,
+          "weight_decay": 0.05,
+          "betas": [
+            0.9,
+            0.98
+          ],
+          "eps": 1e-07,
+          "scheduler": "constant",
+          "warmup_epochs": 1.5,
+          "div_factor": 100.0,
+          "final_div_factor": 10000.0,
+          "max_grad_norm": 1.0,
+          "image_size": 224,
+          "target_ratio": 1.25,
+          "max_txt_len": 64,
+          "num_workers": 0,
+          "precision": "fp32",
+          "grad_scaler_init_scale": 256.0,
+          "max_amp_retries": 10,
+          "freeze_vit": true,
+          "checkpoint_every_steps": 500,
+          "monitor_per_category": 32,
+          "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+        },
+        "training_fingerprint": {
+          "data_audit": "4715235209dc1b8573217a9bc97c1cc41f76d8cc29e66f2a6b56bb9f4ae21bbe",
+          "code": {
+            "train_unifashion_finetune.py": "0c8b1887b00865b00bdfc0b54db745551e19a18f003fab9c59a65fbd0096c09c",
+            "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+            "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+            "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+            "fashioniq_unifashion_dataset.py": "2c252f4297aac573d0e3676e6476a825e611bbe692997b8e2bc9cdffa0b3aa88",
+            "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+          },
+          "assets_manifest": "6728ad447f435cca7253d7c9c9cd933b6abc25a21930bdf77a74d90bcde4bcec"
+        },
+        "eval_batch_size": 4,
+        "precision": "fp32",
+        "gpu": "Tesla T4",
+        "torch": "2.6.0+cu124",
+        "scoring": "Official query_tokens target encoder; max query-to-target-token similarity; optional released gallery-caption similarity",
+        "caption_rerank": "No ITM reranking, no labeled target captions used as query input",
+        "gallery_captions_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+        "code_sha256": {
+          "evaluate_unifashion_fashioniq.py": "14f01eadcb1684a98300b50363a82267896029694ec00bfcb2a6f7c939d46bd0",
+          "fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+          "unifashion_tuning.py": "4d453aa2c0226c36c85e163d7b53d234061c89972360827b0e8d84c011b44406",
+          "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66"
+        },
+        "evaluation_seconds": 4559.1124635979995
+      }
+    },
+    "tuned_unifashion_image_caption_score": {
+      "path": "logs/week42_unifashion_tuning/evidence_completed_20261027/full/lr1e5_b4/unifashion_image_caption_score_per_query.csv",
+      "sha256": "79636f35cfdbf51ebf9beb41714edf8ebe6f5d90002668e30fa45fff83eb44f3",
+      "result_sha256": "6e47fbe6e59cd92e65da42de7dfb00a1f9d5023dc06357280a466b032dec876e",
+      "provenance": {
+        "checkpoint_sha256": "6cc2662a43f417309055f2df450f82635ad980ca481e72ca7f5ccf3d57a152c7",
+        "snapshot": "trial.pt",
+        "checkpoint_kind": "tuning_trial",
+        "optimizer_steps": 300,
+        "completed_epochs": null,
+        "next_epoch_one_based": null,
+        "completed_batches_in_current_epoch": null,
+        "planned_epochs": null,
+        "tuning": {
+          "parent_sha256": "df8226a0e61e41ebb5bf88f1870b0176118f75d14612ceb8c0e04cf91309a683",
+          "parent_progress": {
+            "checkpoint_kind": "full_training",
+            "optimizer_steps": 60000,
+            "completed_epochs": 6,
+            "next_epoch_one_based": 7,
+            "completed_batches_in_current_epoch": 6000,
+            "planned_epochs": 10
+          },
+          "trial": {
+            "name": "lr1e5_b4",
+            "learning_rate": 1e-05,
+            "batch_size": 4
+          },
+          "study_sha256": "b7f893bae8b66855f6917bdd1ab3eb5649b1ad253f2cb0fc2a30a4db8fbdaaa6",
+          "planned_examples": 1200,
+          "optimizer_restarted": true,
+          "schedule": "constant",
+          "precision": "fp32",
+          "checkpoint_every_updates": 100,
+          "code_sha256": {
+            "tune_unifashion.py": "52f9566e6c6652bacc5b4610d76021cfefd14e1b1f67f7082087e369c152a7c1",
+            "unifashion_tuning.py": "4d453aa2c0226c36c85e163d7b53d234061c89972360827b0e8d84c011b44406"
+          },
+          "trial_updates": 300,
+          "trial_examples": 1200,
+          "trial_completed": true
+        },
+        "evaluation_scope": "full_validation",
+        "training_config": {
+          "seed": 42,
+          "epochs": 10,
+          "batch_size": 4,
+          "learning_rate": 1e-05,
+          "weight_decay": 0.05,
+          "betas": [
+            0.9,
+            0.98
+          ],
+          "eps": 1e-07,
+          "scheduler": "constant",
+          "warmup_epochs": 1.5,
+          "div_factor": 100.0,
+          "final_div_factor": 10000.0,
+          "max_grad_norm": 1.0,
+          "image_size": 224,
+          "target_ratio": 1.25,
+          "max_txt_len": 64,
+          "num_workers": 0,
+          "precision": "fp32",
+          "grad_scaler_init_scale": 256.0,
+          "max_amp_retries": 10,
+          "freeze_vit": true,
+          "checkpoint_every_steps": 500,
+          "monitor_per_category": 32,
+          "description": "Full FashionIQ train, upstream 10-epoch OneCycle/AdamW settings; FP32 and batch 2 for the successful Colab sanity environment. Not a batch-128 reproduction."
+        },
+        "training_fingerprint": {
+          "data_audit": "4715235209dc1b8573217a9bc97c1cc41f76d8cc29e66f2a6b56bb9f4ae21bbe",
+          "code": {
+            "train_unifashion_finetune.py": "0c8b1887b00865b00bdfc0b54db745551e19a18f003fab9c59a65fbd0096c09c",
+            "unifashion_training.py": "01ba71bc80e0fba5af64f5bba31a16cef7cf54042a5ef013a26ab97e4b745525",
+            "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66",
+            "unifashion_sanity_data.py": "3e2c8b0d47d6632f38526360fce8bf57c111fdbc02f0e26033687e9fe5fad06b",
+            "fashioniq_unifashion_dataset.py": "2c252f4297aac573d0e3676e6476a825e611bbe692997b8e2bc9cdffa0b3aa88",
+            "train_unifashion_sanity.py": "2dd744a7c0ba7f6c09db8cfdef25b3ed23eca3bc05c8735704dc56578e3bef1f"
+          },
+          "assets_manifest": "6728ad447f435cca7253d7c9c9cd933b6abc25a21930bdf77a74d90bcde4bcec"
+        },
+        "eval_batch_size": 4,
+        "precision": "fp32",
+        "gpu": "Tesla T4",
+        "torch": "2.6.0+cu124",
+        "scoring": "Official query_tokens target encoder; max query-to-target-token similarity; optional released gallery-caption similarity",
+        "caption_rerank": "No ITM reranking, no labeled target captions used as query input",
+        "gallery_captions_sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60",
+        "code_sha256": {
+          "evaluate_unifashion_fashioniq.py": "14f01eadcb1684a98300b50363a82267896029694ec00bfcb2a6f7c939d46bd0",
+          "fashioniq_evaluation.py": "35f524576d37ad9d781d1f1bd9a174b00e58ccafaa16c13a57b5bb9b2ab15485",
+          "unifashion_tuning.py": "4d453aa2c0226c36c85e163d7b53d234061c89972360827b0e8d84c011b44406",
+          "unifashion_runtime.py": "ab27b7634b40bf271957f67311a775bc7d976184311676dcd957eda875ceed66"
+        },
+        "evaluation_seconds": 4559.1124635979995
+      }
+    }
+  }
+}

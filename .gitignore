@@ -3,6 +3,15 @@ embeddings/
 !/logs/week41_fashioniq_evaluation/
 !/logs/week42_unifashion_tuning/
 !/logs/week43_44_unifashion_completion/
+!/logs/paper_comparisons/
+/logs/paper_comparisons/**/cache/
+/logs/paper_comparisons/**/chunks/
+/logs/paper_comparisons/**/*.pt
+/logs/paper_comparisons/**/*.pth
+/logs/paper_comparisons/**/*.npy
+/logs/paper_comparisons/**/*.npz
+/logs/paper_comparisons/**/*.zip
+/logs/paper_comparisons/**/*.tmp
 /logs/week43_44_unifashion_completion/**/*.pt
 /logs/week43_44_unifashion_completion/**/*.pth
 /logs/week43_44_unifashion_completion/**/*.zip
@@ -18,3 +27,4 @@ checkpoints/
 third_party/
 __pycache__/
 *.py[cod]
+/reports/paper_comparisons/

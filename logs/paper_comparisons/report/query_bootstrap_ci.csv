@@ -1,0 +1,13 @@
+method,metric,estimate,lower95,upper95,replicates,seed,unit
+fashionclip_image_only,Recall@10,7.6067365584064515,6.93641980988559,8.314617789262499,5000,42,paired category-stratified query
+fashionclip_image_only,Recall@50,16.922230847399696,15.986831488058082,17.871295321216184,5000,42,paired category-stratified query
+fashionclip_text_only,Recall@10,27.780308944690773,26.647989426059638,28.947128779167798,5000,42,paired category-stratified query
+fashionclip_text_only,Recall@50,47.10054833768989,45.85457858240445,48.33048251061217,5000,42,paired category-stratified query
+fashionclip_additive,Recall@10,23.622107165093695,22.566699722164337,24.720045071958655,5000,42,paired category-stratified query
+fashionclip_additive,Recall@50,41.536903656321805,40.281801946340124,42.78453727437343,5000,42,paired category-stratified query
+unifashion_image_score,Recall@10,45.14488109296267,43.86223868326064,46.392989609725966,5000,42,paired category-stratified query
+unifashion_image_score,Recall@50,68.52979308357368,67.33771910797547,69.64965001000485,5000,42,paired category-stratified query
+unifashion_image_caption_score,Recall@10,64.78562335993237,63.63427297512642,65.99168601811175,5000,42,paired category-stratified query
+unifashion_image_caption_score,Recall@50,80.64073431929766,79.6466275966233,81.58319355370607,5000,42,paired category-stratified query
+fashionclip_legacy_gate,Recall@10,38.76451918756044,37.51166986238318,39.985389436830324,5000,42,paired category-stratified query
+fashionclip_legacy_gate,Recall@50,60.84798634679676,59.59960057724052,62.03502285369724,5000,42,paired category-stratified query
