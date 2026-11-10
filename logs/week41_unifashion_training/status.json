@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "completed_epochs": 10,
+  "planned_epochs": 10,
+  "optimizer_steps": 90000,
+  "checkpoint_step": 90000,
+  "precision": "fp32",
+  "peak_cuda_allocated_bytes": 7571658240,
+  "best_monitor_loss": 0.31285399156263777,
+  "retrieval_evaluated": false
+}

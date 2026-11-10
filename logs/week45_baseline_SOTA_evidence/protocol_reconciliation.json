@@ -1,0 +1,36 @@
+{
+  "status": "validated",
+  "reference_source": "/content/week45_reference/week41_fashioniq_evaluation",
+  "verified_stage": "/content/week45_fashioniq/verified_fashioniq_reference",
+  "historic_protocol_queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+  "evaluated_protocol_queries_sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1",
+  "baseline_method": "fashionclip_additive",
+  "original_preparation_not_modified": true,
+  "details": [
+    {
+      "file": "gallery_captions.json",
+      "mode": "exact_sha256_match",
+      "sha256": "681e20b05dfaa24a809cd9cf79850f20e551029561f746349b5dc99ce3319b60"
+    },
+    {
+      "file": "queries.csv",
+      "mode": "restored_recorded_line_endings",
+      "sha256": "9a574a3d2c194d2a8039f5af638febad67ef945978802e21fda51b17e0a8f2a1"
+    },
+    {
+      "file": "split.dress.val.json",
+      "mode": "exact_sha256_match",
+      "sha256": "21ff91d53c23859da91bfd49f3acc139b7f3a3dc944fc4e4a80194468cf14bab"
+    },
+    {
+      "file": "split.shirt.val.json",
+      "mode": "exact_sha256_match",
+      "sha256": "b82effbf7352a6f828b38c45eb32e53d726bd4d6fd81d6290c81eeb2c68e3234"
+    },
+    {
+      "file": "split.toptee.val.json",
+      "mode": "exact_sha256_match",
+      "sha256": "ee42b2505275dd7a19b11ddb88c9264aab2d77f4e59b075fb1c7c3095d02f412"
+    }
+  ]
+}

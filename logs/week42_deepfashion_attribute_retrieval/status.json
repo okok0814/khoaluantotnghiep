@@ -1,0 +1,15 @@
+{
+  "status": "evaluation_completed",
+  "retrieval_evaluated": true,
+  "error_type": "EmptyDataError",
+  "error": "No columns to parse from file",
+  "updated_at_unix": 1793649124.7385564,
+  "gallery_size": 41571,
+  "queries": 3000,
+  "gallery_completed": 41571,
+  "query_completed": 3000,
+  "gallery_chunks_completed": 163,
+  "gallery_chunks_total": 163,
+  "query_chunks_completed": 150,
+  "query_chunks_total": 150
+}

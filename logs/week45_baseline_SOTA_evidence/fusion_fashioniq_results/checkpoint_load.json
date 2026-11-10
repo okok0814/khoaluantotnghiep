@@ -1,0 +1,77 @@
+{
+  "matched_keys": 338,
+  "missing_nonvision_keys": [
+    "prompt_tokens",
+    "Qformer.bert.embeddings.position_ids",
+    "Qformer.cls.predictions.bias",
+    "Qformer.cls.predictions.transform.dense.weight",
+    "Qformer.cls.predictions.transform.dense.bias",
+    "Qformer.cls.predictions.transform.LayerNorm.weight",
+    "Qformer.cls.predictions.transform.LayerNorm.bias",
+    "Qformer.cls.predictions.decoder.weight",
+    "Qformer.cls.predictions.decoder.bias",
+    "caption_proj.weight",
+    "caption_proj.bias",
+    "query_proj.weight",
+    "query_proj.bias",
+    "attention_fusion.gate_network.0.weight",
+    "attention_fusion.gate_network.0.bias",
+    "attention_fusion.gate_network.3.weight",
+    "attention_fusion.gate_network.3.bias",
+    "attention_fusion.projection.0.weight",
+    "attention_fusion.projection.0.bias",
+    "attention_fusion.projection.3.weight",
+    "attention_fusion.projection.3.bias"
+  ],
+  "pretrained_extra_keys": [
+    "llm_proj.bias",
+    "llm_proj.weight",
+    "llm_query_tokens",
+    "proj_layer.LayerNorm.bias",
+    "proj_layer.LayerNorm.weight",
+    "proj_layer.dense1.bias",
+    "proj_layer.dense1.weight",
+    "proj_layer.dense2.bias",
+    "proj_layer.dense2.weight"
+  ],
+  "visual_backbone": "separate official frozen EVA-G checkpoint",
+  "trainable_parameters": 210763070,
+  "vision_checkpoint": {
+    "loaded": true,
+    "matched_keys": 511,
+    "ignored_checkpoint_keys": [
+      "blocks.39.attn.proj.bias",
+      "blocks.39.attn.proj.weight",
+      "blocks.39.attn.q_bias",
+      "blocks.39.attn.qkv.weight",
+      "blocks.39.attn.v_bias",
+      "blocks.39.mlp.fc1.bias",
+      "blocks.39.mlp.fc1.weight",
+      "blocks.39.mlp.fc2.bias",
+      "blocks.39.mlp.fc2.weight",
+      "blocks.39.norm1.bias",
+      "blocks.39.norm1.weight",
+      "blocks.39.norm2.bias",
+      "blocks.39.norm2.weight",
+      "head.bias",
+      "head.weight",
+      "norm.bias",
+      "norm.weight"
+    ],
+    "missing_keys": []
+  },
+  "attention_fusion": {
+    "enabled": true,
+    "embedding_dim": 256,
+    "inputs": [
+      "mean-pooled projected Q-former query tokens",
+      "projected modification-token representation"
+    ],
+    "connected_to": [
+      "training ITC similarity",
+      "retrieval inference query"
+    ],
+    "initialization": "random; standalone 512-d FashionCLIP checkpoint is not loaded"
+  },
+  "inspection_only": false
+}

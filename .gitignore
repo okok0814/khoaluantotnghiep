@@ -2,6 +2,7 @@ embeddings/
 /logs/*
 !/logs/week41_fashioniq_evaluation/
 !/logs/week42_unifashion_tuning/
+!/logs/week42_deepfashion_attribute_retrieval
 !/logs/week43_44_unifashion_completion/
 !/logs/paper_comparisons/
 /logs/paper_comparisons/**/cache/
@@ -12,6 +13,9 @@ embeddings/
 /logs/paper_comparisons/**/*.npz
 /logs/paper_comparisons/**/*.zip
 /logs/paper_comparisons/**/*.tmp
+!/logs/week41_unifashion_training/
+!/logs/week43_attentionfusion_completion_evidence
+!/logs/week45_baseline_SOTA_evidence
 /logs/week43_44_unifashion_completion/**/*.pt
 /logs/week43_44_unifashion_completion/**/*.pth
 /logs/week43_44_unifashion_completion/**/*.zip
